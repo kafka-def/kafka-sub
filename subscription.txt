@@ -4,11 +4,4 @@
 #support-url: telegram.me/kafka_def
 #announce: разработка @kafka_def // обновлено 22 июля 00:05 MSK // всего 7 конфигов
 
-trojan://0123456789abcdef0123456789abcdef@example.com:443?security=reality&sni=example.com&type=httpupgrade#Обновление сегодня
-hysteria2://qIg7TMxfJvx6t27er0c9P0osebAAPu2PYlB_aoWelV5kVVQ2@fr2.h2corp.org:443?security=tls&fm=%7B%7D&sni=fr2.h2corp.org#🇫🇷 by: @kafka_def
-ss://chacha20-ietf-poly1305:k1dBOmOB4oqi7Ump37a1bQ@82.38.31.216:8080#🇳🇱 by: @kafka_def
-vmess://eyJhZGQiOiI5NC4xMzEuMTA4LjM2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6Ijk4NTVmMWYwLWE4MDAtNDBkNC04YjM4LWM3ZDNlYjc5MzAyZCIsIm5ldCI6IndzIiwicGF0aCI6IiIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7nwn4e3IFRSICMxMyB0Lm1lL2t1ZXJ0b3ZfY29tbXVuaXR5Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9#🇹🇷 by: @kafka_def
-vless://d61b4e1b-4745-484f-8362-18537825a7af@194.164.217.139:448?type=tcp&headerType=none&security=reality&encryption=none&sni=www.samsung.com&fp=firefox&pbk=fjPED4_A_EQrL8PAuBUi9ChoNbY2OC4mUl7r8zaLoxo&sid=05fdaa8a05be46a9#🇫🇷 by: @kafka_def
-hysteria2://95c61940-2823-4665-a033-d4f2218329b6@46.8.210.209:443?security=tls&fm=%7B%7D&sni=ru3.kinotorg.net#🇵🇱 by: @kafka_def
-vless://8bba3194-4856-46d1-8319-075817d87eb1@45.140.205.186:2443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=sw2.cyphervpn.pro&fp=firefox&pbk=USffNprEM08MHiuVy5bj6-kvxugxycuZcgQDFJyz2Wc&sid=8f9d033ad6d2cebf&type=tcp&headerType=none#🇸🇪 by: @kafka_def
-vless://859a537b-09cf-4bce-8da4-ecbb72950e3a@159.195.22.155:443?type=tcp&headerType=none&security=reality&encryption=none&sni=2.oncloudnineservicestreang.com&fp=firefox&pbk=Mg3ZxHNUFbX96q1HpS3WReeM7rnhEsXXtlEzxALeTDc&sid=d8d3dc6c3ca45dd4&flow=xtls-rprx-vision#🇩🇪 by: @kafka_def
+trojan://0123456789abcdef0123456789abcdef@example.com:443?security=reality&sni=example.com&type=httpupgrade#Техническое обслуживание
