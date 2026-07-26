@@ -2,7 +2,21 @@
 #profile-title: kafka sub
 #profile-update-interval: 1
 #support-url: telegram.me/kafka_def
-#announce: разработка @kafka_def // обновлено 24 июля 21:00 MSK // всего 12 конфигов
+#announce: разработка @kafka_def // обновлено 26 июля 20:25 MSK // всего 14 конфигов
 
-trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#пересборка конфигураций
+trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#по вопросам тг @kafka_def
 
+vless://e9c8fc84-ad63-4d73-bf99-1eaafb061bf1@144.31.207.182:8765?flow=xtls-rprx-vision&encryption=none&security=reality&sni=www.gitlab.com&fp=firefox&pbk=5dh8zhGI2P-OXPhrOSYXysjsBsQ_gfZAZomOI5agano&sid=6a7c2332&type=tcp&headerType=none#🇳🇱 by: @kafka_def
+vless://e9c8fc84-ad63-4d73-bf99-1eaafb061bf1@31.59.150.61:8765?flow=xtls-rprx-vision&encryption=none&security=reality&sni=www.gitlab.com&fp=firefox&pbk=5dh8zhGI2P-OXPhrOSYXysjsBsQ_gfZAZomOI5agano&sid=6a7c2332&type=tcp&headerType=none#🇳🇱 by: @kafka_def
+vless://e9c8fc84-ad63-4d73-bf99-1eaafb061bf1@45.194.66.12:8765?flow=xtls-rprx-vision&encryption=none&security=reality&sni=www.amazon.com&fp=firefox&pbk=DqduujPv7ge6G1lAufu6TUDrASQf8buGK3ICg0um5yo&sid=6a728c322332&type=tcp&headerType=none#🇵🇱 by: @kafka_def
+vless://e9c8fc84-ad63-4d73-bf99-1eaafb061bf1@94.125.102.146:8765?flow=xtls-rprx-vision&encryption=none&security=reality&sni=www.gitlab.com&fp=firefox&pbk=5dh8zhGI2P-OXPhrOSYXysjsBsQ_gfZAZomOI5agano&sid=6a7c2332&type=tcp&headerType=none#🇵🇱 by: @kafka_def
+vless://e9c8fc84-ad63-4d73-bf99-1eaafb061bf1@195.226.92.124:8765?flow=xtls-rprx-vision&encryption=none&security=reality&sni=www.asus.com&fp=firefox&pbk=PrRja6geAg6Q12udTDD3VmFMy0B3lMOwqRTCzocN2Wo&sid=6a72fb&type=tcp&headerType=none#🇫🇮 by: @kafka_def
+vless://e9c8fc84-ad63-4d73-bf99-1eaafb061bf1@87.58.204.98:8765?flow=xtls-rprx-vision&encryption=none&security=reality&sni=www.asus.com&fp=edge&pbk=PrRja6geAg6Q12udTDD3VmFMy0B3lMOwqRTCzocN2Wo&sid=6a72fb&type=tcp&headerType=none#🇫🇮 by: @kafka_def
+vless://e9c8fc84-ad63-4d73-bf99-1eaafb061bf1@146.19.128.152:8765?flow=xtls-rprx-vision&encryption=none&security=reality&sni=www.samsung.com&fp=firefox&pbk=uXKpoUYa0BLHflsIxD2SLycUSsvTR8g4lPx-PXVMlAE&sid=6a7b8c9d32&type=tcp&headerType=none#🇱🇻 by: @kafka_def
+vless://e9c8fc84-ad63-4d73-bf99-1eaafb061bf1@146.19.128.149:8765?flow=xtls-rprx-vision&encryption=none&security=reality&sni=www.samsung.com&fp=firefox&pbk=uXKpoUYa0BLHflsIxD2SLycUSsvTR8g4lPx-PXVMlAE&sid=6a7b8c9d32&type=tcp&headerType=none#🇱🇻 by: @kafka_def
+vless://e9c8fc84-ad63-4d73-bf99-1eaafb061bf1@144.31.243.186:8765?flow=xtls-rprx-vision&encryption=none&security=reality&sni=www.gitlab.com&fp=firefox&pbk=5dh8zhGI2P-OXPhrOSYXysjsBsQ_gfZAZomOI5agano&sid=6a7c2332&type=tcp&headerType=none#🇺🇸 by: @kafka_def
+vless://e9c8fc84-ad63-4d73-bf99-1eaafb061bf1@31.76.55.212:8765?flow=xtls-rprx-vision&encryption=none&security=reality&sni=www.gitlab.com&fp=firefox&pbk=5dh8zhGI2P-OXPhrOSYXysjsBsQ_gfZAZomOI5agano&sid=6a7c2332&type=tcp&headerType=none#🇺🇸 by: @kafka_def
+vless://e9c8fc84-ad63-4d73-bf99-1eaafb061bf1@89.125.13.93:8765?flow=xtls-rprx-vision&encryption=none&security=reality&sni=www.google.com&fp=firefox&pbk=fw1RD5-8zaz0bvg_wj7_jyHA8cUg9g5tBOx4smSZL1o&sid=0d3de6e4eaeeaf56&type=tcp&headerType=none#🇪🇪 by: @kafka_def
+vless://e9c8fc84-ad63-4d73-bf99-1eaafb061bf1@95.85.224.182:8765?flow=xtls-rprx-vision&encryption=none&security=reality&sni=www.postimees.ee&fp=firefox&pbk=16Ej2GI7S231ReOO1ecRsXKjrbZHvTwQq8yLfRUFJyo&sid=87b7dd9aa5077898&type=tcp&headerType=none#🇪🇪 by: @kafka_def
+vless://e9c8fc84-ad63-4d73-bf99-1eaafb061bf1@45.196.233.70:8765?flow=xtls-rprx-vision&encryption=none&security=reality&sni=www.ntt.com&fp=firefox&pbk=9-MpQYNkvUf6bHm8s8F1K9HYzd9Iz5Q5Q8GTuHTLTnY&sid=63e6fbb6aa4f57f8&type=tcp&headerType=none#🇯🇵 by: @kafka_def
+vless://e9c8fc84-ad63-4d73-bf99-1eaafb061bf1@45.196.233.70:8768?encryption=none&security=reality&sni=www.ntt.com&fp=firefox&pbk=9-MpQYNkvUf6bHm8s8F1K9HYzd9Iz5Q5Q8GTuHTLTnY&sid=63e6fbb6aa4f57f8&type=xhttp&mode=auto&path=%2Fapi%2Fv4%2Ffeed#🇯🇵 by: @kafka_def
