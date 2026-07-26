@@ -4,17 +4,5 @@
 #support-url: telegram.me/kafka_def
 #announce: разработка @kafka_def // обновлено 24 июля 21:00 MSK // всего 12 конфигов
 
-trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#разработка @kafka_def
+trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#пересборка конфигураций
 
-vless://d88239ee-7452-4891-bc19-07aebfd0e654@mystiq.online:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=max.ru&fp=firefox&pbk=XvpNcDTwMASIiQVDMM9R2fYgNAb33puP3ModPr1hOFU&sid=c0692817&type=tcp&headerType=none#🇱🇻 by: @kafka_def
-hysteria2://d88239ee-7452-4891-bc19-07aebfd0e654@hy2.mystiq.online:443?security=tls&fm=%7B%7D&sni=hy2.mystiq.online#🇱🇻 by: @kafka_def
-vless://d88239ee-7452-4891-bc19-07aebfd0e654@mystiq.online:8443?encryption=none&security=reality&sni=max.ru&fp=firefox&pbk=XvpNcDTwMASIiQVDMM9R2fYgNAb33puP3ModPr1hOFU&sid=c0692817&type=xhttp&mode=auto&path=%2Fapi%2Fv1%2Fupdate#🇱🇻 by: @kafka_def
-vless://f7024ef7-dd35-4fe8-a18d-4186a0ae910c@nl-t3.vinnypuxtomoon.today:2053?flow=xtls-rprx-vision&encryption=none&security=reality&sni=nl-t3.vinnypuxtomoon.today&fp=qq&pbk=RwtMzZtTCmy9WRq3_27xeGF8-1l_qPXRVG3yIFp-6Go&sid=c0d1d1776fed0f6d&type=tcp&headerType=none#🇳🇱 by: @kafka_def
-vless://536c58c0-a41d-4381-bb80-0db76a4d6204@154.83.246.41:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=storage.yandex.net&fp=qq&pbk=pPi-WO8qQFFZ9UJWNLW9YClbjcoAAZWJQ2_FM3Kjhz8&sid=d3ee47fc2f553c44&type=tcp&headerType=none#🇳🇱 by: @kafka_def
-hysteria2://68b4b16e-2759-47a4-8a69-33118edf5ce6@nederland.gamestocke.ru:443?security=tls&fm=%7B%7D&sni=nederland.gamestocke.ru#🇳🇱 by: @kafka_def
-vless://547c0d9e-9bb5-4e83-b6e7-09953bc6004b@78.159.240.215:443?encryption=none&security=tls&sni=13.143.130.92.tyr-agentstvo.tech&alpn=h2&fp=qq&type=ws&path=%2Fwebsocket%3Fed%3D2560#🇵🇱 by: @kafka_def
-vless://547c0d9e-9bb5-4e83-b6e7-09953bc6004b@78.159.240.215:8443?encryption=none&security=tls&sni=2.26.148.147.tyr-agentstvo.tech&alpn=h2&fp=qq&type=ws&path=%2Fwebsocket#🇵🇱 by: @kafka_def
-vless://2f2bd7ab-8c19-4b02-9d4e-990cc74aee76@pl5.ethicsdinnerpave.online:443?encryption=none&security=tls&sni=pl5.ethicsdinnerpave.online&fp=qq&type=xhttp&mode=auto&host=pl5.ethicsdinnerpave.online&path=%2Fassets%2Fbuild%2F_app%2Fimmutable%2Fchunks%2Fstream-one%2F&extra=%7B%22xmux%22%3A%7B%22cMaxReuseTimes%22%3A0.0%2C%22maxConnections%22%3A3.0%2C%22hKeepAlivePeriod%22%3A0.0%2C%22hMaxRequestTimes%22%3A%22600-900%22%2C%22hMaxReusableSecs%22%3A%221800-3000%22%7D%7D#🇵🇱 by: @kafka_def
-vless://547c0d9e-9bb5-4e83-b6e7-09953bc6004b@51.250.4.141:8443?encryption=none&security=tls&sni=cloudflare.vhub.pro&fp=qq&type=ws&path=%2Fwebsocket#🇩🇪 by: @kafka_def
-vless://547c0d9e-9bb5-4e83-b6e7-09953bc6004b@158.160.196.224:443?encryption=none&security=tls&sni=cloudflare.vhub.pro&fp=qq&type=ws&path=%2Fwebsocket#🇩🇪 by: @kafka_def
-trojan://H2a0mA3IKi8qIPurnqCT-w@38.180.218.105:444?security=none&type=tcp&headerType=none#🇩🇪 by: @kafka_def
