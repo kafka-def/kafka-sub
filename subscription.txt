@@ -2,6 +2,15 @@
 #profile-title: kafka sub
 #profile-update-interval: 1
 #support-url: telegram.me/kafka_def
-#announce: разработка @kafka_def // обновлено 27 июля 10:10 MSK // всего - конфигов
+#announce: разработка @kafka_def // обновлено 27 июля 10:55 MSK // всего 8 конфигов
 
-trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#пересборка конфигураций
+trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#по вопроосам @kafka_def
+
+vless://da7685a7-15ef-41e4-a0d9-009bb4be7220@82.29.43.27:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=auto.malina24.xyz&fp=qq&pbk=V6FabatADtcX7aO9KMjGCadJC4LuQ_5nRViab-z-nFQ&sid=5678&type=tcp&headerType=none#🇸🇪 by: @kafka_def
+vless://00c0c6fc-2958-4395-91c3-7e61422f671f@germany.nksconnect.xyz:34560?encryption=none&security=reality&sni=www.oracle.com&fp=qq&pbk=_yjvFc_kLzNeMqXXXgBSznVzSV_BbXUjXeVY5O7JAiM&sid=a4f29e17c8b3d201&type=xhttp&mode=auto&host=germany.nksconnect.xyz&path=%2F&extra=%7B%22xmux%22%3A%7B%22cMaxReuseTimes%22%3A0.0%2C%22maxConcurrency%22%3A%228-16%22%2C%22maxConnections%22%3A0.0%2C%22hKeepAlivePeriod%22%3A0.0%2C%22hMaxRequestTimes%22%3A%22600-900%22%2C%22hMaxReusableSecs%22%3A%221800-3000%22%7D%2C%22xPaddingBytes%22%3A%22100-1000%22%7D#🇩🇪 by: @kafka_def
+vless://a645844f-8938-4566-aa89-6e6f99adc218@46.254.18.27:443?encryption=none&security=tls&sni=cloudflare.vhub.pro&fp=qq&type=ws&path=%2Fwebsocket%3Fed%3D2560#🇩🇪 by: @kafka_def
+vless://00c0c6fc-2958-4395-91c3-7e61422f671f@germany.nksconnect.xyz:20200?flow=xtls-rprx-vision&encryption=none&security=reality&sni=www.oracle.com&fp=qq&pbk=_yjvFc_kLzNeMqXXXgBSznVzSV_BbXUjXeVY5O7JAiM&sid=67e02c8b9e420e26&type=tcp&headerType=none#🇩🇪 by: @kafka_def
+vless://a645844f-8938-4566-aa89-6e6f99adc218@95.163.232.165:443?encryption=none&security=tls&sni=cloudflare.vhub.pro&fp=qq&type=ws&path=%2Fwebsocket%3Fed%3D2560#🇩🇪 by: @kafka_def
+vless://b229c88e-9796-4dd9-93f3-8ce3b4895ba8@194.156.26.16:443?encryption=none&security=tls&sni=stiLl-HaZe-8f4C.RTgvsdEd.WORKeRS.DEv&fp=qq&type=ws&path=%2FeyJqdW5rIjoiMWtkNkRWTGhhdnAiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyI0OS4xMi4yMzcuNzEiXX0%3D#by: @kafka_def
+vless://4b5de9a4-3543-4f04-af6e-5c20141520ce@194.156.26.1:443?encryption=none&security=tls&sni=SumMeR-skY-0522.SFPOijsofw207geFS.WOrkeRS.deV&fp=qq&type=ws&path=%2FeyJqdW5rIjoiWnM2b1ZnRlpNRyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjExNi4yMDIuMTMyLjIwNSJdfQ%3D%3D#by: @kafka_def
+vless://240a0b15-92ad-4f1c-a80b-f66e33e9ebbc@194.156.26.45:443?encryption=none&security=tls&sni=BOLd-WiLDflOWER-b135.FwfsF202F.workers.DEV&fp=qq&type=ws&path=%2FeyJqdW5rIjoiaG5McmFrdUxHIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMTE2LjIwMy41OC4xNjUiXX0%3D#by: @kafka_def
