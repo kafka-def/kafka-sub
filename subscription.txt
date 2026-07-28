@@ -2,7 +2,16 @@
 #profile-title: kafka sub
 #profile-update-interval: 1
 #support-url: telegram.me/kafka_def
-#announce: разработка @kafka_def // обновлено 27 июля 10:55 MSK // всего 8 конфигов
+#announce: разработка @kafka_def // обновлено 28 июля 20:35 MSK // всего 9 конфигов
 
-trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#пересборка конфигураций
+trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#по вопросам @kafka_def
 
+vless://6556ea2e-494c-4c5f-8821-31a6efc2e916@176.123.165.127:57836?encryption=none&security=none&type=tcp&headerType=none#🇪🇺 by: @kafka_def
+vless://d6dc1358-1bb5-4a9d-92fd-3e255567e3fc@94.126.205.65:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=apple.com&fp=chrome&pbk=M9_R2DX7bxoMJpkF4RcyJ0oJ8ZuGsxWrjuREKi6Ol0w&type=tcp&headerType=none#🇪🇺 by: @kafka_def
+vless://1f29762d-3f23-4207-9e39-f774de5d49ba@77.83.246.92:8443?encryption=none&security=none&type=grpc&mode=gun&authority=&serviceName=grpc#🇪🇺 by: @kafka_def
+vless://1f29762d-3f23-4207-9e39-f774de5d49ba@95.85.224.3:8443?encryption=none&security=none&type=grpc&mode=gun&authority=&serviceName=grpc#🇪🇺 by: @kafka_def
+vless://1f29762d-3f23-4207-9e39-f774de5d49ba@77.83.246.92:8443?encryption=none&security=none&type=grpc&mode=gun&authority=&serviceName=grpc#🇵🇱 by: @kafka_def
+vless://7c61a2a5-c7e4-4d52-baf7-a9406ad89b4c@199.232.238.181:443?encryption=none&security=tls&sni=accounts.fastly.com&alpn=h3&fp=chrome&type=xhttp&mode=packet-up&host=ovd8.global.ssl.fastly.net&path=%2F&extra=%7B%22scMaxEachPostBytes%22%3A%221000000%22%2C%22scMaxConcurrentPosts%22%3A100.0%2C%22scMinPostsIntervalMs%22%3A30.0%2C%22xPaddingBytes%22%3A%22100-1000%22%2C%22noGRPCHeader%22%3Afalse%7D&fragment=3%2C1%2Ctlshello%2Cnull&fm=%7B%22tcp%22%3A%5B%7B%22settings%22%3A%7B%22delay%22%3A%221%22%2C%22length%22%3A%223%22%2C%22packets%22%3A%22tlshello%22%7D%2C%22type%22%3A%22fragment%22%7D%5D%7D#🇵🇱 by: @kafka_def
+vless://7c61a2a5-c7e4-4d52-baf7-a9406ad89b4c@199.232.238.181:443?encryption=none&security=tls&sni=accounts.fastly.com&alpn=h3&fp=chrome&type=xhttp&mode=packet-up&host=ovd13.global.ssl.fastly.net&path=%2F&extra=%7B%22scMaxEachPostBytes%22%3A%221000000%22%2C%22scMaxConcurrentPosts%22%3A100.0%2C%22scMinPostsIntervalMs%22%3A30.0%2C%22xPaddingBytes%22%3A%22100-1000%22%2C%22noGRPCHeader%22%3Afalse%7D&fragment=3%2C1%2Ctlshello%2Cnull&fm=%7B%22tcp%22%3A%5B%7B%22settings%22%3A%7B%22delay%22%3A%221%22%2C%22length%22%3A%223%22%2C%22packets%22%3A%22tlshello%22%7D%2C%22type%22%3A%22fragment%22%7D%5D%7D#🇮🇹 by: @kafka_def
+vless://7c61a2a5-c7e4-4d52-baf7-a9406ad89b4c@199.232.238.181:443?encryption=none&security=tls&sni=accounts.fastly.com&alpn=h3&fp=chrome&type=xhttp&mode=packet-up&host=ovd11.global.ssl.fastly.net&path=%2F&extra=%7B%22scMaxEachPostBytes%22%3A%221000000%22%2C%22scMaxConcurrentPosts%22%3A100.0%2C%22scMinPostsIntervalMs%22%3A30.0%2C%22xPaddingBytes%22%3A%22100-1000%22%2C%22noGRPCHeader%22%3Afalse%7D&fragment=3%2C1%2Ctlshello%2Cnull&fm=%7B%22tcp%22%3A%5B%7B%22settings%22%3A%7B%22delay%22%3A%221%22%2C%22length%22%3A%223%22%2C%22packets%22%3A%22tlshello%22%7D%2C%22type%22%3A%22fragment%22%7D%5D%7D#🇧🇬 by: @kafka_def
+vless://9c271c9f-b895-47e3-8874-cd31f9396ced@pro-it.emrata.top:443?encryption=none&security=reality&sni=pro-it.emrata.top&fp=qq&pbk=F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I&type=tcp&headerType=none#🇮🇹 by: @kafka_def
