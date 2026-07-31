@@ -2,7 +2,20 @@
 #profile-title: kafka sub
 #profile-update-interval: 1
 #support-url: telegram.me/kafka_def
-#announce: разработка @kafka_def // обновлено 28 июля 20:35 MSK // всего 9 конфигов
+#announce: разработка @kafka_def // обновлено 31 июля 22:20 MSK // всего 13 конфигов
 
-trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#пересборка конфигурации
+trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#по вопросам @kafka_def
 
+hysteria2://68b4b16e-2759-47a4-8a69-33118edf5ce6@popa.leontunel.ru:443?security=tls&fm=%7B%7D&sni=popa.leontunel.ru#🇬🇧 by: @kafka_def
+vless://ee2f3100-512d-4ef1-9c8b-5725244aa740@ru.pool-b.netcenter-cdn.com:44003?flow=xtls-rprx-vision&encryption=none&security=reality&sni=pool-b.pools.netcenter-cdn.com&fp=firefox&pbk=mCtDwMr9u9MdztUGzCGADj-nfHv6CQpAf_ywbyKl8ww&sid=dbd745&type=tcp&headerType=none#🇩🇪 by: @kafka_def
+vless://7153fb3d-f357-42ac-b6db-ece1732f7f01@multi.fresedvpn.site:11443?encryption=none&security=none&type=ws&host=rebus.rustore.ru&path=%2Fapi%2Fv3%2Fws#🇱🇻 by: @kafka_def
+hysteria2://7c5566a7-4b55-4659-975f-06507d32fd3f@ltu-01.node.lumixnet.com:443?security=tls&fm=%7B%7D&sni=ltu-01.node.lumixnet.com#🇱🇹 by: @kafka_def
+vless://3ad1d277-5715-4ca1-84db-5baea72f822d@93.115.25.139:443?encryption=none&security=tls&sni=ddc-chr2.astralweb.tech&alpn=h2&fp=firefox&type=tcp&headerType=none#🇱🇹 by: @kafka_def
+vless://ef2aba40-bb54-468e-b782-3a991f9e83f0@ru.pool-b.netcenter-cdn.com:44001?flow=xtls-rprx-vision&encryption=none&security=reality&sni=pool-b.pools.netcenter-cdn.com&fp=firefox&pbk=qXyJbGAN_0PyZFVR7vb7anVdCK2Zhxexs7dVgc3vqn0&sid=32e0&type=tcp&headerType=none#🇳🇱 by: @kafka_def
+vless://166ef05e-8ab5-43b7-8910-d1bb0a4326a5@188.72.103.3:443?encryption=none&security=tls&sni=cdn.tracker.yandex.net&fp=firefox&type=ws&host=sync.watchwave.link&path=%2Fapi%2Fv1%2Frooms%2F63368e3dbb%2Fsync#🇳🇱 by: @kafka_def
+vless://3ad1d277-5715-4ca1-84db-5baea72f822d@ddc-chr.astralweb.tech:443?encryption=none&security=tls&sni=ddc-chr.astralweb.tech&alpn=h2&fp=firefox&type=tcp&headerType=none#🇳🇱 by: @kafka_def
+vless://cab0dd62-10ac-4b3d-86a1-873166e3dfd6@ru.pool-b.netcenter-cdn.com:44002?flow=xtls-rprx-vision&encryption=none&security=reality&sni=pool-b.pools.netcenter-cdn.com&fp=firefox&pbk=sl0wx4BFdJ7SsfQ6SjkSHU_SQ_0mAhyIlT2eAxWGRyQ&sid=e1233ae7e56111a7&type=tcp&headerType=none#🇨🇭 by: @kafka_def
+vless://3ad1d277-5715-4ca1-84db-5baea72f822d@sw1-chr.astralweb.tech:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=sw1-chr.astralweb.tech&fp=firefox&pbk=Z2c9dK70_0OWBEZGgeaXJyt9dup9h2-hZlCCvIGLg1Q&sid=496ee75c2f91f51d&type=tcp&headerType=none#🇸🇪 by: @kafka_def
+vless://bece874b-e905-48a4-9620-5ef59b49081a@38.180.216.63:52315?encryption=none&security=none&type=ws&path=%2F#🇪🇪 by: @kafka_def
+hysteria2://824165d8-e2e9-4b71-8b5c-e51f22450848@ee.lockaway.top:443?security=tls&fm=%7B%7D&sni=ee.lockaway.top#🇪🇪 by: @kafka_def
+vless://db2072f3-728b-4381-a9ec-51629decc2b8@uk2.denverpresents.top:443?encryption=none&security=tls&sni=uk2.denverpresents.top&alpn=h2%252Chttp%252F1.1&fp=qq&type=xhttp&mode=auto&host=uk2.denverpresents.top&path=%2Fassets%2Fbuild%2F_app%2Fimmutable%2Fchunks%2Fstream-one%2F#by: @kafka_def
