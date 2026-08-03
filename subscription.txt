@@ -2,13 +2,13 @@
 #profile-title: kafka sub
 #profile-update-interval: 1
 #support-url: telegram.me/kafka_def
-#announce: разработка @kafka_def // обновлено 3 августа 20:40 MSK // всего 20 конфигов
+#announce: разработка @kafka_def // обновлено 3 августа 20:45 MSK // всего 20 конфигов
 
 trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#пересборка конфигураций
 
 vless://06d44c57-8e1a-41f4-b9c4-65d35869e078@78.17.180.106:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=isp04.skorostnet.space&fp=firefox&pbk=aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o&sid=fdda9806fe5d8584&type=tcp&headerType=none#🇪🇸 ES // by: @kafka_def
 vless://06d44c57-8e1a-41f4-b9c4-65d35869e078@78.17.180.110:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=isp05.skorostnet.space&fp=firefox&pbk=aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o&sid=fdda9806fe5d8584&type=tcp&headerType=none#🇪🇸 ES // by: @kafka_def
-vless://130.49.218.26:47222?encryption=none&security=reality&sni=sempre.moscow&fp=firefox&pbk=ku2hvIz-V3sudUB9Dy6eojXKwkandc2PN12Bb6Z380c&sid=6789f9d3&type=xhttp&mode=auto&path=%2F#🇫🇷 FR // by: @kafka_def
+vless://9dada88d-f8f8-459d-8a4f-4df2c973fe43@130.49.218.26:47222?encryption=none&security=reality&sni=sempre.moscow&fp=firefox&pbk=ku2hvIz-V3sudUB9Dy6eojXKwkandc2PN12Bb6Z380c&sid=6789f9d3&type=xhttp&mode=auto&path=%2F#🇫🇷 FR // by: @kafka_def
 vless://c04bf2df-2b7f-44da-a893-3792d3910fd8@78.17.208.20:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=fr03.skorostnet.space&fp=firefox&pbk=aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o&sid=fdda9806fe5d8584&type=tcp&headerType=none#🇫🇷 FR // by: @kafka_def
 vless://94d2d711-76e5-4d82-a3c9-4f06fd5558c8@87.120.92.181:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=e-spectacular.ru&fp=firefox&pbk=oEZR7FpSd4ZrBKHrBLJqfGq_23-xf7DQy0bkqkiq0mw&sid=825d392c67e4&type=tcp&headerType=none#🇩🇪 DE // by: @kafka_def
 vless://d1e816db-0dc6-4b44-8037-c59700028214@79.137.203.64:443?encryption=none&security=reality&sni=www.ibm.com&fp=firefox&pbk=ycW5LB_qsf61SQrWr6eIbPfNCzb5_J3rD9QFlN8TIEc&sid=9a44c802e4756255&type=grpc&mode=gun&authority=&serviceName=grpc#🇩🇪 DE // by: @kafka_def
