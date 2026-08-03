@@ -2,9 +2,10 @@
 #profile-title: kafka sub
 #profile-update-interval: 1
 #support-url: telegram.me/kafka_def
-#announce: разработка @kafka_def // обновлено 3 августа 20:45 MSK // всего 20 конфигов
+#announce: разработка @kafka_def // обновлено 3 августа 21:25 MSK // всего 20 конфигов
 
-trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#пересборка конфигураций
+trojan://0023456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#по вопросам @kafka_def
+trojan://0023456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#поддержать ₽ @kafka_def
 
 vless://06d44c57-8e1a-41f4-b9c4-65d35869e078@78.17.180.106:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=isp04.skorostnet.space&fp=firefox&pbk=aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o&sid=fdda9806fe5d8584&type=tcp&headerType=none#🇪🇸 ES // by: @kafka_def
 vless://06d44c57-8e1a-41f4-b9c4-65d35869e078@78.17.180.110:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=isp05.skorostnet.space&fp=firefox&pbk=aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o&sid=fdda9806fe5d8584&type=tcp&headerType=none#🇪🇸 ES // by: @kafka_def
