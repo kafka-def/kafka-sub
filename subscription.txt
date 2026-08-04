@@ -2,13 +2,24 @@
 #profile-title: kafka sub
 #profile-update-interval: 1
 #support-url: telegram.me/kafka_def
-#announce: разработка @kafka_def // обновлено 0 августа 00:00 MSK // всего 0 конфигов
+#announce: разработка @kafka_def // обновлено 4 августа 20:40 MSK // всего 15 конфигов
 
-trojan://0223456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#пересборка конфигов
 trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#по вопросам @kafka_def
 trojan://0023456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#поддержать ₽ @kafka_def
 
-vless://06d44c57-8e1a-41f4-b9c4-65d35869e078@78.17.180.106:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=isp04.skorostnet.space&fp=firefox&pbk=aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o&sid=fdda9806fe5d8584&type=tcp&headerType=none#🇪🇸 ES // by: @kafka_def
-vless://06d44c57-8e1a-41f4-b9c4-65d35869e078@78.17.180.110:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=isp05.skorostnet.space&fp=firefox&pbk=aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o&sid=fdda9806fe5d8584&type=tcp&headerType=none#🇪🇸 ES // by: @kafka_def
-vless://c04bf2df-2b7f-44da-a893-3792d3910fd8@78.17.208.20:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=fr03.skorostnet.space&fp=firefox&pbk=aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o&sid=fdda9806fe5d8584&type=tcp&headerType=none#🇫🇷 FR // by: @kafka_def
-vless://68b4b16e-2759-47a4-8a69-33118edf5ce6@185.65.202.156:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=ger.leontunel.ru&fp=firefox&pbk=gtKMi9Q9ZMYxe-ZvzmbpPI-uE6YcFM84xYSw7bpKF3w&sid=52c579ed2ce06c26&type=tcp&headerType=none#🇩🇪 DE LTE // by: @kafka_def
+vless://738af6f0-498c-4d3d-aa44-baada5cc2764@31.76.84.251:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=ie.janusgate.org&fp=firefox&pbk=nilJ07r1KZ0-KhmRNYeICXGhM9HeG9uxnRaqjYz3fWg&sid=da69ccae3f9f367f&type=tcp&headerType=none#🇬🇧 GB // by: @kafka_sub
+vless://546cf4fe-fccb-554b-ba90-027e4aa4ecc7@31.76.53.16:443?encryption=none&security=tls&sni=31.76.53.16.fwqfw783rg2dad.website&alpn=http%2F1.1&fp=firefox&type=ws&path=%2Fwebsocket%3Fed%3D2560#🇬🇧 GB // by: @kafka_sub
+vless://f078c1ff-ca5f-4e51-89a4-49f7c0d32758@152.233.43.91:16923?encryption=none&security=reality&sni=maps.yandex.ru&fp=firefox&pbk=_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA&sid=10ffb85da1c2d986&type=grpc&mode=gun&authority=&serviceName=neurex#🇵🇱 PL // by: @kafka_sub
+vless://1fef5248-fdd2-40d6-b3b9-6c33d4e74724@144.31.0.34:7443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=_custom_&fp=firefox&pbk=8wD0IhR27ftD5LyJDq9CaFzi6DgA4vFtB-UP6QIdWVc&sid=e8ca5079a5e91481&type=tcp&headerType=none#🇵🇱 PL // by: @kafka_sub
+vless://1fef5248-fdd2-40d6-b3b9-6c33d4e74724@144.31.0.34:7443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=custom&fp=firefox&pbk=8wD0IhR27ftD5LyJDq9CaFzi6DgA4vFtB-UP6QIdWVc&sid=e8ca5079a5e91481&type=tcp&headerType=none#🇵🇱 PL // by: @kafka_sub
+vless://ce54986e-1876-4afb-8b01-af90d4ed5832@91.193.18.173:8443?encryption=none&security=reality&sni=addons.mozilla.org&fp=firefox&pbk=56QUSkgaBUAruo4LoZnfo6z6Y4CGZRTx1zdNLYKKGRk&sid=530db35e324c3aa5&type=grpc&mode=gun&authority=&serviceName=api.v1.telemetry.EventStream#🇵🇱 PL // by: @kafka_sub
+vless://546cf4fe-fccb-5452-ba90-027e4aa4ecc7@31.76.53.16:443?encryption=none&security=tls&sni=31.76.53.16.fwqfw783rg2dad.website&alpn=http%2F1.1&fp=firefox&type=ws&path=%2Fwebsocket%3Fed%3D2560#🇹🇷 TR // by: @kafka_sub
+vless://18f71148-a3c7-40c7-b02a-be04da72efe3@2.26.94.13:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=pro-tr.emrata.top&fp=firefox&pbk=da5UVhoC5QOCDm84AxB-RRxf0z2nySZ3lOemgqizLS4&type=tcp&headerType=none#🇹🇷 TR // by: @kafka_sub
+vless://76713d07-5a6b-49c2-abd8-bc450a2fa7fc@95.85.224.76:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=ee-download.spectrum.vu&fp=firefox&pbk=P2MV0I11JvKg-G3wfg64YVGUEh0Wvy6C4MTVsMPWdyQ&sid=7b1c7d9a3f2a&type=tcp&headerType=none#🇪🇪 EE // by: @kafka_sub
+vless://738af6f0-498c-4d3d-aa44-baada5cc2764@31.76.84.251:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=ee.janusgate.org&fp=firefox&pbk=nilJ07r1KZ0-KhmRNYeICXGhM9HeG9uxnRaqjYz3fWg&sid=773353fbea287c00&type=tcp&headerType=none#🇪🇪 EE // by: @kafka_sub
+vless://68b4b16e-2759-47a4-8a69-33118edf5ce6@194.104.10.68:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=ned.leontunel.ru&fp=firefox&pbk=z3U2vV7PRNvOraeAs6RnjM8aQbkOFdyp82ogXdS40mI&sid=f64c0c7635cbddf5&type=tcp&headerType=none#🇳🇱 NL // by: @kafka_sub
+vless://4d5fea10-c669-4cb9-91b2-9d179b844520@89.124.116.234:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=www.googletagmanager.com&fp=firefox&pbk=8EPzwlenieiAy21ktdbQITnHJHA_biE4TVbN6OcDSSY&sid=4e40ed8b114da1ae&type=tcp&headerType=none#🇳🇱 NL // by: @kafka_sub
+vless://06d44c57-8e1a-41f4-b9c4-65d35869e078@78.17.180.106:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=isp04.skorostnet.space&fp=firefox&pbk=aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o&sid=fdda9806fe5d8584&type=tcp&headerType=none#🇪🇸 ES // by: @kafka_sub
+vless://06d44c57-8e1a-41f4-b9c4-65d35869e078@78.17.180.110:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=isp05.skorostnet.space&fp=firefox&pbk=aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o&sid=fdda9806fe5d8584&type=tcp&headerType=none#🇪🇸 ES // by: @kafka_sub
+vless://c04bf2df-2b7f-44da-a893-3792d3910fd8@78.17.208.20:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=fr03.skorostnet.space&fp=firefox&pbk=aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o&sid=fdda9806fe5d8584&type=tcp&headerType=none#🇫🇷 FR // by: @kafka_sub
+vless://68b4b16e-2759-47a4-8a69-33118edf5ce6@185.65.202.156:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=ger.leontunel.ru&fp=firefox&pbk=gtKMi9Q9ZMYxe-ZvzmbpPI-uE6YcFM84xYSw7bpKF3w&sid=52c579ed2ce06c26&type=tcp&headerType=none#🇩🇪 DE LTE // by: @kafka_sub
