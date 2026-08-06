@@ -2,12 +2,23 @@
 #profile-title: kafka sub
 #profile-update-interval: 1
 #support-url: telegram.me/kafka_def
-#announce: разработка @kafka_def // обновлено 0 августа 00:00 MSK // всего 0 конфигов
+#announce: разработка @kafka_def // обновлено 6 августа 14:45 MSK // всего 15 конфигов
 
 trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#по вопросам @kafka_def
 trojan://0023456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#поддержать ₽ @kafka_def
 
+vless://b94da146-a56e-49d7-af4c-a68c9065cbfd@50.7.248.74:8180?encryption=none&fp=firefox&security=tls&serviceName=media.playback.v1.SessionGateway&sni=vpnforppl.top&type=grpc#🇵🇱 PL // by: @kafka_sub
+vless://a1de0630-5786-48a0-84f6-dc6f2de10d6d@91.193.59.191:2087?encryption=none&fp=firefox&security=tls&sni=vlso5.1d.mom&type=ws#🇵🇱 PL // by: @kafka_sub
 vless://68b4b16e-2759-47a4-8a69-33118edf5ce6@194.104.10.68:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=ned.leontunel.ru&fp=firefox&pbk=z3U2vV7PRNvOraeAs6RnjM8aQbkOFdyp82ogXdS40mI&sid=f64c0c7635cbddf5&type=tcp&headerType=none#🇳🇱 NL // by: @kafka_sub
 vless://4d5fea10-c669-4cb9-91b2-9d179b844520@89.124.116.234:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=www.googletagmanager.com&fp=firefox&pbk=8EPzwlenieiAy21ktdbQITnHJHA_biE4TVbN6OcDSSY&sid=4e40ed8b114da1ae&type=tcp&headerType=none#🇳🇱 NL // by: @kafka_sub
 vless://06d44c57-8e1a-41f4-b9c4-65d35869e078@78.17.180.106:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=isp04.skorostnet.space&fp=firefox&pbk=aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o&sid=fdda9806fe5d8584&type=tcp&headerType=none#🇪🇸 ES // by: @kafka_sub
 vless://06d44c57-8e1a-41f4-b9c4-65d35869e078@78.17.180.110:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=isp05.skorostnet.space&fp=firefox&pbk=aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o&sid=fdda9806fe5d8584&type=tcp&headerType=none#🇪🇸 ES // by: @kafka_sub
+vless://2a6b708e-6799-473e-85e9-d4b116c5eedc@177.3.208.169:443?encryption=none&fp=firefox&host=titandarkness.mooo.com&path=/21381/0kO2id8FMQ&security=tls&sni=titandarkness.mooo.com&type=ws#🇧🇷 BR // by: @kafka_sub
+vless://4f375fb4-3c95-425f-bc7b-8085487a6f3c@177.3.208.169:443?encryption=none&fp=firefox&host=titandarkness.mooo.com&path=/21381/0kO2id8FMQ&security=tls&sni=titandarkness.mooo.com&type=ws#🇧🇷 BR // by: @kafka_sub
+vless://2a6b708e-6799-473e-85e9-d4b116c5eedc@177.3.208.169:443?encryption=none&fp=firefox&pbk=YHI3GuZf_OtRdFuJwJiTR0nmDESjiDtMV0v1BXG9U2M&security=reality&sid=0ac34cf976c0e948&sni=sub.titandarkness.mooo.com&spx=/161a928fa642750&type=tcp#🇧🇷 BR // by: @kafka_sub
+vless://2a6b708e-6799-473e-85e9-d4b116c5eedc@177.3.208.169:443?encryption=none&fp=firefox&pbk=YHI3GuZf_OtRdFuJwJiTR0nmDESjiDtMV0v1BXG9U2M&security=reality&sid=318d32c8532256fd&sni=sub.titandarkness.mooo.com&spx=/161a928fa642750&type=tcp#🇧🇷 BR // by: @kafka_sub
+vless://4f375fb4-3c95-425f-bc7b-8085487a6f3c@177.3.208.169:443?encryption=none&fp=firefox&pbk=YHI3GuZf_OtRdFuJwJiTR0nmDESjiDtMV0v1BXG9U2M&security=reality&sid=53ae5986b60c9c19&sni=sub.titandarkness.mooo.com&spx=/63223499ce6e05b&type=tcp#🇧🇷 BR // by: @kafka_sub
+vless://2a6b708e-6799-473e-85e9-d4b116c5eedc@177.3.208.169:443?encryption=none&fp=firefox&pbk=YHI3GuZf_OtRdFuJwJiTR0nmDESjiDtMV0v1BXG9U2M&security=reality&sid=09c6f40d743af241&sni=sub.titandarkness.mooo.com&spx=/161a928fa642750&type=tcp#🇧🇷 BR // by: @kafka_sub
+vless://4f375fb4-3c95-425f-bc7b-8085487a6f3c@177.3.208.169:443?encryption=none&fp=firefox&pbk=YHI3GuZf_OtRdFuJwJiTR0nmDESjiDtMV0v1BXG9U2M&security=reality&sid=60e83f46b1f7785b&sni=sub.titandarkness.mooo.com&spx=/63223499ce6e05b&type=tcp#🇧🇷 BR // by: @kafka_sub
+vless://4f375fb4-3c95-425f-bc7b-8085487a6f3c@177.3.208.169:443?encryption=none&fp=firefox&pbk=YHI3GuZf_OtRdFuJwJiTR0nmDESjiDtMV0v1BXG9U2M&security=reality&sid=b948266a6be03716&sni=sub.titandarkness.mooo.com&spx=/63223499ce6e05b&type=tcp#🇧🇷 BR // by: @kafka_sub
+vless://4f375fb4-3c95-425f-bc7b-8085487a6f3c@177.3.208.169:443?encryption=none&fp=firefox&pbk=YHI3GuZf_OtRdFuJwJiTR0nmDESjiDtMV0v1BXG9U2M&security=reality&sid=7e7d078aa03e3ca2&sni=sub.titandarkness.mooo.com&spx=/63223499ce6e05b&type=tcp#🇧🇷 BR // by: @kafka_sub
