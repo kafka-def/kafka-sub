@@ -4,25 +4,6 @@
 #support-url: telegram.me/kafka_def
 #announce: разработка @kafka_def // обновлено 9 августа 17:00 MSK // всего 17 конфигов
 
+trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#пересборка конфигураций
 trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#по вопросам @kafka_def
 trojan://0023456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#поддержать ₽ @kafka_def
-
-vless://c04bf2df-2b7f-44da-a893-3792d3910fd8@185.232.117.116:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=vl06.skorostnet.space&fp=firefox&pbk=aBNWkd8CVkuimbtzgsDNsIUIENI-PQuKkpUInLncz2o&sid=fdda9806fe5d8584&type=tcp&headerType=none#🇪🇪 EE // by: @kafka_sub
-vless://b406bc51-9002-474c-beae-b194b02c91da@144.31.131.241:8443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=mold.speedload.online&fp=firefox&pbk=J5ITJbg5FQFembAfkogKHHQB6DigsFXQxK7xu-QMWUs&sid=a20d3ed244c76426&type=tcp&headerType=none#🇲🇩 MD // by: @kafka_sub
-vless://06d44c57-8e1a-41f4-b9c4-65d35869e078@78.17.154.129:13868?flow=xtls-rprx-vision&encryption=none&security=reality&sni=wp.pl&fp=firefox&pbk=YxGdcVKnOjKUtaG-E68lzI_rd9DI5RvsbLY0qyMFX2w&sid=e852dc&type=tcp&headerType=none#🇵🇱 PL // by: @kafka_sub
-vless://f61025f4-7973-4e3e-883c-a0fe85f0489c@pl.rexten.cc:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=pl.rexten.cc&fp=firefox&pbk=OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ&type=tcp&headerType=none#🇵🇱 PL // by: @kafka_sub
-vless://5fa4e57e-62dc-4a8f-9b4c-a43f1899cd5e@45.143.200.166:2096?encryption=none&security=reality&sni=free01.tunnely.space&fp=firefox&pbk=mChFHtaRmeuO2aDuDPqZvBFaCz6f34sVJIKuJcAR130&sid=2e40144ddc07e8e1&type=grpc&mode=gun&authority=&serviceName=grpc#🇨🇭 CH // by: @kafka_sub
-vless://8fdf6dde-a1ca-456d-9b18-86b74d5768e6@45.131.212.15:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=abuse.sellflow.org&fp=firefox&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&type=tcp&headerType=none#🇨🇭 CH // by: @kafka_sub
-vless://8fdf6dde-a1ca-456d-9b18-86b74d5768e6@193.233.255.11:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=abuse.sellflow.org&fp=firefox&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&type=tcp&headerType=none#🇨🇭 CH // by: @kafka_sub
-vless://f9959a44-4836-4d29-8029-c539a26e77c5@178.83.121.28:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=hk.s3-cloud.org&fp=firefox&pbk=nFJCJ2tvxLdLrc9G-O1laW8KDir5SDnaOTmYndVaOGQ&sid=7a3f9e2b1c8d4f6a&type=tcp&headerType=none#🇨🇭 CH // by: @kafka_sub
-vless://f9959a44-4836-4d29-8029-c539a26e77c5@178.83.121.33:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=hk.s3-cloud.org&fp=firefox&pbk=nFJCJ2tvxLdLrc9G-O1laW8KDir5SDnaOTmYndVaOGQ&sid=7a3f9e2b1c8d4f6a&type=tcp&headerType=none#🇨🇭 CH // by: @kafka_sub
-vless://f61025f4-7973-4e3e-883c-a0fe85f0489c@ne4.rexten.cc:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=ne4.rexten.cc&fp=firefox&pbk=OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ&type=tcp&headerType=none#🇪🇺 EU // by: @kafka_sub
-vless://f61025f4-7973-4e3e-883c-a0fe85f0489c@lv.rexten.cc:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=lv.rexten.cc&fp=firefox&pbk=OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ&type=tcp&headerType=none#🇪🇺 EU // by: @kafka_sub
-vless://f61025f4-7973-4e3e-883c-a0fe85f0489c@us.rexten.cc:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=us.rexten.cc&fp=firefox&pbk=OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ&type=tcp&headerType=none#🇪🇺 EU // by: @kafka_sub
-vless://f61025f4-7973-4e3e-883c-a0fe85f0489c@sw.rexten.cc:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=sw.rexten.cc&fp=firefox&pbk=OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ&type=tcp&headerType=none#🇪🇺 EU // by: @kafka_sub
-vless://7f0986ee-2ff5-49b1-9577-93f7d483816a@sweden.dance-tonic.rutube.info:8443?encryption=none&security=reality&sni=sweden.dance-tonic.rutube.info&fp=firefox&pbk=9OYY5pqE32-AqAkHK9Pv2TNoaAFwFFRMJKT4_ccSil4&sid=08&type=grpc&mode=gun&authority=&serviceName=grpc#🇪🇺 EU // by: @kafka_sub
-vless://7f0986ee-2ff5-49b1-9577-93f7d483816a@ee.cdn-update.rutube.info:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=wpark.ee&fp=firefox&pbk=-AdhgMZeNHR2zAmGWa5peg7Ni0-e4IVMoSzydC9n7C4&sid=08&type=tcp&headerType=none#🇪🇺 EU // by: @kafka_sub
-vless://7f0986ee-2ff5-49b1-9577-93f7d483816a@nl.cdn.rutube.info:8443?encryption=none&security=reality&sni=jagersvereniging.nl&fp=firefox&pbk=NW2c4t6gXODenb0_Mo5Qf-1nrJr5xFQm30zf-IVfHjY&sid=08&type=grpc&mode=gun&authority=&serviceName=grpc#🇪🇺 EU // by: @kafka_sub
-vless://7f0986ee-2ff5-49b1-9577-93f7d483816a@api1.maxonelove.com:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=pl.maxonelove.com&fp=firefox&pbk=o_ZQuEx_ealt_YkqgtYRqFhee0pzFkg9ObUhODLTAB8&sid=08&type=tcp&headerType=none#🇪🇺 EU // by: @kafka_sub
-vless://8e9b2c52-e083-40fb-92c1-8a8cd4c6a02c@217.150.197.54:8443?encryption=none&security=tls&sni=2.26.148.147.tyr-agentstvo.tech&alpn=http%2F1.1&fp=firefox&type=ws&path=%2Fwebsocket%3Fed%3D2560#🇪🇺 EU // by: @kafka_sub
-vless://8e9b2c52-e083-40fb-92c1-8a8cd4c6a02c@78.159.240.215:8443?encryption=none&security=tls&sni=2.26.148.147.tyr-agentstvo.tech&alpn=http%2F1.1&fp=firefox&type=ws&path=%2Fwebsocket%3Fed%3D2560#🇪🇺 EU // by: @kafka_sub
