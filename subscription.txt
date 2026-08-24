@@ -4,4 +4,4 @@
 #support-url: telegram.me/kafka_def
 #announce: автор @kafka_def // обновлено 0 августа 00:00 MSK
 
-trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#Техническое обслуживание.
+trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#Обновление сегодня.
