@@ -2,7 +2,7 @@
 #profile-title: kafka sub
 #profile-update-interval: 1
 #support-url: telegram.me/kafka_def
-#announce: автор @kafka_def // переезд на .yaml // получить ссылку инструкции и ссылку у .yaml
+#announce: автор @kafka_def // переезд на .yaml // получить инструкции и ссылку у @rudy_bd
 
 trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#перезд на .yaml
 trojan://0123456089abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#получить ссылку
