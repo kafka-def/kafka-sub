@@ -1,2 +1,3 @@
 https://gitverse.ru/api/repos/Akres/VPN/raw/branch/master/all
 https://gitverse.ru/api/repos/Akres/VPN/raw/branch/master/bwl
+https://sub.vlessfo.ru/vlessforu/working_configs.txt
