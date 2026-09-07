@@ -1,19 +1,6 @@
 mixed-port: 7890
 mode: rule
 proxies:
-- name: 🇳🇱 3
-  type: vless
-  server: 43.245.227.70
-  port: 443
-  uuid: f1c496bf-d2ab-45be-bc13-051d60d227b7
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: 2mdn-cn.net
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: nULEPKy53x8pz3C1grQxzZ9hcADidKOeyMhSipgODwI
 - name: Бесплатный 40
   type: vless
   server: 89.105.206.122
@@ -29,6 +16,31 @@ proxies:
   reality-opts:
     public-key: 8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w
     short-id: 00a61d55a07de885
+- name: 🇳🇱 3
+  type: vless
+  server: 43.245.227.70
+  port: 443
+  uuid: f1c496bf-d2ab-45be-bc13-051d60d227b7
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 2mdn-cn.net
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: nULEPKy53x8pz3C1grQxzZ9hcADidKOeyMhSipgODwI
+- name: Бесплатный 34
+  type: vless
+  server: 50.7.226.172
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  udp: true
+  encryption: none
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: viper-21.moriarty-web.com
+  client-fingerprint: firefox
 - name: Бесплатный 33
   type: vless
   server: 50.7.226.171
@@ -42,18 +54,6 @@ proxies:
   client-fingerprint: firefox
   alpn:
   - h2
-- name: Бесплатный 34
-  type: vless
-  server: 50.7.226.172
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  udp: true
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: viper-21.moriarty-web.com
-  client-fingerprint: firefox
 - name: Бесплатный 11
   type: vless
   server: 143.246.182.63
@@ -72,108 +72,51 @@ proxies:
   xhttp-opts:
     path: /assets/build/_app/immutable/chunks/stream-one/
     host: uk10.filesnap.tech
-- name: Бесплатный 5
+- name: Бесплатный 47
   type: vless
-  server: 104.194.143.112
-  port: 443
-  uuid: 268b4f72-c447-4ff4-840a-c178e551e743
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: cdn.dodostatic.net
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: HcBAHoLxmHEKHLNpHOn-XOSNsVlJQThcqtov7le50Gg
-    short-id: aeb1eee5185a2c19
-- name: tg:VlessForU 2
-  type: vless
-  server: 50.7.248.234
+  server: viper-21.moriarty-web.com
   port: 443
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: viper-22.moriarty-web.com
+  servername: viper-21.moriarty-web.com
   client-fingerprint: firefox
-  alpn:
-  - h2
-- name: SNi 6
+- name: '5037'
   type: vless
-  server: 94.228.219.174
-  port: 443
-  uuid: eb0e3aec-f67f-4fa2-8577-b0bff0484e77
+  server: 45.144.28.39
+  port: 2053
+  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: vk.ru
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: dRLd_E_GYCkCcwxLN5EcRQYsREKqisb26_ZSehxUpWY
+    short-id: 1eb8ea8dae937ae0
+- name: 🇺🇸 8
+  type: vless
+  server: us02.keyinvest.org
+  port: 1444
+  uuid: 1f61fc64-3113-4a23-9670-a33208026dbc
   udp: true
   encryption: none
   network: xhttp
   tls: true
-  servername: sstats.vk-portal.net
-  client-fingerprint: firefox
+  servername: 5post-gate.x5.ru
+  client-fingerprint: qq
   reality-opts:
-    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
-    short-id: f79448a30d
+    public-key: laQ_nym00MMR_SCNOOr5c7HMCtfmGfAQaHYMswZys1g
+    short-id: a8f3c1d7e9b4c2f6
   xhttp-opts:
-    path: /assets/v2/pkg
-- name: Бесплатный 25
-  type: vless
-  server: 194.34.175.235
-  port: 443
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-  udp: true
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: localhost
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
+    path: /xhttp-proxy
+    mode: auto
 - name: Бесплатный 23
   type: vless
   server: 194.34.175.158
-  port: 443
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-  udp: true
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: localhost
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-- name: Бесплатный 26
-  type: vless
-  server: 194.34.175.66
-  port: 443
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-  udp: true
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: localhost
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-- name: Бесплатный 22
-  type: vless
-  server: 194.34.175.143
-  port: 443
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-  udp: true
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: localhost
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-- name: Бесплатный 27
-  type: vless
-  server: 194.34.175.70
   port: 443
   uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
   udp: true
@@ -199,9 +142,23 @@ proxies:
   client-fingerprint: firefox
   reality-opts:
     public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-- name: Бесплатный 21
+- name: Бесплатный 22
   type: vless
-  server: 194.34.175.123
+  server: 194.34.175.143
+  port: 443
+  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
+  udp: true
+  encryption: none
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: localhost
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
+- name: Бесплатный 25
+  type: vless
+  server: 194.34.175.235
   port: 443
   uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
   udp: true
@@ -227,7 +184,118 @@ proxies:
   client-fingerprint: firefox
   reality-opts:
     public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-- name: SNi 5
+- name: Бесплатный 21
+  type: vless
+  server: 194.34.175.123
+  port: 443
+  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
+  udp: true
+  encryption: none
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: localhost
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
+- name: Бесплатный 27
+  type: vless
+  server: 194.34.175.70
+  port: 443
+  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
+  udp: true
+  encryption: none
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: localhost
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
+- name: '2887'
+  type: vless
+  server: 81.90.17.164
+  port: 443
+  uuid: cb784d00-d34a-4389-b938-8717f7b28353
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: yastatic.net
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: v0XQn6uvyC8q5CThcRYLer1F1OOYpZDn5NLOvDicaWg
+    short-id: b31c2b75add2e5fa
+- name: '5602'
+  type: vless
+  server: 81.90.17.164
+  port: 443
+  uuid: cb784d00-d34a-4389-b938-8717f7b28353
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: yastatic.net
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: v0XQn6uvyC8q5CThcRYLer1F1OOYpZDn5NLOvDicaWg
+    short-id: b31c2b75add2e5fa
+- name: Бесплатный 26
+  type: vless
+  server: 194.34.175.66
+  port: 443
+  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
+  udp: true
+  encryption: none
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: localhost
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
+- name: 🇪🇪
+  type: vless
+  server: estron.nxxzxaw.beer
+  port: 443
+  uuid: 02f3a6a2-289e-4026-8e26-616d47e0914f
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: estron.nxxzxaw.beer
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 98MNvJC4t0ZjK_xHlQjOx2WfLfAPluNDb71MzS9sPT8
+    short-id: 38018dde3e27335e
+- name: tg:VlessForU
+  type: vless
+  server: 50.7.248.234
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: viper-22.moriarty-web.com
+  client-fingerprint: firefox
+  alpn:
+  - h2
+- name: Бесплатный 35
+  type: vless
+  server: 50.7.249.178
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  udp: true
+  encryption: none
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: pl2-ded.moritech.net
+  client-fingerprint: firefox
+  alpn:
+  - h2
+- name: SNi 3
   type: vless
   server: 94.228.219.172
   port: 443
@@ -243,66 +311,181 @@ proxies:
     short-id: f79448a30d
   xhttp-opts:
     path: /assets/v2/pkg
-- name: 🇩🇪
+- name: SNi 4
   type: vless
-  server: 132.243.228.209
-  port: 9443
-  uuid: 70d482eb-7584-4841-a02a-c668f1ee33e7
+  server: 94.228.219.174
+  port: 443
+  uuid: eb0e3aec-f67f-4fa2-8577-b0bff0484e77
   udp: true
   encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
+  network: xhttp
   tls: true
-  servername: de3.routeliora.ru
+  servername: sstats.vk-portal.net
   client-fingerprint: firefox
   reality-opts:
-    public-key: bDDR3ubmqiA8nv8uD72QLIKgpcWaENtY0Vumrce6jgg
-    short-id: 7a8b9c0d
-- name: Бесплатный 36
+    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
+    short-id: f79448a30d
+  xhttp-opts:
+    path: /assets/v2/pkg
+- name: 🇳🇱 6
   type: vless
-  server: 50.7.36.26
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  server: nl01.keyinvest.org
+  port: 1444
+  uuid: 1f61fc64-3113-4a23-9670-a33208026dbc
   udp: true
   encryption: none
+  network: xhttp
+  tls: true
+  servername: 5post-gate.x5.ru
+  client-fingerprint: qq
+  reality-opts:
+    public-key: laQ_nym00MMR_SCNOOr5c7HMCtfmGfAQaHYMswZys1g
+    short-id: a8f3c1d7e9b4c2f6
+  xhttp-opts:
+    path: /xhttp-proxy
+    mode: auto
+- name: '0620'
+  type: vless
+  server: 89.36.161.222
+  port: 2053
+  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+  udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: at2.moritech.net
-  client-fingerprint: firefox
-  alpn:
-  - h2
-- name: Бесплатный 37
-  type: vless
-  server: 50.7.37.154
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  udp: true
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: at1.moritech.net
-  client-fingerprint: firefox
-  alpn:
-  - h2
-- name: 🇩🇪 5
-  type: vless
-  server: 91.224.86.107
-  port: 9830
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-  udp: true
-  encryption: none
-  network: grpc
-  tls: true
-  servername: dl.google.com
+  servername: vk.ru
   client-fingerprint: firefox
   reality-opts:
-    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-    short-id: aabbccdd
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-- name: SNi 7
+    public-key: cGVu5j95KoeHBkWXveyTKolORbdvZm9g1T6yyo64ZBg
+- name: '4724'
+  type: vless
+  server: 150.241.101.80
+  port: 8443
+  uuid: 47d9b534-8a0a-4bd2-90f1-1d6ade14427e
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: yandex.net
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    short-id: 6ba85179e30d4fc2
+- name: '5656'
+  type: vless
+  server: 89.36.161.222
+  port: 2053
+  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: vk.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: cGVu5j95KoeHBkWXveyTKolORbdvZm9g1T6yyo64ZBg
+    short-id: d26f4703cdd30f4e
+- name: Бесплатный 16
+  type: vless
+  server: 151.242.2.81
+  port: 443
+  uuid: 0a2dde28-70da-4863-a06f-35d007d94d35
+  udp: true
+  network: ws
+  tls: true
+  servername: cf9.rumedia-cdn.com
+  client-fingerprint: qq
+  ws-opts:
+    path: /cdn/v3/live
+    headers:
+      Host: cf9.rumedia-cdn.com
+- name: Бесплатный 9
+  type: vless
+  server: 138.124.183.18
+  port: 443
+  uuid: d9d0f208-d582-41d5-bb7b-742671402810
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: eu-east-es-1.hanvpn.biz
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 2yLrSZNVyK-n2NSJuVnkokYlFS4q07OT_CfGrDiTRhY
+    short-id: 25b5a7681806bc97
+- name: Beta-тест
+  type: vless
+  server: 200.165.229.159
+  port: 443
+  uuid: 3db8407b-1f96-4b82-bfeb-55258c1e57b4
+  udp: true
+  encryption: none
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: flarora.ferreo.sbs
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: HKKWGVu7xJfscDTH_28WhqSfSnp8fA5jpj7X1eMO-mU
+    short-id: 1067b23f928e7618
+- name: '3244'
+  type: vless
+  server: 95.85.224.51
+  port: 443
+  uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: max.ru
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
+    short-id: a696de84963656de
+- name: '5938'
+  type: vless
+  server: 95.85.224.51
+  port: 443
+  uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: max.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
+    short-id: a696de84963656de
+- name: '4667'
+  type: vless
+  server: 95.85.224.51
+  port: 443
+  uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: max.ru
+  client-fingerprint: qq
+  reality-opts:
+    public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
+    short-id: a696de84963656de
+- name: 🇸🇪 2
+  type: vless
+  server: 5.157.10.146
+  port: 443
+  uuid: 732255eb-8ce9-4cd5-8bdc-376bd3fa0b11
+  udp: true
+  encryption: none
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: sweb1.loozerp.wiki
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA
+    short-id: fb442438e2223836
+- name: SNi 5
   type: vless
   server: nld-0001.api.packet-drop-society.net
   port: 443
@@ -320,114 +503,7 @@ proxies:
   xhttp-opts:
     path: /assets/v2/pkg
     mode: auto
-- name: Бесплатный 17
-  type: vless
-  server: 185.126.238.87
-  port: 2083
-  uuid: 7668f678-faee-40cc-9b56-9c39dc773388
-  udp: true
-  network: grpc
-  grpc-opts:
-    grpc-service-name: security.debian.org
-- name: Бесплатный 48
-  type: vless
-  server: viper-21.moriarty-web.com
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: viper-21.moriarty-web.com
-  client-fingerprint: firefox
-- name: Бесплатный 16
-  type: vless
-  server: 151.242.2.81
-  port: 443
-  uuid: 0a2dde28-70da-4863-a06f-35d007d94d35
-  udp: true
-  network: ws
-  tls: true
-  servername: cf9.rumedia-cdn.com
-  client-fingerprint: qq
-  ws-opts:
-    path: /cdn/v3/live
-    headers:
-      Host: cf9.rumedia-cdn.com
-- name: Бесплатный 35
-  type: vless
-  server: 50.7.249.178
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  udp: true
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: pl2-ded.moritech.net
-  client-fingerprint: firefox
-  alpn:
-  - h2
-- name: 🇳🇱 7
-  type: vless
-  server: unlimited.gruztrack.online
-  port: 8080
-  uuid: 6e34a4ea-f950-490d-92f6-51b64ad5c133
-  udp: true
-  network: xhttp
-  tls: true
-  servername: max.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 0iAwNpu3TAZxNlRX8gSiYPbx-S-P12fYe5h_xAxoWAQ
-    short-id: 6d6f13013d3e1d0c
-  xhttp-opts:
-    mode: packet-up
-- name: Бесплатный 9
-  type: vless
-  server: 138.124.183.18
-  port: 443
-  uuid: d9d0f208-d582-41d5-bb7b-742671402810
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: eu-east-es-1.hanvpn.biz
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 2yLrSZNVyK-n2NSJuVnkokYlFS4q07OT_CfGrDiTRhY
-    short-id: 25b5a7681806bc97
-- name: 🇳🇱 4
-  type: vless
-  server: 65.109.238.140
-  port: 443
-  uuid: 05bfcbaa-cba0-4bce-9103-09fe3f5f0667
-  udp: true
-  encryption: none
-  network: xhttp
-  tls: true
-  servername: hel1.nordlinkcloud.com
-  client-fingerprint: edge
-  alpn:
-  - h2
-  xhttp-opts:
-    path: /api/v3/stream/
-    x-padding-bytes: 100-1000
-- name: 🇺🇸 3
-  type: vless
-  server: 46.173.25.146
-  port: 443
-  uuid: 8d1a1b09-12d6-4b76-82f0-893cc805d9c0
-  udp: true
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: ru.crunch-crunch.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: djTtGqd0XWqtt_WHukU7BTPQSn9o7gIpAosAxMy8tUo
-    short-id: ea1058117be12087
-- name: 🇷🇺
+- name: 🇷🇺 2
   type: vless
   server: 31.76.88.10
   port: 443
@@ -445,50 +521,62 @@ proxies:
     path: /cdn/v3/live
     headers:
       Host: cf5.rumedia-cdn.com
-- name: Beta-тест
+- name: 🇫🇮 4
   type: vless
-  server: 200.165.229.159
+  server: glowingjockeycorny.grayribbon.app
   port: 443
-  uuid: 3db8407b-1f96-4b82-bfeb-55258c1e57b4
+  uuid: 7a97f64d-5fc7-4011-9028-58d2ba751595
   udp: true
   encryption: none
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: flarora.ferreo.sbs
+  servername: glowingjockeycorny.grayribbon.app
   client-fingerprint: firefox
   reality-opts:
-    public-key: HKKWGVu7xJfscDTH_28WhqSfSnp8fA5jpj7X1eMO-mU
-    short-id: 1067b23f928e7618
-- name: Бесплатный 15
+    public-key: GJu4Ucn-XsY8pYyihFZOtFZWaowxSV8JqcVozlfSqkk
+    short-id: e066cfc5aed13a33
+- name: Бесплатный 14
   type: vless
-  server: 151.242.168.125
-  port: 390
-  uuid: 7b363f9c-3df9-4b60-a789-9cd36be0bdfe
+  server: 149.118.55.234
+  port: 443
+  uuid: 58f7687b-5209-4dcd-a11e-6e4eb2191378
   udp: true
-  encryption: none
+  network: ws
+  tls: true
+  servername: edge.xlordgrim.com
+  ws-opts:
+    path: /xlordgrim/sg
+    headers:
+      Host: edge.xlordgrim.com
+- name: '5539'
+  type: vless
+  server: 144.31.50.236
+  port: 443
+  uuid: 1c332eae-7e02-4acd-996d-4eb3e652401c
+  udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: bowandbead.com
-  client-fingerprint: qq
+  servername: yandex.ru
+  client-fingerprint: firefox
   reality-opts:
-    public-key: 5RCgAVjaT7hwdVIKAEULswXGqR127ZOZV6X17nEhYk8
-    short-id: b545fe8c5e22f92d
-- name: Бесплатный 7
+    public-key: uitO4Z8t9TplwwYaqwLqh5rfxDh_X8bOBiNuPbzvaEM
+    short-id: bbe46bd8f6b96839
+- name: Бесплатный 5
   type: vless
-  server: 107.189.19.27
+  server: 104.194.143.112
   port: 443
-  uuid: 813a385c-f26f-48b5-9bbb-53204a9c5bcc
+  uuid: 268b4f72-c447-4ff4-840a-c178e551e743
   udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
   servername: cdn.dodostatic.net
-  client-fingerprint: qq
+  client-fingerprint: firefox
   reality-opts:
-    public-key: Sgocj9v63XdHU04TV3-Pk141YPIT_E-UgLr9u4OkE0E
-    short-id: d27201f7bf5874f9
+    public-key: HcBAHoLxmHEKHLNpHOn-XOSNsVlJQThcqtov7le50Gg
+    short-id: aeb1eee5185a2c19
 - name: Бесплатный
   type: vless
   server: 102.211.56.29
@@ -504,21 +592,66 @@ proxies:
   reality-opts:
     public-key: 8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w
     short-id: 00a61d55a07de885
-- name: Бесплатный 31
+- name: 🇭🇰 3
   type: vless
-  server: 45.9.168.17
+  server: hk01.keyinvest.org
+  port: 1444
+  uuid: 1f61fc64-3113-4a23-9670-a33208026dbc
+  udp: true
+  encryption: none
+  network: xhttp
+  tls: true
+  servername: 5post-gate.x5.ru
+  client-fingerprint: qq
+  reality-opts:
+    public-key: laQ_nym00MMR_SCNOOr5c7HMCtfmGfAQaHYMswZys1g
+    short-id: a8f3c1d7e9b4c2f6
+  xhttp-opts:
+    path: /xhttp-proxy
+    mode: auto
+- name: 🇪🇪 2
+  type: vless
+  server: turtlethriftsuds.spindlehouse.art
   port: 443
-  uuid: 5d4a87fa-16f1-4b65-b217-225a31e36239
+  uuid: 7a97f64d-5fc7-4011-9028-58d2ba751595
   udp: true
   encryption: none
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: hu.convert-flow.net
+  servername: turtlethriftsuds.spindlehouse.art
   client-fingerprint: firefox
   reality-opts:
-    public-key: 8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w
-    short-id: 00a61d55a07de885
+    public-key: MRh1vF7XBdr5KhoaMOC8BcZJy0xs5ZfD9gwiVyzhN08
+    short-id: 79281cd08b6fad6a
+- name: Бесплатный 7
+  type: vless
+  server: 107.189.19.27
+  port: 443
+  uuid: 813a385c-f26f-48b5-9bbb-53204a9c5bcc
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: cdn.dodostatic.net
+  client-fingerprint: qq
+  reality-opts:
+    public-key: Sgocj9v63XdHU04TV3-Pk141YPIT_E-UgLr9u4OkE0E
+    short-id: d27201f7bf5874f9
+- name: '3301'
+  type: vless
+  server: prep.wwwinternetvideo.click
+  port: 443
+  uuid: 1c332eae-7e02-4acd-996d-4eb3e652401c
+  udp: true
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: yandex.ru
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: uitO4Z8t9TplwwYaqwLqh5rfxDh_X8bOBiNuPbzvaEM
+    short-id: bbe46bd8f6b96839
 - name: Бесплатный 20
   type: vless
   server: 188.253.27.22
@@ -533,65 +666,79 @@ proxies:
     path: /proxyip=tw.william.us.ci?uuid=82bc2875-3fee-49d1-ab29-e108a7b1e5f9
     headers:
       Host: sni.868001.xyz
-- name: Бесплатный 8
+- name: '7030'
   type: vless
-  server: 132.243.228.209
-  port: 8443
-  uuid: 70d482eb-7584-4841-a02a-c668f1ee33e7
+  server: 45.12.75.242
+  port: 26424
+  uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
   udp: true
-  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: de2.routeliora.ru
+  servername: ya.ru
   client-fingerprint: firefox
   reality-opts:
-    public-key: bDDR3ubmqiA8nv8uD72QLIKgpcWaENtY0Vumrce6jgg
-    short-id: 9f3a7c2d
-- name: SNi 2
+    public-key: l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0
+    short-id: 23103e1e
+- name: Бесплатный 10
   type: vless
-  server: 178.72.141.199
+  server: 142.91.102.35
   port: 443
-  uuid: b2965434-9d33-4eb7-b463-d1043e39092f
+  uuid: 54a9c202-cfe9-4bb8-826c-653a52a96c6d
   udp: true
   encryption: none
+  network: tcp
+  tls: true
+  servername: 8.sahanwickramasinghe.me
+  client-fingerprint: firefox
+- name: 🇸🇪 4
+  type: vless
+  server: swegen.gaawg.buzz
+  port: 443
+  uuid: 02f3a6a2-289e-4026-8e26-616d47e0914f
+  udp: true
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: m.vk.com
-  client-fingerprint: firefox
+  servername: swegen.gaawg.buzz
+  client-fingerprint: qq
   reality-opts:
-    public-key: 4Z1HpHko94l9nZW0Gbn22VSwb8DexIzNPjHehOALfWM
-    short-id: b23516
-- name: Бесплатный 32
+    public-key: pgG2grngQEtOFJImLfz0AEm-O2IodM2jCY4aMCYQI1U
+    short-id: 6aa2d2e950441a9a
+- name: Бесплатный 17
   type: vless
-  server: 5.157.10.146
+  server: 185.126.238.87
+  port: 2083
+  uuid: 7668f678-faee-40cc-9b56-9c39dc773388
+  udp: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: security.debian.org
+- name: Beta-тест 3
+  type: vless
+  server: ru05.abvpn.ru
   port: 443
-  uuid: 732255eb-8ce9-4cd5-8bdc-376bd3fa0b11
+  uuid: a289a3d3-5833-4b28-8809-ae72898a98d0
   udp: true
   encryption: none
-  flow: xtls-rprx-vision
+  network: ws
+  tls: true
+  servername: ru05.abvpn.ru
+  client-fingerprint: android
+  ws-opts:
+    path: /websocket
+- name: '5666'
+  type: vless
+  server: 45.12.75.242
+  port: 26424
+  uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
+  udp: true
   network: tcp
   tls: true
-  servername: sweb1.loozerp.wiki
-  client-fingerprint: firefox
+  servername: ya.ru
+  client-fingerprint: chrome
   reality-opts:
-    public-key: x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA
-    short-id: fb442438e2223836
-- name: Бесплатный 46
-  type: vless
-  server: pl6.moritech.net
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  udp: true
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: pl6.moritech.net
-  client-fingerprint: firefox
-  alpn:
-  - v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus
-  skip-cert-verify: false
+    public-key: l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0
+    short-id: 23103e1e
 - name: Бесплатный 6
   type: vless
   server: 107.181.151.241
@@ -606,42 +753,22 @@ proxies:
   reality-opts:
     public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
     short-id: 225e930cfd4d
-- name: Beta-тест 3
+- name: 🇩🇪 6
   type: vless
-  server: ru05.abvpn.ru
+  server: cribkisserevict.indigoyarn.art
   port: 443
-  uuid: a289a3d3-5833-4b28-8809-ae72898a98d0
+  uuid: 7a97f64d-5fc7-4011-9028-58d2ba751595
   udp: true
   encryption: none
-  network: ws
-  tls: true
-  servername: ru05.abvpn.ru
-  client-fingerprint: android
-  ws-opts:
-    path: /websocket
-- name: Бесплатный 14
-  type: vless
-  server: 149.118.55.234
-  port: 443
-  uuid: 58f7687b-5209-4dcd-a11e-6e4eb2191378
-  udp: true
-  network: ws
-  tls: true
-  servername: edge.xlordgrim.com
-  ws-opts:
-    path: /xlordgrim/sg
-    headers:
-      Host: edge.xlordgrim.com
-- name: Бесплатный 39
-  type: vless
-  server: 8.sahanwickramasinghe.me
-  port: 443
-  uuid: 54a9c202-cfe9-4bb8-826c-653a52a96c6d
-  udp: true
+  flow: xtls-rprx-vision
   network: tcp
   tls: true
-  client-fingerprint: android
-- name: 🇳🇱 5
+  servername: cribkisserevict.indigoyarn.art
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: ruLdcX4DDyrZGzDhy4Da87fULoIZs5wbpESDpTbALQw
+    short-id: 7afc7016631aa46a
+- name: '🇳🇱Авто - Обход глушилок (LTE) #1'
   type: vless
   server: asd.coteite.pro
   port: 14443
@@ -657,20 +784,24 @@ proxies:
     path: /tzws
     headers:
       Host: asd.coteite.pro
-- name: Бесплатный 10
+- name: Бесплатный 3
   type: vless
-  server: 142.91.102.35
-  port: 443
-  uuid: 54a9c202-cfe9-4bb8-826c-653a52a96c6d
+  server: 104.17.73.206
+  port: 8443
+  uuid: 542fd687-5160-4f80-9223-56678567dd29
   udp: true
   encryption: none
-  network: tcp
+  network: ws
   tls: true
   servername: 8.sahanwickramasinghe.me
   client-fingerprint: firefox
-- name: Бесплатный 13
+  ws-opts:
+    path: /
+    headers:
+      Host: 8.sahanwickramasinghe.me
+- name: Бесплатный 45
   type: vless
-  server: 144.31.5.3
+  server: pl6.moritech.net
   port: 443
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
   udp: true
@@ -678,62 +809,72 @@ proxies:
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: pl4.moritech.net
+  servername: pl6.moritech.net
   client-fingerprint: firefox
   alpn:
-  - h2
+  - v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus
+  skip-cert-verify: false
 proxy-groups:
 - name: 🚀 Freedom Rudy
   type: select
   proxies:
-  - 🇳🇱 3
   - Бесплатный 40
-  - Бесплатный 33
+  - 🇳🇱 3
   - Бесплатный 34
+  - Бесплатный 33
   - Бесплатный 11
-  - Бесплатный 5
-  - tg:VlessForU 2
-  - SNi 6
-  - Бесплатный 25
+  - Бесплатный 47
+  - '5037'
+  - 🇺🇸 8
   - Бесплатный 23
-  - Бесплатный 26
-  - Бесплатный 22
-  - Бесплатный 27
   - Бесплатный 24
-  - Бесплатный 21
+  - Бесплатный 22
+  - Бесплатный 25
   - Бесплатный 28
-  - SNi 5
-  - 🇩🇪
-  - Бесплатный 36
-  - Бесплатный 37
-  - 🇩🇪 5
-  - SNi 7
-  - Бесплатный 17
-  - Бесплатный 48
-  - Бесплатный 16
+  - Бесплатный 21
+  - Бесплатный 27
+  - '2887'
+  - '5602'
+  - Бесплатный 26
+  - 🇪🇪
+  - tg:VlessForU
   - Бесплатный 35
-  - 🇳🇱 7
+  - SNi 3
+  - SNi 4
+  - 🇳🇱 6
+  - '0620'
+  - '4724'
+  - '5656'
+  - Бесплатный 16
   - Бесплатный 9
-  - 🇳🇱 4
-  - 🇺🇸 3
-  - 🇷🇺
   - Beta-тест
-  - Бесплатный 15
-  - Бесплатный 7
-  - Бесплатный
-  - Бесплатный 31
-  - Бесплатный 20
-  - Бесплатный 8
-  - SNi 2
-  - Бесплатный 32
-  - Бесплатный 46
-  - Бесплатный 6
-  - Beta-тест 3
+  - '3244'
+  - '5938'
+  - '4667'
+  - 🇸🇪 2
+  - SNi 5
+  - 🇷🇺 2
+  - 🇫🇮 4
   - Бесплатный 14
-  - Бесплатный 39
-  - 🇳🇱 5
+  - '5539'
+  - Бесплатный 5
+  - Бесплатный
+  - 🇭🇰 3
+  - 🇪🇪 2
+  - Бесплатный 7
+  - '3301'
+  - Бесплатный 20
+  - '7030'
   - Бесплатный 10
-  - Бесплатный 13
+  - 🇸🇪 4
+  - Бесплатный 17
+  - Beta-тест 3
+  - '5666'
+  - Бесплатный 6
+  - 🇩🇪 6
+  - '🇳🇱Авто - Обход глушилок (LTE) #1'
+  - Бесплатный 3
+  - Бесплатный 45
   - DIRECT
 rules:
 - MATCH,🚀 Freedom Rudy
