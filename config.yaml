@@ -2,37 +2,67 @@ mixed-port: 7890
 mode: rule
 proxies:
 - type: vless
-  server: 169.40.42.224
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  server: 172.233.139.46
+  port: 53734
+  uuid: 56a1b253-cde4-490f-9c5e-09a523882bdd
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: yahoo.com
+  servername: www.tesla.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
+    public-key: JAG5rl6KEt7KAV0y8Z2x6orWHymCXRSX49SkEnEftWU
+    short-id: a56d7d8da977f860
+  network: tcp
+  _source_name: 🇺🇸
+  name: Испания 1
+- type: vless
+  server: 172.235.43.210
+  port: 53957
+  uuid: 7ab29f89-6eef-4171-b232-fc4f580ad31b
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.nvidia.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: XUHlbk5VH5z4E2wxZBhlpLZ33qevyQgqU7dheRDgoGQ
+    short-id: 44e82fd7b97b14
   network: tcp
   _source_name: 🇺🇸
   name: Европа 1
 - type: vless
-  server: 169.40.42.35
+  server: 172.236.233.59
   port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  uuid: abd1c29a-94cb-4648-8d1e-5baae9d2a807
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: yahoo.com
+  servername: www.cloudflare.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
+    public-key: oTMDLwY2hloBfA7ShzVsrFhjL4QXR6mY32B93rMLxV0
+    short-id: 525e0ffc773f48ba
   network: tcp
   _source_name: 🇺🇸
   name: Европа 2
 - type: vless
-  server: 169.40.42.16
+  server: 172.235.38.85
+  port: 42942
+  uuid: bca46025-bf43-40c0-895b-054a6fbcfd32
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.tesla.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: JmkfJoDWpAqt6gj4cbc4_cwItsdryMlV7joAGfNTKQU
+    short-id: a56d7d8da977f860
+  network: tcp
+  _source_name: 🇺🇸
+  name: Испания 2
+- type: vless
+  server: 169.40.42.90
   port: 443
   uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   encryption: none
@@ -47,7 +77,7 @@ proxies:
   _source_name: 🇺🇸
   name: Европа 3
 - type: vless
-  server: 169.40.42.225
+  server: 169.40.42.224
   port: 443
   uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   encryption: none
@@ -62,7 +92,7 @@ proxies:
   _source_name: 🇺🇸
   name: Европа 4
 - type: vless
-  server: 169.40.42.232
+  server: 169.40.42.74
   port: 443
   uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   encryption: none
@@ -77,19 +107,35 @@ proxies:
   _source_name: 🇺🇸
   name: Европа 5
 - type: vless
-  server: 15.204.97.195
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  server: 169.40.42.35
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: fuck.rkn
+  servername: yahoo.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
   network: tcp
   _source_name: 🇺🇸
   name: Европа 6
+- type: vless
+  server: 169.40.42.16
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  network: tcp
+  _source_name: 🇺🇸
+  name: Европа 7
 - type: vless
   server: 15.204.97.209
   port: 23576
@@ -103,24 +149,9 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
   network: tcp
   _source_name: 🇺🇸
-  name: Европа 7
-- type: vless
-  server: 51.81.203.63
-  port: 443
-  uuid: cb2dbb6a-a1ea-4023-9ace-6466cee57241
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.icloud.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0
-    short-id: 4477382ff6d3d41c
-  network: tcp
-  _source_name: 🇺🇸
   name: Европа 8
 - type: vless
-  server: 169.40.42.90
+  server: 169.40.42.225
   port: 443
   uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   encryption: none
@@ -145,27 +176,26 @@ proxies:
   client-fingerprint: firefox
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
   network: tcp
   _source_name: 🇺🇸
   name: Европа 10
 - type: vless
-  server: 15.204.97.216
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  server: 169.40.42.232
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: fuck.rkn
+  servername: yahoo.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
   network: tcp
   _source_name: 🇺🇸
   name: Европа 11
 - type: vless
-  server: 15.204.97.198
+  server: 15.204.97.195
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   encryption: none
@@ -195,80 +225,50 @@ proxies:
   _source_name: 🇺🇸
   name: Европа 13
 - type: vless
-  server: 172.235.62.90
-  port: 443
-  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
+  server: 15.204.97.198
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: www.amazon.com
+  servername: fuck.rkn
   client-fingerprint: firefox
   reality-opts:
-    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-    short-id: 1a
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
   network: tcp
   _source_name: 🇺🇸
   name: Европа 14
 - type: vless
-  server: 172.233.139.46
-  port: 53734
-  uuid: 56a1b253-cde4-490f-9c5e-09a523882bdd
+  server: 15.204.97.216
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: www.tesla.com
+  servername: fuck.rkn
   client-fingerprint: firefox
   reality-opts:
-    public-key: JAG5rl6KEt7KAV0y8Z2x6orWHymCXRSX49SkEnEftWU
-    short-id: a56d7d8da977f860
-  network: tcp
-  _source_name: 🇺🇸
-  name: Испания 1
-- type: vless
-  server: 172.235.43.210
-  port: 53957
-  uuid: 7ab29f89-6eef-4171-b232-fc4f580ad31b
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.nvidia.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: XUHlbk5VH5z4E2wxZBhlpLZ33qevyQgqU7dheRDgoGQ
-    short-id: 44e82fd7b97b14
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
   network: tcp
   _source_name: 🇺🇸
   name: Европа 15
 - type: vless
-  server: 172.236.233.59
+  server: 51.81.203.63
   port: 443
-  uuid: abd1c29a-94cb-4648-8d1e-5baae9d2a807
+  uuid: cb2dbb6a-a1ea-4023-9ace-6466cee57241
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: www.cloudflare.com
+  servername: www.icloud.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: oTMDLwY2hloBfA7ShzVsrFhjL4QXR6mY32B93rMLxV0
-    short-id: 525e0ffc773f48ba
+    public-key: nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0
+    short-id: 4477382ff6d3d41c
   network: tcp
   _source_name: 🇺🇸
   name: Европа 16
-- type: vless
-  server: 172.235.38.85
-  port: 42942
-  uuid: bca46025-bf43-40c0-895b-054a6fbcfd32
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.tesla.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: JmkfJoDWpAqt6gj4cbc4_cwItsdryMlV7joAGfNTKQU
-    short-id: a56d7d8da977f860
-  network: tcp
-  _source_name: 🇺🇸
-  name: Испания 2
 - type: vless
   server: 47.253.226.114
   port: 443
@@ -312,49 +312,75 @@ proxies:
   _source_name: 🇺🇸
   name: Европа 19
 - type: vless
-  server: 167.17.69.171
+  server: 47.251.25.74
   port: 443
-  uuid: 00144519-7e0d-476b-8d28-435576af9262
+  uuid: 18805ff3-b420-45de-af18-93be14024ae8
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: www.cloudflare.com
+  servername: www.amazon.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk
-    short-id: 0990d22f
+    public-key: H56cOJhw0xw76lDEpt7IuJJmVGemK6_CK34KtHwDMX8
   network: tcp
   _source_name: 🇺🇸
   name: Европа 20
 - type: vless
-  server: 79.141.172.154
-  port: 10453
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  server: 207.241.172.254
+  port: 12345
+  uuid: 5b8165d4-87bb-4584-96af-a4997261ffd9
   encryption: none
+  flow: xtls-rprx-vision
   tls: true
-  servername: www.google.com
+  servername: amp-api-edge.apps.apple.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: rAHMmpeUJ6uOoGgk31dTF4-1RTtLZFnOEs_li2AYQWc
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TunService
+    public-key: 1N8CIM6v_TgbIDNneyEPNQ92hyq5Eyh_irJWOXKDBDw
+    short-id: 2b368990a94e8cbb
+  network: tcp
+  _source_name: 🇺🇸
+  name: Польша 1
+- type: vless
+  server: 207.241.172.254
+  port: 12345
+  uuid: 9d1edc82-a983-496a-954a-a52e4fb13f37
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: amp-api-edge.apps.apple.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 1N8CIM6v_TgbIDNneyEPNQ92hyq5Eyh_irJWOXKDBDw
+    short-id: 2b368990a94e8cbb
+  network: tcp
+  _source_name: 🇺🇸
+  name: Польша 2
+- type: vless
+  server: 159.89.87.21
+  port: 28190
+  uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: aws.amazon.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
+  network: tcp
   _source_name: 🇺🇸
   name: Европа 21
 - type: vless
-  server: 216.227.161.95
-  port: 7443
-  uuid: 218fd696-e3a2-4c33-b397-a5f13a82969e
+  server: 23.94.227.94
+  port: 15884
+  uuid: c543f497-6a6d-4842-8317-a5f62ea56dc2
   encryption: none
   tls: true
-  servername: media3.abvphelp.cc
+  servername: www.intel.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: uNqGvaJEIFTFQvAxsTDhetPxkIWzJuBtxXsK0yFMYzM
-    short-id: 48d5cf47
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
+    public-key: rZAYGSqaklKNltwTGPpAok74VYCxV9uKvrOyydSn9UE
+    short-id: a391369e7596
+  network: tcp
   _source_name: 🇺🇸
   name: Европа 22
 - type: vless
@@ -371,10 +397,40 @@ proxies:
     short-id: 041cf34629de8469
   network: tcp
   _source_name: 🇺🇸
-  name: Польша 1
+  name: Польша 3
 - type: vless
-  server: 91.193.17.234
-  port: 9460
+  server: 47.89.186.170
+  port: 55861
+  uuid: d51ed55c-d6dd-400b-aaf6-017c33969bfe
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.intel.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs
+    short-id: 7551ed1b
+  network: tcp
+  _source_name: 🇺🇸
+  name: Европа 23
+- type: vless
+  server: 167.17.69.171
+  port: 443
+  uuid: 00144519-7e0d-476b-8d28-435576af9262
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk
+    short-id: 0990d22f
+  network: tcp
+  _source_name: 🇺🇸
+  name: Европа 24
+- type: vless
+  server: 79.141.172.154
+  port: 10453
   uuid: b3a11068-1a7e-4643-85de-7c82cce46943
   encryption: none
   tls: true
@@ -385,50 +441,6 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: TunService
-  _source_name: 🇺🇸
-  name: Европа 23
-- type: vless
-  server: 23.94.227.94
-  port: 15884
-  uuid: c543f497-6a6d-4842-8317-a5f62ea56dc2
-  encryption: none
-  tls: true
-  servername: www.intel.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: rZAYGSqaklKNltwTGPpAok74VYCxV9uKvrOyydSn9UE
-    short-id: a391369e7596
-  network: tcp
-  _source_name: 🇺🇸
-  name: Европа 24
-- type: vless
-  server: 195.123.235.177
-  port: 443
-  uuid: 729dd5f2-f5ff-4070-8c10-863eceded0b1
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 5B83otQ5ZQwtBFhR7xzsGJRXflkFKRJpQguYbE5JWGI
-    short-id: c85d029f5e8eb393
-  network: tcp
-  _source_name: 🇺🇸
-  name: Австрия 1
-- type: vless
-  server: 216.167.94.71
-  port: 25711
-  uuid: c45bc46e-d2e6-4049-b2d1-31b466d1629e
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.intel.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: nZTIbfG5GiuGVsNvTrsCAoNT9Fr198HmwMhzzca7Cws
-    short-id: e1d048284849e63e
-  network: tcp
   _source_name: 🇺🇸
   name: Европа 25
 - type: vless
@@ -446,17 +458,17 @@ proxies:
   _source_name: 🇺🇸
   name: Европа 26
 - type: vless
-  server: 169.40.42.74
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  server: 216.167.94.71
+  port: 25711
+  uuid: c45bc46e-d2e6-4049-b2d1-31b466d1629e
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: yahoo.com
+  servername: www.intel.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
+    public-key: nZTIbfG5GiuGVsNvTrsCAoNT9Fr198HmwMhzzca7Cws
+    short-id: e1d048284849e63e
   network: tcp
   _source_name: 🇺🇸
   name: Европа 27
@@ -476,37 +488,6 @@ proxies:
   _source_name: 🇺🇸
   name: Испания 3
 - type: vless
-  server: 186.246.19.79
-  port: 40443
-  uuid: 5e3f974b-06fc-4555-907a-6681391b7c17
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: deepl.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE
-    short-id: 2bc0
-  network: tcp
-  _source_name: 🇺🇸
-  name: Германия 1
-- type: vless
-  server: 193.42.12.34
-  port: 18443
-  uuid: ab6a5359-0edf-41c3-8dfd-e4b005e80820
-  encryption: none
-  tls: true
-  servername: gp2.steptofsvo.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0
-    short-id: 5c766813929a1fdd
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-  _source_name: 🇩🇪
-  name: Европа 28
-- type: vless
   server: 186.246.21.156
   port: 40443
   uuid: 17d29827-7cf1-4115-b40d-548e10ec355d
@@ -520,39 +501,170 @@ proxies:
     short-id: aa3c
   network: tcp
   _source_name: 🇺🇸
+  name: Германия 1
+- type: vless
+  server: 91.193.17.234
+  port: 9460
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  encryption: none
+  tls: true
+  servername: www.google.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: rAHMmpeUJ6uOoGgk31dTF4-1RTtLZFnOEs_li2AYQWc
+  network: grpc
+  grpc-opts:
+    grpc-service-name: TunService
+  _source_name: 🇺🇸
+  name: Европа 28
+- type: vless
+  server: 186.246.19.79
+  port: 40443
+  uuid: 5e3f974b-06fc-4555-907a-6681391b7c17
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: deepl.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE
+    short-id: 2bc0
+  network: tcp
+  _source_name: 🇺🇸
   name: Германия 2
 - type: vless
-  server: 45.157.235.14
-  port: 18443
-  uuid: ab6a5359-0edf-41c3-8dfd-e4b005e80820
+  server: 45.159.79.71
+  port: 4443
+  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
   encryption: none
+  flow: xtls-rprx-vision
   tls: true
-  servername: gp1.steptofsvo.com
+  servername: sentry.io
   client-fingerprint: firefox
   reality-opts:
-    public-key: QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0
-    short-id: 5c766813929a1fdd
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-  _source_name: 🇩🇪
+    public-key: 321Ii2xbCoyll6WJ0Qm1Sh8qcC0kxXvUaZhe3kyasD8
+    short-id: a1b2c3d4e5f6a7b8
+  network: tcp
+  _source_name: 🇺🇸
+  name: Швеция 1
+- type: vless
+  server: 94.241.174.157
+  port: 40443
+  uuid: 8ac637bf-554e-4902-94d7-baf01780a83c
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: deepl.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: mM33xyzf1GPaU2CQXAGYoGkTuYzEZRYT6S-NngyqfHQ
+    short-id: beb4
+  network: tcp
+  _source_name: 🇳🇱
+  name: Германия 3
+- type: vless
+  server: 147.45.145.127
+  port: 443
+  uuid: 534cbbe2-cc36-4f2d-8fb0-90410e7148c9
+  encryption: none
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: tWRR3W8jBAQKBUujLzL7Xri3WXy3F08OxHYrkSOnlAc
+    short-id: 52a6
+  network: tcp
+  _source_name: 🇳🇱
   name: Европа 29
 - type: vless
-  server: 45.145.43.44
-  port: 18443
-  uuid: ab6a5359-0edf-41c3-8dfd-e4b005e80820
+  server: 94.228.219.178
+  port: 443
+  uuid: eb0e3aec-f67f-4fa2-8577-b0bff0484e77
   encryption: none
   tls: true
-  servername: gp1.steptofsvo.com
+  servername: sstats.vk-portal.net
   client-fingerprint: firefox
   reality-opts:
-    public-key: QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0
-    short-id: 5c766813929a1fdd
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-  _source_name: 🇩🇪
+    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
+    short-id: f79448a30d
+  network: xhttp
+  xhttp-opts:
+    path: /assets/v2/pkg
+  _source_name: 🇳🇱
+  name: Австрия 1
+- type: vless
+  server: 50.7.182.18
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: viper-20.moriarty-web.com
+  client-fingerprint: firefox
+  alpn:
+  - h2
+  network: tcp
+  _source_name: 🇳🇱
   name: Европа 30
+- type: vless
+  server: 94.228.219.172
+  port: 443
+  uuid: eb0e3aec-f67f-4fa2-8577-b0bff0484e77
+  encryption: none
+  tls: true
+  servername: sstats.vk-portal.net
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
+    short-id: f79448a30d
+  network: xhttp
+  xhttp-opts:
+    path: /assets/v2/pkg
+  _source_name: 🇳🇱
+  name: Австрия 2
+- type: vless
+  server: 50.7.182.18
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: viper-20.moriarty-web.com
+  client-fingerprint: firefox
+  network: tcp
+  _source_name: 🇳🇱
+  name: Европа 31
+- type: vless
+  server: 94.228.219.179
+  port: 443
+  uuid: eb0e3aec-f67f-4fa2-8577-b0bff0484e77
+  encryption: none
+  tls: true
+  servername: sstats.vk-portal.net
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
+    short-id: f79448a30d
+  network: xhttp
+  xhttp-opts:
+    path: /assets/v2/pkg
+  _source_name: 🇳🇱
+  name: Австрия 3
+- type: vless
+  server: 38.209.125.45
+  port: 443
+  uuid: 394101ef-7a56-4407-bb85-f46f37b08ef4
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: tht0aIcfnLJR3pYz5ulOaV-HFR1gj6PjIKFBMPpHSAo
+    short-id: ce4fcc97d5bf5023
+  network: tcp
+  _source_name: 🇺🇸
+  name: Польша 4
 - type: vless
   server: 91.224.87.22
   port: 9873
@@ -568,37 +680,145 @@ proxies:
   grpc-opts:
     grpc-service-name: grpc-tunnel
   _source_name: 🇺🇸
-  name: Европа 31
+  name: Европа 32
 - type: vless
-  server: 47.251.25.74
-  port: 443
-  uuid: 18805ff3-b420-45de-af18-93be14024ae8
+  server: 172.239.239.53
+  port: 22746
+  uuid: a4846a6c-163f-4b12-a99f-378d814e5e09
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: www.amazon.com
+  servername: www.intel.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: H56cOJhw0xw76lDEpt7IuJJmVGemK6_CK34KtHwDMX8
+    public-key: B6bPTxNaLqqoUTuNggzTBP0pPxJEqE_Bd_Ob27MPvgU
+    short-id: d9fd4fa80238cd05
   network: tcp
-  _source_name: 🇺🇸
-  name: Европа 32
+  _source_name: 🇳🇱
+  name: Европа 33
 - type: vless
-  server: 5.175.161.47
-  port: 8443
-  uuid: eb85f61f-acb3-4689-8b7c-d8ad2a6aa43f
+  server: 139.64.166.55
+  port: 443
+  uuid: c743b343-b1c9-4e44-98a9-274df2015727
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: cudJBi1zLMATgg_nlqMK5O6Lshlv8EQ2BBQjxbpF4AY
+    short-id: eedf31ed
+  network: tcp
+  _source_name: 🇳🇱
+  name: Европа 34
+- type: vless
+  server: 152.70.58.201
+  port: 443
+  uuid: 8892e34a-339b-4526-b88d-cf68c516231c
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.nvidia.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28
+    short-id: 52c723e0fad49689
+  network: tcp
+  _source_name: 🇳🇱
+  name: Европа 35
+- type: vless
+  server: 89.208.105.204
+  port: 443
+  uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: amazon.de
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: G8SING6Ibc_igZ5vI5578fXCT_mBMRuq_o8_Ymnj2SQ
+    short-id: eba1498e012ef580
+  network: tcp
+  _source_name: 🇳🇱
+  name: Германия 4
+- type: vless
+  server: 138.16.141.59
+  port: 7443
+  uuid: a289a3d3-5833-4b28-8809-ae72898a98d0
   encryption: none
   tls: true
-  servername: gateway.icloud.com
+  servername: ibm.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: 6hrP_JlRUK40WwXk9ZL0FpB19bTR0RnrUGYX5SaZkCE
-    short-id: 0501b478da6a4950
+    public-key: RY7zkFQ01lI92jxNAyCa8T33UBW1fgpJgg8ZEqMA10k
+    short-id: a09ff9f8
+  network: tcp
+  _source_name: 🇳🇱
+  name: Европа 36
+- type: vless
+  server: 193.42.12.34
+  port: 18443
+  uuid: ab6a5359-0edf-41c3-8dfd-e4b005e80820
+  encryption: none
+  tls: true
+  servername: gp2.steptofsvo.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0
+    short-id: 5c766813929a1fdd
   network: grpc
   grpc-opts:
     grpc-service-name: grpc
   _source_name: 🇩🇪
-  name: Австрия 2
+  name: Европа 37
+- type: vless
+  server: 94.237.4.82
+  port: 443
+  uuid: a11d5668-63f7-4fe2-9b77-7f8336ae883d
+  encryption: none
+  tls: true
+  servername: gitlab.io
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: S2V0SCkn720uXFS2bC5iH-vyt3GBA22nXoypHyDWQzE
+    short-id: ed
+  network: xhttp
+  xhttp-opts:
+    path: /
+  _source_name: 🇳🇱
+  name: Италия 1
+- type: vless
+  server: 45.157.235.14
+  port: 18443
+  uuid: ab6a5359-0edf-41c3-8dfd-e4b005e80820
+  encryption: none
+  tls: true
+  servername: gp1.steptofsvo.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0
+    short-id: 5c766813929a1fdd
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
+  _source_name: 🇩🇪
+  name: Европа 38
+- type: vless
+  server: 45.145.43.44
+  port: 18443
+  uuid: ab6a5359-0edf-41c3-8dfd-e4b005e80820
+  encryption: none
+  tls: true
+  servername: gp1.steptofsvo.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0
+    short-id: 5c766813929a1fdd
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
+  _source_name: 🇩🇪
+  name: Европа 39
 - type: vless
   server: 31.56.189.27
   port: 2087
@@ -628,36 +848,36 @@ proxies:
   _source_name: 🇩🇪
   name: Испания 5
 - type: vless
-  server: 91.224.86.107
-  port: 9830
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-  encryption: none
-  tls: true
-  servername: dl.google.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-    short-id: aabbccdd
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-  _source_name: 🇩🇪
-  name: Европа 33
-- type: vless
-  server: 47.89.186.170
-  port: 55861
-  uuid: d51ed55c-d6dd-400b-aaf6-017c33969bfe
+  server: 31.56.189.27
+  port: 8765
+  uuid: df9f5aca-eda0-428f-a752-e53866153d12
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: www.intel.com
+  servername: srv-21bac9.vless.monster
   client-fingerprint: firefox
   reality-opts:
-    public-key: t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs
-    short-id: 7551ed1b
+    public-key: M08l5tDmJUYELykZCNYQyFgtR9Zc-A4ZGlUSLcUeS2c
+    short-id: 1bcc9177f3124b25
   network: tcp
-  _source_name: 🇺🇸
-  name: Европа 34
+  _source_name: 🇩🇪
+  name: Испания 6
+- type: vless
+  server: 5.175.161.47
+  port: 8443
+  uuid: eb85f61f-acb3-4689-8b7c-d8ad2a6aa43f
+  encryption: none
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 6hrP_JlRUK40WwXk9ZL0FpB19bTR0RnrUGYX5SaZkCE
+    short-id: 0501b478da6a4950
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
+  _source_name: 🇩🇪
+  name: Австрия 4
 - type: vless
   server: 31.56.189.224
   port: 3443
@@ -672,51 +892,7 @@ proxies:
     short-id: a1b2c3d4
   network: tcp
   _source_name: 🇩🇪
-  name: Европа 35
-- type: vless
-  server: 132.243.228.209
-  port: 9443
-  uuid: 70d482eb-7584-4841-a02a-c668f1ee33e7
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: de3.routeliora.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: bDDR3ubmqiA8nv8uD72QLIKgpcWaENtY0Vumrce6jgg
-    short-id: 7a8b9c0d
-  network: tcp
-  _source_name: 🇩🇪
-  name: Германия 3
-- type: vless
-  server: 132.243.228.209
-  port: 8443
-  uuid: 70d482eb-7584-4841-a02a-c668f1ee33e7
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: de2.routeliora.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: bDDR3ubmqiA8nv8uD72QLIKgpcWaENtY0Vumrce6jgg
-    short-id: 9f3a7c2d
-  network: tcp
-  _source_name: 🇩🇪
-  name: Германия 4
-- type: vless
-  server: 185.204.169.118
-  port: 8443
-  uuid: f184cbe9-6172-4a9b-9e30-918cb3cdb8fe
-  encryption: none
-  tls: true
-  servername: de3.dexila.fun
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: xmdtRdNTtp9XB0HkeA1G6dVT2m5oapMT6FiyscJbSRQ
-    short-id: 613352d6a1f0db55
-  network: tcp
-  _source_name: 🇩🇪
-  name: Германия 5
+  name: Европа 40
 - type: vless
   server: 82.39.171.12
   port: 443
@@ -731,22 +907,7 @@ proxies:
     short-id: c39cc7310a
   network: tcp
   _source_name: 🇩🇪
-  name: Европа 36
-- type: vless
-  server: 45.159.79.71
-  port: 4443
-  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: sentry.io
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 321Ii2xbCoyll6WJ0Qm1Sh8qcC0kxXvUaZhe3kyasD8
-    short-id: a1b2c3d4e5f6a7b8
-  network: tcp
-  _source_name: 🇺🇸
-  name: Швеция 1
+  name: Европа 41
 - type: vless
   server: 144.31.50.236
   port: 443
@@ -761,183 +922,7 @@ proxies:
     short-id: bbe46bd8f6b96839
   network: tcp
   _source_name: 🇩🇪
-  name: Германия 6
-- type: vless
-  server: 87.58.152.18
-  port: 8443
-  uuid: fe73f296-e5c0-45a6-8064-f8e76a75e946
-  encryption: none
-  tls: true
-  servername: amp-api-edge.apps.apple.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: v-y8lgU3a2wSMalMiBveBtwHLwqW4WWTOgUoMNNBKFQ
-    short-id: c0dc8d7fda62ee7f
-  network: tcp
-  _source_name: 🇩🇪
-  name: Польша 2
-- type: vless
-  server: 138.124.28.79
-  port: 443
-  uuid: 14409b0c-2091-4bc7-9845-2485a31ac38a
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: doich.stopingiphatered.shop
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: EYfpgja4VjpLUnWHtDJQ1XZk6xL5j4rXwf80Sw6keV0
-    short-id: 0c13e8822e7f58aa
-  network: tcp
-  _source_name: 🇩🇪
-  name: Австрия 3
-- type: vless
-  server: 94.241.174.157
-  port: 40443
-  uuid: 8ac637bf-554e-4902-94d7-baf01780a83c
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: deepl.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: mM33xyzf1GPaU2CQXAGYoGkTuYzEZRYT6S-NngyqfHQ
-    short-id: beb4
-  network: tcp
-  _source_name: 🇳🇱
-  name: Германия 7
-- type: vless
-  server: 50.7.182.18
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: viper-20.moriarty-web.com
-  client-fingerprint: firefox
-  alpn:
-  - h2
-  network: tcp
-  _source_name: 🇳🇱
-  name: Европа 37
-- type: vless
-  server: 50.7.182.18
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: viper-20.moriarty-web.com
-  client-fingerprint: firefox
-  network: tcp
-  _source_name: 🇳🇱
-  name: Европа 38
-- type: vless
-  server: 200.165.229.159
-  port: 443
-  uuid: 3db8407b-1f96-4b82-bfeb-55258c1e57b4
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: flarora.ferreo.sbs
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: HKKWGVu7xJfscDTH_28WhqSfSnp8fA5jpj7X1eMO-mU
-    short-id: 1067b23f928e7618
-  network: tcp
-  _source_name: 🇩🇪
-  name: Европа 39
-- type: vless
-  server: 147.45.145.127
-  port: 443
-  uuid: 534cbbe2-cc36-4f2d-8fb0-90410e7148c9
-  encryption: none
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: tWRR3W8jBAQKBUujLzL7Xri3WXy3F08OxHYrkSOnlAc
-    short-id: 52a6
-  network: tcp
-  _source_name: 🇳🇱
-  name: Европа 40
-- type: vless
-  server: 144.31.125.60
-  port: 443
-  uuid: 9015f0bc-2053-4ca1-9b9b-a018b97b32d2
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.intel.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: SVgtyuD9khylgHuB0treGekxVSHPOS-wPZTNHUf6zj8
-    short-id: 85c86a9863
-  network: tcp
-  _source_name: 🇩🇪
-  name: Европа 41
-- type: vless
-  server: 94.228.219.178
-  port: 443
-  uuid: eb0e3aec-f67f-4fa2-8577-b0bff0484e77
-  encryption: none
-  tls: true
-  servername: sstats.vk-portal.net
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
-    short-id: f79448a30d
-  network: xhttp
-  xhttp-opts:
-    path: /assets/v2/pkg
-  _source_name: 🇳🇱
-  name: Австрия 4
-- type: vless
-  server: 94.228.219.176
-  port: 443
-  uuid: eb0e3aec-f67f-4fa2-8577-b0bff0484e77
-  encryption: none
-  tls: true
-  servername: sstats.vk-portal.net
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
-    short-id: f79448a30d
-  network: xhttp
-  xhttp-opts:
-    path: /assets/v2/pkg
-  _source_name: 🇳🇱
-  name: Австрия 5
-- type: vless
-  server: 45.82.67.183
-  port: 443
-  uuid: 1a8d3885-d868-49c5-abc4-68ff79a91e09
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: northwaleswildlifetrust.org.uk
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: daiJkQwpAcBk7oH1iZzRthMj-jAlqovX7vAiwVqfjTU
-    short-id: 8880a9f75eb46d91
-  network: tcp
-  _source_name: 🇳🇱
-  name: США 1
-- type: vless
-  server: 45.82.67.183
-  port: 443
-  uuid: 30c3f401-9768-4215-8752-776926c1d67c
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: northwaleswildlifetrust.org.uk
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: daiJkQwpAcBk7oH1iZzRthMj-jAlqovX7vAiwVqfjTU
-    short-id: 8880a9f75eb46d91
-  network: tcp
-  _source_name: 🇳🇱
-  name: США 2
+  name: Германия 5
 - type: vless
   server: 151.101.69.253
   port: 443
@@ -955,97 +940,114 @@ proxies:
   _source_name: 🇩🇪
   name: Канада 1
 - type: vless
-  server: 172.239.239.53
-  port: 22746
-  uuid: a4846a6c-163f-4b12-a99f-378d814e5e09
+  server: 87.58.152.18
+  port: 8443
+  uuid: fe73f296-e5c0-45a6-8064-f8e76a75e946
+  encryption: none
+  tls: true
+  servername: amp-api-edge.apps.apple.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: v-y8lgU3a2wSMalMiBveBtwHLwqW4WWTOgUoMNNBKFQ
+    short-id: c0dc8d7fda62ee7f
+  network: tcp
+  _source_name: 🇩🇪
+  name: Польша 5
+- type: vless
+  server: 200.165.229.159
+  port: 443
+  uuid: 3db8407b-1f96-4b82-bfeb-55258c1e57b4
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: www.intel.com
+  servername: flarora.ferreo.sbs
   client-fingerprint: firefox
   reality-opts:
-    public-key: B6bPTxNaLqqoUTuNggzTBP0pPxJEqE_Bd_Ob27MPvgU
-    short-id: d9fd4fa80238cd05
+    public-key: HKKWGVu7xJfscDTH_28WhqSfSnp8fA5jpj7X1eMO-mU
+    short-id: 1067b23f928e7618
   network: tcp
-  _source_name: 🇳🇱
+  _source_name: 🇩🇪
   name: Европа 42
 - type: vless
-  server: 5.253.59.156
+  server: 46.62.135.67
   port: 443
-  uuid: 9f2d111d-408e-44e5-bf97-b8323d050443
+  uuid: bed0fd7d-7873-4617-8459-edc93a2138cd
   encryption: none
-  flow: xtls-rprx-vision
   tls: true
-  servername: nl5.freekeysh110.online
+  servername: amp-api-edge.apps.apple.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: sgPREsDFJUchKawgXgFGEM4YBjTDur0rgD2GuQmZXzA
-    short-id: 04b9f0b2470fae16
+    public-key: 1U9eTADaumTYxiO9NifVHUv5mbMowU2NSjgc2rBdvHo
+    short-id: 7a0300af51a1c4cf
   network: tcp
-  _source_name: 🇳🇱
-  name: Нидерланды 1
+  _source_name: 🇫🇮
+  name: Польша 6
 - type: vless
-  server: 139.64.166.55
+  server: 62.238.54.59
   port: 443
-  uuid: c743b343-b1c9-4e44-98a9-274df2015727
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: cudJBi1zLMATgg_nlqMK5O6Lshlv8EQ2BBQjxbpF4AY
-    short-id: eedf31ed
-  network: tcp
-  _source_name: 🇳🇱
-  name: Европа 43
-- type: vless
-  server: 138.16.141.59
-  port: 7443
-  uuid: a289a3d3-5833-4b28-8809-ae72898a98d0
+  uuid: 087ae087-ab55-4a6f-b89a-98db5feb9bac
   encryption: none
   tls: true
-  servername: ibm.com
+  servername: www.wikipedia.org
   client-fingerprint: firefox
   reality-opts:
-    public-key: RY7zkFQ01lI92jxNAyCa8T33UBW1fgpJgg8ZEqMA10k
-    short-id: a09ff9f8
-  network: tcp
-  _source_name: 🇳🇱
-  name: Европа 44
-- type: vless
-  server: 94.237.4.82
-  port: 443
-  uuid: a11d5668-63f7-4fe2-9b77-7f8336ae883d
-  encryption: none
-  tls: true
-  servername: gitlab.io
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: S2V0SCkn720uXFS2bC5iH-vyt3GBA22nXoypHyDWQzE
-    short-id: ed
+    public-key: as04WkYoj-P4vEjJFXB3LeA_Rkt7Ud4pV2oTZ3bZwQg
+    short-id: 1c213fd68e13
   network: xhttp
   xhttp-opts:
-    path: /
-  _source_name: 🇳🇱
-  name: Италия 1
+    path: /farasati1
+  _source_name: 🇫🇮
+  name: Европа 43
 - type: vless
-  server: 152.70.58.201
+  server: 62.238.55.43
   port: 443
-  uuid: 8892e34a-339b-4526-b88d-cf68c516231c
+  uuid: f782c7b8-3afb-4950-af47-89f85fbf2998
   encryption: none
-  flow: xtls-rprx-vision
   tls: true
-  servername: www.nvidia.com
+  servername: www.wikipedia.org
   client-fingerprint: firefox
   reality-opts:
-    public-key: Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28
-    short-id: 52c723e0fad49689
-  network: tcp
-  _source_name: 🇳🇱
+    public-key: as04WkYoj-P4vEjJFXB3LeA_Rkt7Ud4pV2oTZ3bZwQg
+    short-id: 1c213fd68e13
+  network: xhttp
+  xhttp-opts:
+    path: /farasati1
+  _source_name: 🇫🇮
+  name: Европа 44
+- type: vless
+  server: 37.27.252.18
+  port: 443
+  uuid: 7725b5e5-4ce1-4026-b680-faac74399ef9
+  encryption: none
+  tls: true
+  servername: www.wikipedia.org
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: as04WkYoj-P4vEjJFXB3LeA_Rkt7Ud4pV2oTZ3bZwQg
+    short-id: 1c213fd68e13
+  network: xhttp
+  xhttp-opts:
+    path: /farasati1
+  _source_name: 🇫🇮
   name: Европа 45
 - type: vless
-  server: 194.34.175.115
+  server: 91.224.86.107
+  port: 9830
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  encryption: none
+  tls: true
+  servername: dl.google.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+    short-id: aabbccdd
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+  _source_name: 🇩🇪
+  name: Европа 46
+- type: vless
+  server: 194.34.175.196
   port: 443
   uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
   encryption: none
@@ -1059,7 +1061,7 @@ proxies:
   _source_name: 🇫🇮
   name: Канада 2
 - type: vless
-  server: 194.34.175.207
+  server: 194.34.175.123
   port: 443
   uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
   encryption: none
@@ -1073,7 +1075,7 @@ proxies:
   _source_name: 🇫🇮
   name: Канада 3
 - type: vless
-  server: 194.34.175.191
+  server: 194.34.175.184
   port: 443
   uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
   encryption: none
@@ -1086,21 +1088,6 @@ proxies:
   network: tcp
   _source_name: 🇫🇮
   name: Канада 4
-- type: vless
-  server: 89.208.105.204
-  port: 443
-  uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: amazon.de
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: G8SING6Ibc_igZ5vI5578fXCT_mBMRuq_o8_Ymnj2SQ
-    short-id: eba1498e012ef580
-  network: tcp
-  _source_name: 🇳🇱
-  name: Германия 8
 - type: vless
   server: 45.128.235.8
   port: 443
@@ -1130,53 +1117,21 @@ proxies:
     short-id: 6ba85179e30d4fc2
   network: tcp
   _source_name: 🇫🇮
-  name: Европа 46
+  name: Европа 47
 - type: vless
-  server: 85.198.70.200
-  port: 14406
-  uuid: 237f91bf-102e-4077-8cc3-baebccb42936
+  server: 193.233.136.157
+  port: 11437
+  uuid: fc60d2f9-e3b5-449f-80d8-385c08e93c94
   encryption: none
-  flow: xtls-rprx-vision
   tls: true
-  servername: vk.ru
+  servername: amp-api-edge.apps.apple.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: ldAmsl3dqTCUBmlmA8CS9ZnpznP6cFWj9AxNddWnbxY
-    short-id: 1a2b3c4d5e6f7a8b
-  network: tcp
-  _source_name: 🇳🇱
-  name: Россия 1
-- type: vless
-  server: 5.61.91.206
-  port: 443
-  uuid: bd99da97-265e-0021-82cc-4ec009fe9ce2
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amd.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: b4n1pcO8ST3JkGtj8YymXVrW17LEe2EHec5wY7hMMR4
-    short-id: 0a4b7c3d
+    public-key: XW53yYaevp21yOZsWMV_mVg58iYCNp91sYndl95qnmI
+    short-id: 7de83d0e31eb75ef
   network: tcp
   _source_name: 🇫🇮
-  name: Молдова 1
-- type: vless
-  server: 2.26.100.192
-  port: 2087
-  uuid: 40205ae5-d30f-4216-b2e0-0506dbbd382e
-  encryption: none
-  tls: true
-  servername: ads.x5.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: Ku60WZ3HEdE07DoEBJ5I9o_fjcN_bhdK8bTW3RJjBmM
-    short-id: c226283c4de5b1ad
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-  _source_name: 🇫🇮
-  name: Россия 2
+  name: Польша 7
 - type: vless
   server: 31.76.103.109
   port: 8444
@@ -1192,7 +1147,50 @@ proxies:
   xhttp-opts:
     path: /xh
   _source_name: 🇫🇮
-  name: Испания 6
+  name: Испания 7
+- type: vless
+  server: 50.7.249.170
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: pl1-ded.moritech.net
+  client-fingerprint: firefox
+  alpn:
+  - h2
+  network: tcp
+  _source_name: 🇵🇱
+  name: Германия 6
+- type: vless
+  server: 50.7.249.178
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: pl2-ded.moritech.net
+  client-fingerprint: firefox
+  alpn:
+  - h2
+  network: tcp
+  _source_name: 🇵🇱
+  name: Германия 7
+- type: vless
+  server: 141.0.184.240
+  port: 8443
+  uuid: 70d482eb-7584-4841-a02a-c668f1ee33e7
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: dzen.ru
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: AxzvGjWPl7k1QMOWsRCgtuizgSS5NVWXwRoYsKP-630
+    short-id: f2a3b4c5
+  network: tcp
+  _source_name: 🇫🇮
+  name: Россия 1
 - type: vless
   server: 2.27.208.9
   port: 443
@@ -1209,6 +1207,33 @@ proxies:
   _source_name: 🇫🇮
   name: Финляндия 2
 - type: vless
+  server: 50.7.249.178
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: pl2-ded.moritech.net
+  client-fingerprint: firefox
+  alpn:
+  - h2
+  - http/1.1
+  network: tcp
+  _source_name: 🇵🇱
+  name: Германия 8
+- type: vless
+  server: 50.7.249.178
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: pl2-ded.moritech.net
+  client-fingerprint: firefox
+  network: tcp
+  _source_name: 🇵🇱
+  name: Германия 9
+- type: vless
   server: 50.7.249.170
   port: 443
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
@@ -1219,93 +1244,23 @@ proxies:
   client-fingerprint: firefox
   alpn:
   - h2
-  network: tcp
-  _source_name: 🇵🇱
-  name: Германия 9
-- type: vless
-  server: 50.7.249.178
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: pl2-ded.moritech.net
-  client-fingerprint: firefox
-  alpn:
-  - h2
+  - http/1.1
   network: tcp
   _source_name: 🇵🇱
   name: Германия 10
 - type: vless
-  server: 141.0.184.240
-  port: 8443
-  uuid: 70d482eb-7584-4841-a02a-c668f1ee33e7
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: dzen.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: AxzvGjWPl7k1QMOWsRCgtuizgSS5NVWXwRoYsKP-630
-    short-id: f2a3b4c5
-  network: tcp
-  _source_name: 🇫🇮
-  name: Россия 3
-- type: vless
-  server: 50.7.249.178
+  server: 50.7.249.170
   port: 443
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: pl2-ded.moritech.net
+  servername: pl1-ded.moritech.net
   client-fingerprint: firefox
   network: tcp
   _source_name: 🇵🇱
   name: Германия 11
 - type: vless
-  server: 50.7.249.170
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: pl1-ded.moritech.net
-  client-fingerprint: firefox
-  network: tcp
-  _source_name: 🇵🇱
-  name: Германия 12
-- type: vless
-  server: 50.7.249.178
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: pl2-ded.moritech.net
-  client-fingerprint: firefox
-  alpn:
-  - h2
-  - http/1.1
-  network: tcp
-  _source_name: 🇵🇱
-  name: Германия 13
-- type: vless
-  server: 50.7.249.170
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: pl1-ded.moritech.net
-  client-fingerprint: firefox
-  alpn:
-  - h2
-  - http/1.1
-  network: tcp
-  _source_name: 🇵🇱
-  name: Германия 14
-- type: vless
   server: 50.7.248.234
   port: 443
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
@@ -1316,18 +1271,6 @@ proxies:
   client-fingerprint: firefox
   alpn:
   - h2
-  network: tcp
-  _source_name: 🇵🇱
-  name: Европа 47
-- type: vless
-  server: 50.7.248.234
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: viper-22.moriarty-web.com
-  client-fingerprint: firefox
   network: tcp
   _source_name: 🇵🇱
   name: Европа 48
@@ -1347,60 +1290,17 @@ proxies:
   _source_name: 🇵🇱
   name: Европа 49
 - type: vless
-  server: 144.31.2.33
+  server: 50.7.248.234
   port: 443
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: pl3.moritech.net
-  client-fingerprint: firefox
-  alpn:
-  - h2
-  network: tcp
-  _source_name: 🇵🇱
-  name: Польша 3
-- type: vless
-  server: 193.233.136.157
-  port: 11437
-  uuid: fc60d2f9-e3b5-449f-80d8-385c08e93c94
-  encryption: none
-  tls: true
-  servername: amp-api-edge.apps.apple.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: XW53yYaevp21yOZsWMV_mVg58iYCNp91sYndl95qnmI
-    short-id: 7de83d0e31eb75ef
-  network: tcp
-  _source_name: 🇫🇮
-  name: Польша 4
-- type: vless
-  server: 144.31.2.33
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: pl3.moritech.net
+  servername: viper-22.moriarty-web.com
   client-fingerprint: firefox
   network: tcp
   _source_name: 🇵🇱
-  name: Польша 5
-- type: vless
-  server: 2.26.100.192
-  port: 445
-  uuid: 40205ae5-d30f-4216-b2e0-0506dbbd382e
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: ads.x5.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: Ku60WZ3HEdE07DoEBJ5I9o_fjcN_bhdK8bTW3RJjBmM
-    short-id: c226283c4de5b1ad
-  network: tcp
-  _source_name: 🇫🇮
-  name: Россия 4
+  name: Европа 50
 - type: vless
   server: 144.31.5.3
   port: 443
@@ -1415,7 +1315,62 @@ proxies:
   - http/1.1
   network: tcp
   _source_name: 🇵🇱
-  name: Польша 6
+  name: Польша 8
+- type: vless
+  server: 144.31.2.33
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: pl3.moritech.net
+  client-fingerprint: firefox
+  alpn:
+  - h2
+  network: tcp
+  _source_name: 🇵🇱
+  name: Польша 9
+- type: vless
+  server: 144.31.5.3
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: pl4.moritech.net
+  client-fingerprint: firefox
+  alpn:
+  - h2
+  network: tcp
+  _source_name: 🇵🇱
+  name: Польша 10
+- type: vless
+  server: 144.31.5.3
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: pl4.moritech.net
+  client-fingerprint: firefox
+  network: tcp
+  _source_name: 🇵🇱
+  name: Польша 11
+- type: vless
+  server: 51.250.98.44
+  port: 33743
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  encryption: none
+  tls: true
+  servername: www.google.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
+  network: grpc
+  grpc-opts:
+    grpc-service-name: TunService
+  _source_name: 🇵🇱
+  name: Европа 51
 - type: vless
   server: 45.12.75.242
   port: 26424
@@ -1429,34 +1384,22 @@ proxies:
     short-id: 23103e1e
   network: tcp
   _source_name: 🇷🇺
-  name: Россия 5
+  name: Россия 2
 - type: vless
-  server: 46.8.200.91
+  server: 46.173.25.146
   port: 443
-  uuid: 0a2dde28-70da-4863-a06f-35d007d94d35
-  encryption: none
-  tls: true
-  servername: cf3.rumedia-cdn.com
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /casc
-    headers:
-      Host: cf3.rumedia-cdn.com
-  _source_name: 🇷🇺
-  name: Россия 6
-- type: vless
-  server: 50.7.226.171
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  uuid: 8d1a1b09-12d6-4b76-82f0-893cc805d9c0
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: viper-21.moriarty-web.com
+  servername: ru.crunch-crunch.com
   client-fingerprint: firefox
+  reality-opts:
+    public-key: djTtGqd0XWqtt_WHukU7BTPQSn9o7gIpAosAxMy8tUo
+    short-id: ea1058117be12087
   network: tcp
-  _source_name: 🇬🇧
-  name: Европа 50
+  _source_name: 🇷🇺
+  name: Россия 3
 - type: vless
   server: 50.7.226.171
   port: 443
@@ -1470,7 +1413,19 @@ proxies:
   - h2
   network: tcp
   _source_name: 🇬🇧
-  name: Европа 51
+  name: Европа 52
+- type: vless
+  server: 50.7.226.171
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: viper-21.moriarty-web.com
+  client-fingerprint: firefox
+  network: tcp
+  _source_name: 🇬🇧
+  name: Европа 53
 - type: vless
   server: 2.24.131.46
   port: 443
@@ -1485,22 +1440,7 @@ proxies:
     short-id: daf012feff3b00d0
   network: tcp
   _source_name: 🇬🇧
-  name: Европа 52
-- type: vless
-  server: 138.124.125.211
-  port: 443
-  uuid: 1996007c-e7bc-464b-999b-cac28cec6c3e
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: RVj8E6YuWeOq9XzIVLQCKM39qa-Cknp-GYvVAA1UPFo
-    short-id: 72cceb78
-  network: tcp
-  _source_name: 🇬🇧
-  name: Польша 7
+  name: Европа 54
 - type: vless
   server: 2.24.131.46
   port: 443
@@ -1515,7 +1455,22 @@ proxies:
     short-id: daf012feff3b00d0
   network: tcp
   _source_name: 🇬🇧
-  name: Европа 53
+  name: Европа 55
+- type: vless
+  server: 138.124.125.211
+  port: 443
+  uuid: 1996007c-e7bc-464b-999b-cac28cec6c3e
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: RVj8E6YuWeOq9XzIVLQCKM39qa-Cknp-GYvVAA1UPFo
+    short-id: 72cceb78
+  network: tcp
+  _source_name: 🇬🇧
+  name: Польша 12
 - type: vless
   server: 43.245.227.70
   port: 443
@@ -1529,22 +1484,7 @@ proxies:
     public-key: nULEPKy53x8pz3C1grQxzZ9hcADidKOeyMhSipgODwI
   network: tcp
   _source_name: 🇬🇧
-  name: Молдова 2
-- type: vless
-  server: 104.194.143.112
-  port: 443
-  uuid: 268b4f72-c447-4ff4-840a-c178e551e743
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: cdn.dodostatic.net
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: HcBAHoLxmHEKHLNpHOn-XOSNsVlJQThcqtov7le50Gg
-    short-id: aeb1eee5185a2c19
-  network: tcp
-  _source_name: 🇬🇧
-  name: Австрия 6
+  name: Молдова 1
 - type: vless
   server: 51.89.194.151
   port: 2053
@@ -1558,7 +1498,7 @@ proxies:
     short-id: 949023ece91caa7c
   network: tcp
   _source_name: 🇬🇧
-  name: Европа 54
+  name: Европа 56
 - type: vless
   server: 143.246.182.63
   port: 443
@@ -1577,6 +1517,32 @@ proxies:
   _source_name: 🇬🇧
   name: Финляндия 3
 - type: vless
+  server: 50.7.36.26
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: at2.moritech.net
+  client-fingerprint: firefox
+  network: tcp
+  _source_name: 🇦🇹
+  name: Австрия 5
+- type: vless
+  server: 50.7.36.26
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: at2.moritech.net
+  client-fingerprint: firefox
+  alpn:
+  - h2
+  network: tcp
+  _source_name: 🇦🇹
+  name: Австрия 6
+- type: vless
   server: 50.7.37.154
   port: 443
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
@@ -1591,13 +1557,13 @@ proxies:
   _source_name: 🇦🇹
   name: Австрия 7
 - type: vless
-  server: 50.7.36.26
+  server: 50.7.37.154
   port: 443
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: at2.moritech.net
+  servername: at1.moritech.net
   client-fingerprint: firefox
   network: tcp
   _source_name: 🇦🇹
@@ -1613,36 +1579,25 @@ proxies:
   client-fingerprint: firefox
   alpn:
   - h2
+  - http/1.1
   network: tcp
   _source_name: 🇦🇹
   name: Австрия 9
 - type: vless
-  server: 50.7.37.154
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  server: 62.210.91.10
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: at1.moritech.net
+  servername: fuck.rkn
   client-fingerprint: firefox
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
   network: tcp
-  _source_name: 🇦🇹
-  name: Австрия 10
-- type: vless
-  server: 50.7.36.26
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: at2.moritech.net
-  client-fingerprint: firefox
-  alpn:
-  - h2
-  - http/1.1
-  network: tcp
-  _source_name: 🇦🇹
-  name: Австрия 11
+  _source_name: 🇫🇷
+  name: Европа 57
 - type: vless
   server: 152.53.1.40
   port: 443
@@ -1657,79 +1612,7 @@ proxies:
     short-id: 43dcff53849b81e6
   network: tcp
   _source_name: 🇦🇹
-  name: Россия 7
-- type: vless
-  server: 152.53.114.186
-  port: 443
-  uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: as.tunnelx.space
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: UO3EObgU3xUrhIGEE0gfCn5ZOz8YxNcwwW6ZaYzD3SA
-    short-id: 4e9b0c2d1a3f5768
-  network: tcp
-  _source_name: 🇦🇹
-  name: Европа 55
-- type: vless
-  server: 104.105.138.244
-  port: 443
-  uuid: f5c4664b-67ab-4d92-801d-a60984e104d4
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: rpROz1JNz8wRk2QT5o7jwE9CzJUWMvPNXoeWyS3c1WM
-    short-id: 09994e53af766acd
-  network: tcp
-  _source_name: 🇯🇵
-  name: Европа 56
-- type: vless
-  server: 130.12.102.125
-  port: 443
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-  encryption: none
-  tls: true
-  servername: localhost
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  network: tcp
-  _source_name: 🇯🇵
-  name: Канада 5
-- type: vless
-  server: 154.31.114.248
-  port: 50159
-  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
-    short-id: 091e1c5db8451757
-  network: tcp
-  _source_name: 🇯🇵
-  name: Европа 57
-- type: vless
-  server: 46.250.250.149
-  port: 2053
-  uuid: 59bf58d9-ddaf-42cd-a0ca-db3559ad8714
-  encryption: none
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: eUjgCl7-ujbXq11kaSLe-8q1LJJfSueB5Vkh24wKgk8
-    short-id: cf081ff86b298c48
-  network: tcp
-  _source_name: 🇯🇵
-  name: Польша 8
+  name: Россия 4
 - type: vless
   server: 62.210.91.2
   port: 23576
@@ -1760,47 +1643,6 @@ proxies:
   _source_name: 🇫🇷
   name: Европа 59
 - type: vless
-  server: 62.210.91.10
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  network: tcp
-  _source_name: 🇫🇷
-  name: Европа 60
-- type: vless
-  server: 38.175.203.11
-  port: 443
-  uuid: 1b8ec962-6e6f-4fc3-a9a4-c8a6fc907796
-  encryption: none
-  tls: true
-  servername: oulucloud.706666.xyz
-  client-fingerprint: firefox
-  network: tcp
-  _source_name: 🇯🇵
-  name: Европа 61
-- type: vless
-  server: 38.47.97.182
-  port: 52226
-  uuid: 46f0c575-37ca-48fc-bde0-2efaa9708d17
-  encryption: none
-  tls: true
-  servername: 720200.org
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: 720200.org
-  _source_name: 🇯🇵
-  name: Европа 62
-- type: vless
   server: 50.7.245.35
   port: 443
   uuid: 5d4a87fa-16f1-4b65-b217-225a31e36239
@@ -1828,22 +1670,36 @@ proxies:
     short-id: 4868e772d098f0af
   network: tcp
   _source_name: 🇫🇷
-  name: Европа 63
+  name: Европа 60
 - type: vless
-  server: 172.238.232.239
-  port: 32833
-  uuid: 167ed405-7de9-4bff-b1ea-6e3d49c76b0b
+  server: 212.227.235.66
+  port: 2053
+  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
+  encryption: none
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk
+    short-id: 29e8dcd2b37aaa7f
+  network: tcp
+  _source_name: 🇪🇸
+  name: Польша 13
+- type: vless
+  server: 193.238.154.18
+  port: 443
+  uuid: 2297ea1f-2415-4a2c-be20-4a3a978283a2
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: www.intel.com
+  servername: es1.hat.onl
   client-fingerprint: firefox
   reality-opts:
-    public-key: PaTDdYBrlh1xBixdI0igvRRkf0vnUwMRzi-4oDyfS20
-    short-id: a0a305ccc8e94aa8
+    public-key: V3uMWEfDQAPFP6o5ED8Jtk0rJBPs7IlOLf_Wh8w_jXc
+    short-id: 76132b3b39704c44
   network: tcp
-  _source_name: 🇮🇹
-  name: Европа 64
+  _source_name: 🇪🇸
+  name: Нидерланды 1
 - type: vless
   server: 66.70.179.198
   port: 2053
@@ -1857,7 +1713,7 @@ proxies:
     short-id: bb437dca4f03116e
   network: tcp
   _source_name: 🇨🇦
-  name: Польша 9
+  name: Польша 14
 - type: vless
   server: 158.69.112.254
   port: 443
@@ -1874,20 +1730,6 @@ proxies:
   _source_name: 🇨🇦
   name: Эстония 1
 - type: vless
-  server: 57.131.38.163
-  port: 2053
-  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
-  encryption: none
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
-    short-id: 5b8a942318178e7b
-  network: tcp
-  _source_name: 🇮🇹
-  name: Польша 10
-- type: vless
   server: 216.152.147.28
   port: 443
   uuid: d9e4721d-cdac-44c7-bc91-117367eac194
@@ -1901,24 +1743,21 @@ proxies:
     short-id: b9f8d3f8
   network: tcp
   _source_name: 🇨🇦
-  name: Европа 65
+  name: Европа 61
 - type: vless
-  server: 95.163.214.43
-  port: 443
-  uuid: 88ce17fc-7c6c-43a7-98a4-33fb59697b17
+  server: 57.131.38.163
+  port: 2053
+  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
   encryption: none
   tls: true
-  servername: ok.ru
+  servername: www.apple.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: VdG4ntV15FfNWV4rvSny2mvOTSXfOUVKHNC0dOyXY2s
-    short-id: 864fbb122f15b43d
-  network: xhttp
-  xhttp-opts:
-    path: /api/v1/e0163615
-    host: vk.com
-  _source_name: 🇷🇺
-  name: Россия 8
+    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
+    short-id: 5b8a942318178e7b
+  network: tcp
+  _source_name: 🇮🇹
+  name: Польша 15
 - type: vless
   server: 138.124.180.137
   port: 443
@@ -1933,37 +1772,7 @@ proxies:
     short-id: 33acba1b
   network: tcp
   _source_name: 🇱🇻
-  name: Польша 11
-- type: vless
-  server: 138.124.86.127
-  port: 444
-  uuid: f5197f13-930e-4ce4-925e-973d703dd4e6
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: github.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: acR3z7kRfCQEnfuCO1U3MFzTUXWQz9YqSe5RwbxafyE
-    short-id: a1b2c3d4a1b2c3d4
-  network: tcp
-  _source_name: 🇸🇪
-  name: Италия 2
-- type: vless
-  server: 91.192.81.214
-  port: 443
-  uuid: 607801ac-dbdd-4938-a167-129015d9978e
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: bMcyxNueltQhz5Kuxcf8odDStWHowYfLhKNdCbUweDc
-    short-id: d1742269
-  network: tcp
-  _source_name: 🇸🇬
-  name: Европа 66
+  name: Польша 16
 - type: vless
   server: 178.128.112.70
   port: 443
@@ -1978,7 +1787,37 @@ proxies:
     short-id: 7f7f
   network: tcp
   _source_name: 🇸🇬
-  name: Европа 67
+  name: Европа 62
+- type: vless
+  server: 91.192.81.214
+  port: 443
+  uuid: 607801ac-dbdd-4938-a167-129015d9978e
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: bMcyxNueltQhz5Kuxcf8odDStWHowYfLhKNdCbUweDc
+    short-id: d1742269
+  network: tcp
+  _source_name: 🇸🇬
+  name: Европа 63
+- type: vless
+  server: 45.39.108.109
+  port: 443
+  uuid: d806a58b-33aa-42e0-b170-395e49c16b37
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.microsoft.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: Y0noOXC8qHmbM0GmDpj-9BBwKSOtHs-uMbNfKU050GQ
+    short-id: b558b9305a0b
+  network: tcp
+  _source_name: 🇱🇻
+  name: Европа 64
 - type: vless
   server: 146.235.16.130
   port: 19825
@@ -2008,22 +1847,22 @@ proxies:
     headers:
       Host: edge.xlordgrim.com
   _source_name: 🇸🇬
-  name: Европа 68
+  name: Европа 65
 - type: vless
-  server: 79.141.174.147
-  port: 33743
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  server: 104.105.138.244
+  port: 443
+  uuid: f5c4664b-67ab-4d92-801d-a60984e104d4
   encryption: none
+  flow: xtls-rprx-vision
   tls: true
-  servername: www.google.com
+  servername: www.cloudflare.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TunService
-  _source_name: 🇸🇪
-  name: Европа 69
+    public-key: rpROz1JNz8wRk2QT5o7jwE9CzJUWMvPNXoeWyS3c1WM
+    short-id: 09994e53af766acd
+  network: tcp
+  _source_name: 🇯🇵
+  name: Европа 66
 - type: vless
   server: 95.85.224.51
   port: 443
@@ -2038,7 +1877,51 @@ proxies:
     short-id: a696de84963656de
   network: tcp
   _source_name: 🇪🇪
-  name: Россия 9
+  name: Россия 5
+- type: vless
+  server: 46.250.250.149
+  port: 2053
+  uuid: 59bf58d9-ddaf-42cd-a0ca-db3559ad8714
+  encryption: none
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: eUjgCl7-ujbXq11kaSLe-8q1LJJfSueB5Vkh24wKgk8
+    short-id: cf081ff86b298c48
+  network: tcp
+  _source_name: 🇯🇵
+  name: Польша 17
+- type: vless
+  server: 154.31.114.248
+  port: 50159
+  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
+    short-id: 091e1c5db8451757
+  network: tcp
+  _source_name: 🇯🇵
+  name: Европа 67
+- type: vless
+  server: 79.141.174.147
+  port: 33743
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  encryption: none
+  tls: true
+  servername: www.google.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
+  network: grpc
+  grpc-opts:
+    grpc-service-name: TunService
+  _source_name: 🇸🇪
+  name: Европа 68
 - type: vless
   server: 151.245.106.49
   port: 2053
@@ -2052,36 +1935,63 @@ proxies:
     short-id: 37b4f3ae8bf23763
   network: tcp
   _source_name: 🇰🇷
-  name: Польша 12
+  name: Польша 18
 - type: vless
-  server: 31.76.62.250
+  server: 38.180.186.202
   port: 443
-  uuid: 14409b0c-2091-4bc7-9845-2485a31ac38a
+  uuid: 1199c55b-f7ed-451a-bcbc-387d0ed84117
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: latin.roastedtoad.best
+  servername: zvukipro.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk
-    short-id: ff776ff77be48b88
+    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
+    short-id: fd55b698ee8c3629
   network: tcp
-  _source_name: 🇱🇻
-  name: Австрия 12
+  _source_name: 🇦🇷
+  name: Великобритания 1
 - type: vless
-  server: 212.227.235.66
-  port: 2053
-  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
+  server: 149.33.19.143
+  port: 443
+  uuid: 049b5a3c-3331-4a16-a12a-1f79c5b52d17
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: zvukipro.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
+    short-id: fd55b698ee8c3629
+  network: tcp
+  _source_name: 🇦🇷
+  name: Великобритания 2
+- type: vless
+  server: 27.0.232.125
+  port: 443
+  uuid: 603f2593-b20b-4103-8967-9c67eecfe6bd
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: gateway.icloud.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: kdRZN4WiVlF32uFV6tMU8aMLFRHWw70oEqE3iKlnrl4
+    short-id: 5b88be779393c536
+  network: tcp
+  _source_name: 🇭🇰
+  name: Австрия 10
+- type: vless
+  server: 38.175.203.11
+  port: 443
+  uuid: 1b8ec962-6e6f-4fc3-a9a4-c8a6fc907796
   encryption: none
   tls: true
-  servername: www.apple.com
+  servername: oulucloud.706666.xyz
   client-fingerprint: firefox
-  reality-opts:
-    public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk
-    short-id: 29e8dcd2b37aaa7f
   network: tcp
-  _source_name: 🇪🇸
-  name: Польша 13
+  _source_name: 🇯🇵
+  name: Европа 69
 - type: vless
   server: 50.7.5.163
   port: 443
@@ -2097,78 +2007,6 @@ proxies:
   _source_name: 🇮🇪
   name: Европа 70
 - type: vless
-  server: 50.7.5.163
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: ir-viper.failspace.top
-  client-fingerprint: firefox
-  network: tcp
-  _source_name: 🇮🇪
-  name: Европа 71
-- type: vless
-  server: 156.226.168.221
-  port: 35193
-  uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: d_pn_DMaIxhCkNh80h0Mc7nP94hrlN--I8liOIREDxE
-    short-id: e8daed2d
-  network: tcp
-  _source_name: 🇭🇰
-  name: Польша 14
-- type: vless
-  server: 27.0.232.125
-  port: 443
-  uuid: 603f2593-b20b-4103-8967-9c67eecfe6bd
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: gateway.icloud.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: kdRZN4WiVlF32uFV6tMU8aMLFRHWw70oEqE3iKlnrl4
-    short-id: 5b88be779393c536
-  network: tcp
-  _source_name: 🇭🇰
-  name: Австрия 13
-- type: vless
-  server: 149.33.19.143
-  port: 443
-  uuid: 049b5a3c-3331-4a16-a12a-1f79c5b52d17
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: zvukipro.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  network: tcp
-  _source_name: 🇦🇷
-  name: Великобритания 1
-- type: vless
-  server: 38.180.186.202
-  port: 443
-  uuid: 1199c55b-f7ed-451a-bcbc-387d0ed84117
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: zvukipro.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  network: tcp
-  _source_name: 🇦🇷
-  name: Великобритания 2
-- type: vless
   server: 129.154.192.50
   port: 2053
   uuid: 48e84fcc-ecb1-48a3-a596-88fea84887f5
@@ -2182,22 +2020,34 @@ proxies:
     short-id: dea6d68a3f6f96e3
   network: tcp
   _source_name: 🇰🇷
-  name: Европа 72
+  name: Европа 71
 - type: vless
-  server: 85.90.197.91
+  server: 50.7.5.163
   port: 443
-  uuid: dabb9a19-03ab-4cdf-8963-d3c45eb0f80d
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: gr.freeinternat.com
+  servername: ir-viper.failspace.top
+  client-fingerprint: firefox
+  network: tcp
+  _source_name: 🇮🇪
+  name: Европа 72
+- type: vless
+  server: 185.47.254.251
+  port: 443
+  uuid: 878fb7f7-fc65-465e-a352-17c7216c6f3d
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: gateway.icloud.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk
-    short-id: ff776ff77be48b88
+    public-key: 6-_ZidygR8PRt4gtHlGCAW-PPmjEIm7Wn7MZqJU1z1Q
+    short-id: 6c059ecfddf9b179
   network: tcp
-  _source_name: 🇬🇷
-  name: Австрия 14
+  _source_name: 🇲🇽
+  name: Австрия 11
 - type: vless
   server: 194.61.31.126
   port: 2053
@@ -2211,7 +2061,7 @@ proxies:
     short-id: c0cb7457deebbc70
   network: tcp
   _source_name: 🇮🇳
-  name: Польша 15
+  name: Польша 19
 - type: vless
   server: 46.250.240.80
   port: 2053
@@ -2242,9 +2092,52 @@ proxies:
   _source_name: 🇸🇪
   name: Европа 74
 - type: vless
+  server: 118.167.200.67
+  port: 24215
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  encryption: none
+  tls: true
+  servername: addons.mozilla.org
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  network: tcp
+  _source_name: 🇹🇼
+  name: Европа 75
+- type: vless
+  server: 156.226.168.221
+  port: 35193
+  uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: d_pn_DMaIxhCkNh80h0Mc7nP94hrlN--I8liOIREDxE
+    short-id: e8daed2d
+  network: tcp
+  _source_name: 🇭🇰
+  name: Польша 20
+- type: vless
+  server: 85.90.197.91
+  port: 443
+  uuid: dabb9a19-03ab-4cdf-8963-d3c45eb0f80d
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: gr.freeinternat.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk
+    short-id: ff776ff77be48b88
+  network: tcp
+  _source_name: 🇬🇷
+  name: Австрия 12
+- type: vless
   server: 185.178.208.176
   port: 443
-  uuid: 7c0afa7a-d1e2-410c-8cf3-e53e69f915eb
+  uuid: 12af4d27-56d0-4aad-a961-9a195aa4ca99
   encryption: none
   tls: true
   servername: founders-blog.online
@@ -2260,9 +2153,23 @@ proxies:
   _source_name: 🇸🇪
   name: Нидерланды 2
 - type: vless
+  server: 45.128.235.8
+  port: 443
+  uuid: d9d0f208-d582-41d5-bb7b-742671402810
+  flow: xtls-rprx-vision
+  tls: true
+  servername: eu-north-fi-1.hanvpn.biz
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: nnkPnz6R86-6xG92s8k-1DUQPXAJIVMoMWDLPghh4x4
+    short-id: 0173b2681806bc97
+  network: tcp
+  _source_name: tg:VlessForU
+  name: Финляндия 4
+- type: vless
   server: 95.129.236.216
   port: 443
-  uuid: c25b5c68-163d-4188-8055-52e5df3bde9d
+  uuid: e73828e3-50b0-41eb-841f-7124e5049e8e
   encryption: none
   tls: true
   servername: cdnguard.org
@@ -2275,7 +2182,38 @@ proxies:
     headers:
       Host: cdnguard.org
   _source_name: 🇱🇹
-  name: Европа 75
+  name: Европа 76
+- type: vless
+  server: 94.228.219.177
+  port: 443
+  uuid: eb0e3aec-f67f-4fa2-8577-b0bff0484e77
+  encryption: none
+  tls: true
+  servername: sstats.vk-portal.net
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
+    short-id: f79448a30d
+  network: xhttp
+  xhttp-opts:
+    path: /assets/v2/pkg
+  _source_name: SNi
+  name: Австрия 13
+- type: vless
+  server: 176.109.88.216
+  port: 443
+  uuid: 2c7f1414-87ae-4a01-9796-a02c067891a6
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: api-maps.yandex.ru
+  client-fingerprint: qq
+  reality-opts:
+    public-key: oqRus6Z_Q1jqJaTEPu7ENbRL0-XKOw54K0jwCCGLtEk
+    short-id: a9c4f17e3b62d8
+  network: raw
+  _source_name: LTE
+  name: Германия 12
 - type: vless
   server: fi.routeliora.ru
   port: 8443
@@ -2290,23 +2228,7 @@ proxies:
     short-id: f2a3b4c5
   network: tcp
   _source_name: SNi
-  name: Финляндия 4
-- type: vless
-  server: 94.228.219.172
-  port: 443
-  uuid: eb0e3aec-f67f-4fa2-8577-b0bff0484e77
-  encryption: none
-  tls: true
-  servername: sstats.vk-portal.net
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
-    short-id: f79448a30d
-  network: xhttp
-  xhttp-opts:
-    path: /assets/v2/pkg
-  _source_name: SNi
-  name: Австрия 15
+  name: Финляндия 5
 - type: vless
   server: 143.246.182.63
   port: 443
@@ -2323,21 +2245,20 @@ proxies:
     path: /assets/build/_app/immutable/chunks/stream-one/
     host: uk10.filesnap.tech
   _source_name: Бесплатный
-  name: Финляндия 5
+  name: Финляндия 6
 - type: vless
-  server: 45.154.96.35
+  server: 149.118.55.234
   port: 443
-  uuid: dabb9a19-03ab-4cdf-8963-d3c45eb0f80d
-  flow: xtls-rprx-vision
+  uuid: 58f7687b-5209-4dcd-a11e-6e4eb2191378
   tls: true
-  servername: fra3.freeinternat.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk
-    short-id: ff776ff77be48b88
-  network: tcp
+  servername: edge.xlordgrim.com
+  network: ws
+  ws-opts:
+    path: /xlordgrim/sg
+    headers:
+      Host: edge.xlordgrim.com
   _source_name: Бесплатный
-  name: Австрия 16
+  name: Европа 77
 - type: vless
   server: eu-central-pl-1.hanvpn.biz
   port: 443
@@ -2351,21 +2272,73 @@ proxies:
     short-id: 12e3b7681806bc97
   network: tcp
   _source_name: Бесплатный
-  name: Польша 16
+  name: Польша 21
 - type: vless
-  server: 194.34.175.19
-  port: 443
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
+  server: de2.routeliora.ru
+  port: 8443
+  uuid: 70d482eb-7584-4841-a02a-c668f1ee33e7
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: localhost
+  servername: de2.routeliora.ru
   client-fingerprint: firefox
   reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
+    public-key: bDDR3ubmqiA8nv8uD72QLIKgpcWaENtY0Vumrce6jgg
+    short-id: 9f3a7c2d
   network: tcp
   _source_name: Бесплатный
-  name: Канада 6
+  name: Германия 13
+- type: vless
+  server: 50.7.226.171
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
+  tls: true
+  servername: viper-21.moriarty-web.com
+  client-fingerprint: firefox
+  alpn:
+  - h2
+  network: tcp
+  _source_name: Бесплатный
+  name: Европа 78
+- type: vless
+  server: 50.7.248.234
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
+  tls: true
+  servername: viper-22.moriarty-web.com
+  client-fingerprint: firefox
+  alpn:
+  - h2
+  network: tcp
+  _source_name: Бесплатный
+  name: Европа 79
+- type: vless
+  server: 45.154.96.35
+  port: 443
+  uuid: dabb9a19-03ab-4cdf-8963-d3c45eb0f80d
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fra3.freeinternat.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk
+    short-id: ff776ff77be48b88
+  network: tcp
+  _source_name: Бесплатный
+  name: Австрия 14
+- type: vless
+  server: 50.7.36.26
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
+  tls: true
+  servername: at2.moritech.net
+  client-fingerprint: firefox
+  network: tcp
+  _source_name: Бесплатный
+  name: Австрия 15
 - type: vless
   server: 194.34.175.223
   port: 443
@@ -2379,137 +2352,7 @@ proxies:
     public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
   network: tcp
   _source_name: Бесплатный
-  name: Канада 7
-- type: vless
-  server: 50.7.36.26
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: at2.moritech.net
-  client-fingerprint: firefox
-  network: tcp
-  _source_name: Бесплатный
-  name: Австрия 17
-- type: vless
-  server: 194.34.175.143
-  port: 443
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: localhost
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  network: tcp
-  _source_name: Бесплатный
-  name: Канада 8
-- type: vless
-  server: 217.19.122.47
-  port: 443
-  uuid: ecf728d9-1555-4e12-b178-1d8bd98465e4
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: rulte.horizonless.pro
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 0UUWi4Ds_Rp889_u0YNOX9PAiP10MLzetKrxS_Nhejc
-  network: raw
-  _source_name: LTE
-  name: Нидерланды 3
-- type: vless
-  server: 194.34.175.235
-  port: 443
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: localhost
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  network: tcp
-  _source_name: Бесплатный
-  name: Канада 9
-- type: vless
-  server: 185.126.238.87
-  port: 2083
-  uuid: 7668f678-faee-40cc-9b56-9c39dc773388
-  network: grpc
-  grpc-opts:
-    grpc-service-name: security.debian.org
-  _source_name: Бесплатный
-  name: Европа 76
-- type: vless
-  server: 2.56.121.43
-  port: 443
-  uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.ikea.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: vnUSQFujh6K08KR6FHYWoBkZCAEZNWSKji0PPw9eMWM
-    short-id: 86229a5e3b1e6ef4
-  network: tcp
-  _source_name: Бесплатный
-  name: Европа 77
-- type: vless
-  server: 194.34.175.70
-  port: 443
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: localhost
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  network: tcp
-  _source_name: Бесплатный
-  name: Канада 10
-- type: vless
-  server: 216.227.161.95
-  port: 7443
-  uuid: 218fd696-e3a2-4c33-b397-a5f13a82969e
-  tls: true
-  servername: media3.abvphelp.cc
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: uNqGvaJEIFTFQvAxsTDhetPxkIWzJuBtxXsK0yFMYzM
-    short-id: 48d5cf47
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-  _source_name: Бесплатный
-  name: Европа 78
-- type: vless
-  server: viper-21.moriarty-web.com
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: viper-21.moriarty-web.com
-  client-fingerprint: firefox
-  network: tcp
-  _source_name: Бесплатный
-  name: Европа 79
-- type: vless
-  server: pl6.moritech.net
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: pl6.moritech.net
-  client-fingerprint: edge
-  alpn:
-  - h2
-  network: tcp
-  _source_name: Бесплатный
-  name: Польша 17
+  name: Канада 5
 - type: vless
   server: 151.242.2.81
   port: 443
@@ -2523,49 +2366,7 @@ proxies:
     headers:
       Host: cf9.rumedia-cdn.com
   _source_name: Бесплатный
-  name: Россия 10
-- type: vless
-  server: 194.34.175.77
-  port: 443
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: localhost
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  network: tcp
-  _source_name: Бесплатный
-  name: Канада 11
-- type: vless
-  server: 107.189.19.27
-  port: 443
-  uuid: 813a385c-f26f-48b5-9bbb-53204a9c5bcc
-  flow: xtls-rprx-vision
-  tls: true
-  servername: cdn.dodostatic.net
-  client-fingerprint: qq
-  reality-opts:
-    public-key: Sgocj9v63XdHU04TV3-Pk141YPIT_E-UgLr9u4OkE0E
-    short-id: d27201f7bf5874f9
-  network: tcp
-  _source_name: Бесплатный
-  name: Австрия 18
-- type: vless
-  server: 104.194.143.112
-  port: 443
-  uuid: 268b4f72-c447-4ff4-840a-c178e551e743
-  flow: xtls-rprx-vision
-  tls: true
-  servername: cdn.dodostatic.net
-  client-fingerprint: qq
-  reality-opts:
-    public-key: HcBAHoLxmHEKHLNpHOn-XOSNsVlJQThcqtov7le50Gg
-    short-id: aeb1eee5185a2c19
-  network: tcp
-  _source_name: Бесплатный
-  name: Австрия 19
+  name: Россия 6
 - type: vless
   server: 50.7.245.35
   port: 443
@@ -2581,35 +2382,63 @@ proxies:
   _source_name: Бесплатный
   name: Франция 2
 - type: vless
-  server: 65.109.238.140
-  port: 443
-  uuid: 05bfcbaa-cba0-4bce-9103-09fe3f5f0667
+  server: 132.243.228.209
+  port: 8443
+  uuid: 70d482eb-7584-4841-a02a-c668f1ee33e7
+  flow: xtls-rprx-vision
+  tls: true
+  servername: de2.routeliora.ru
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: bDDR3ubmqiA8nv8uD72QLIKgpcWaENtY0Vumrce6jgg
+    short-id: 9f3a7c2d
+  network: tcp
+  _source_name: Бесплатный
+  name: Германия 14
+- type: vless
+  server: chatgpt.com
+  port: 2087
+  uuid: cf1d2ded-2472-483a-f2f2-12c83d1826dd
   encryption: none
   tls: true
-  servername: hel1.nordlinkcloud.com
-  client-fingerprint: firefox
+  servername: cdn-edge-static-assets-delivery-node-a7f2c9e4b1d8.esmahdi9.com
+  client-fingerprint: qq
   alpn:
   - h2
+  - http/1.1
   network: xhttp
   xhttp-opts:
-    path: /api/v3/stream/
+    path: /@v2_line
+    mode: auto
   _source_name: Бесплатный
-  name: Европа 80
+  name: Германия 15
 - type: vless
-  server: 50.7.226.171
+  server: viper-21.moriarty-web.com
   port: 443
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
   flow: xtls-rprx-vision
   tls: true
   servername: viper-21.moriarty-web.com
   client-fingerprint: firefox
-  alpn:
-  - h2
   network: tcp
   _source_name: Бесплатный
-  name: Европа 81
+  name: Европа 80
 - type: vless
-  server: 194.34.175.158
+  server: 2.26.255.206
+  port: 443
+  uuid: d9d0f208-d582-41d5-bb7b-742671402810
+  flow: xtls-rprx-vision
+  tls: true
+  servername: eu-central-pl-1.hanvpn.biz
+  client-fingerprint: edge
+  reality-opts:
+    public-key: NjIuu35vz5MthSzqd6kt8PbXbZxCCL2Rb2GbpMCRTEY
+    short-id: 12e3b7681806bc97
+  network: tcp
+  _source_name: Бесплатный
+  name: Польша 22
+- type: vless
+  server: 194.34.175.19
   port: 443
   uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
   encryption: none
@@ -2621,78 +2450,39 @@ proxies:
     public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
   network: tcp
   _source_name: Бесплатный
-  name: Канада 12
+  name: Канада 6
 - type: vless
-  server: 144.31.5.64
+  server: 217.19.122.47
   port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: pl6.moritech.net
-  client-fingerprint: firefox
-  network: tcp
-  _source_name: Бесплатный
-  name: Польша 18
-- type: vless
-  server: 50.7.248.234
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: viper-22.moriarty-web.com
-  client-fingerprint: firefox
-  alpn:
-  - h2
-  network: tcp
-  _source_name: Бесплатный
-  name: Европа 82
-- type: vless
-  server: 45.128.235.8
-  port: 443
-  uuid: d9d0f208-d582-41d5-bb7b-742671402810
-  flow: xtls-rprx-vision
-  tls: true
-  servername: eu-north-fi-1.hanvpn.biz
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: nnkPnz6R86-6xG92s8k-1DUQPXAJIVMoMWDLPghh4x4
-    short-id: 0173b2681806bc97
-  network: tcp
-  _source_name: Бесплатный
-  name: Финляндия 6
-- type: vless
-  server: 149.118.55.234
-  port: 443
-  uuid: 58f7687b-5209-4dcd-a11e-6e4eb2191378
-  tls: true
-  servername: edge.xlordgrim.com
-  network: ws
-  ws-opts:
-    path: /xlordgrim/sg
-    headers:
-      Host: edge.xlordgrim.com
-  _source_name: Бесплатный
-  name: Европа 83
-- type: vless
-  server: 144.31.5.3
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  uuid: ecf728d9-1555-4e12-b178-1d8bd98465e4
   encryption: none
   flow: xtls-rprx-vision
   tls: true
-  servername: pl4.moritech.net
-  client-fingerprint: qq
-  alpn:
-  - h2
-  network: tcp
+  servername: rulte.horizonless.pro
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 0UUWi4Ds_Rp889_u0YNOX9PAiP10MLzetKrxS_Nhejc
+  network: raw
+  _source_name: LTE
+  name: Нидерланды 3
+- type: vless
+  server: 185.126.238.87
+  port: 2083
+  uuid: 7668f678-faee-40cc-9b56-9c39dc773388
+  encryption: none
+  network: grpc
+  grpc-opts:
+    grpc-service-name: security.debian.org
   _source_name: Бесплатный
-  name: Польша 19
+  name: Европа 81
 proxy-groups:
 - name: 🚀 Freedom Rudy
   type: select
   proxies:
+  - Испания 1
   - Европа 1
   - Европа 2
+  - Испания 2
   - Европа 3
   - Европа 4
   - Европа 5
@@ -2705,20 +2495,19 @@ proxy-groups:
   - Европа 12
   - Европа 13
   - Европа 14
-  - Испания 1
   - Европа 15
   - Европа 16
-  - Испания 2
   - Европа 17
   - Европа 18
   - Европа 19
   - Европа 20
+  - Польша 1
+  - Польша 2
   - Европа 21
   - Европа 22
-  - Польша 1
+  - Польша 3
   - Европа 23
   - Европа 24
-  - Австрия 1
   - Европа 25
   - Европа 26
   - Европа 27
@@ -2726,156 +2515,140 @@ proxy-groups:
   - Германия 1
   - Европа 28
   - Германия 2
+  - Швеция 1
+  - Германия 3
   - Европа 29
+  - Австрия 1
   - Европа 30
-  - Европа 31
-  - Европа 32
   - Австрия 2
-  - Испания 4
-  - Испания 5
+  - Европа 31
+  - Австрия 3
+  - Польша 4
+  - Европа 32
   - Европа 33
   - Европа 34
   - Европа 35
-  - Германия 3
   - Германия 4
-  - Германия 5
   - Европа 36
-  - Швеция 1
-  - Германия 6
-  - Польша 2
-  - Австрия 3
-  - Германия 7
   - Европа 37
+  - Италия 1
   - Европа 38
   - Европа 39
+  - Испания 4
+  - Испания 5
+  - Испания 6
+  - Австрия 4
   - Европа 40
   - Европа 41
-  - Австрия 4
-  - Австрия 5
-  - США 1
-  - США 2
+  - Германия 5
   - Канада 1
+  - Польша 5
   - Европа 42
-  - Нидерланды 1
+  - Польша 6
   - Европа 43
   - Европа 44
-  - Италия 1
   - Европа 45
+  - Европа 46
   - Канада 2
   - Канада 3
   - Канада 4
-  - Германия 8
   - Финляндия 1
-  - Европа 46
+  - Европа 47
+  - Польша 7
+  - Испания 7
+  - Германия 6
+  - Германия 7
   - Россия 1
-  - Молдова 1
-  - Россия 2
-  - Испания 6
   - Финляндия 2
+  - Германия 8
   - Германия 9
   - Германия 10
-  - Россия 3
   - Германия 11
-  - Германия 12
-  - Германия 13
-  - Германия 14
-  - Европа 47
   - Европа 48
   - Европа 49
-  - Польша 3
-  - Польша 4
-  - Польша 5
-  - Россия 4
-  - Польша 6
-  - Россия 5
-  - Россия 6
   - Европа 50
+  - Польша 8
+  - Польша 9
+  - Польша 10
+  - Польша 11
   - Европа 51
+  - Россия 2
+  - Россия 3
   - Европа 52
-  - Польша 7
   - Европа 53
-  - Молдова 2
-  - Австрия 6
   - Европа 54
+  - Европа 55
+  - Польша 12
+  - Молдова 1
+  - Европа 56
   - Финляндия 3
+  - Австрия 5
+  - Австрия 6
   - Австрия 7
   - Австрия 8
   - Австрия 9
-  - Австрия 10
-  - Австрия 11
-  - Россия 7
-  - Европа 55
-  - Европа 56
-  - Канада 5
   - Европа 57
-  - Польша 8
+  - Россия 4
   - Европа 58
   - Европа 59
-  - Европа 60
-  - Европа 61
-  - Европа 62
   - Франция 1
+  - Европа 60
+  - Польша 13
+  - Нидерланды 1
+  - Польша 14
+  - Эстония 1
+  - Европа 61
+  - Польша 15
+  - Польша 16
+  - Европа 62
   - Европа 63
   - Европа 64
-  - Польша 9
-  - Эстония 1
-  - Польша 10
-  - Европа 65
-  - Россия 8
-  - Польша 11
-  - Италия 2
-  - Европа 66
-  - Европа 67
   - Сингапур 1
+  - Европа 65
+  - Европа 66
+  - Россия 5
+  - Польша 17
+  - Европа 67
   - Европа 68
-  - Европа 69
-  - Россия 9
-  - Польша 12
-  - Австрия 12
-  - Польша 13
-  - Европа 70
-  - Европа 71
-  - Польша 14
-  - Австрия 13
+  - Польша 18
   - Великобритания 1
   - Великобритания 2
+  - Австрия 10
+  - Европа 69
+  - Европа 70
+  - Европа 71
   - Европа 72
-  - Австрия 14
-  - Польша 15
+  - Австрия 11
+  - Польша 19
   - Европа 73
   - Европа 74
-  - Нидерланды 2
   - Европа 75
+  - Польша 20
+  - Австрия 12
+  - Нидерланды 2
   - Финляндия 4
-  - Австрия 15
-  - Финляндия 5
-  - Австрия 16
-  - Польша 16
-  - Канада 6
-  - Канада 7
-  - Австрия 17
-  - Канада 8
-  - Нидерланды 3
-  - Канада 9
   - Европа 76
+  - Австрия 13
+  - Германия 12
+  - Финляндия 5
+  - Финляндия 6
   - Европа 77
-  - Канада 10
+  - Польша 21
+  - Германия 13
   - Европа 78
   - Европа 79
-  - Польша 17
-  - Россия 10
-  - Канада 11
-  - Австрия 18
-  - Австрия 19
+  - Австрия 14
+  - Австрия 15
+  - Канада 5
+  - Россия 6
   - Франция 2
+  - Германия 14
+  - Германия 15
   - Европа 80
+  - Польша 22
+  - Канада 6
+  - Нидерланды 3
   - Европа 81
-  - Канада 12
-  - Польша 18
-  - Европа 82
-  - Финляндия 6
-  - Европа 83
-  - Польша 19
   - DIRECT
 rules:
 - MATCH,🚀 Freedom Rudy
