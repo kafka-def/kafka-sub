@@ -31,6 +31,17 @@ jobs:
         run: |
           python build.py
 
+      - name: Download Mihomo
+        run: |
+          wget -q https://github.com/MetaCubeX/mihomo/releases/download/v1.19.30/mihomo-linux-amd64-v1-v1.19.30.gz
+          gunzip mihomo-linux-amd64-v1-v1.19.30.gz
+          mv mihomo-linux-amd64-v1-v1.19.30 mihomo
+          chmod +x mihomo
+
+      - name: Check proxies
+        run: |
+          python check.py
+
       - name: Commit config
         run: |
           git config user.name "github-actions[bot]"
