@@ -558,6 +558,73 @@ def validate_config(path):
         raise RuntimeError("Mihomo rejected config")
 
 
+_PROXY_ERROR_RE = re.compile(r"\bproxy\s+(\d+)\s*:", re.IGNORECASE)
+
+
+def filter_mihomo_invalid_nodes(nodes):
+    """Remove nodes that make Mihomo reject the whole configuration.
+
+    Mihomo reports the offending proxy by its 1-based index, e.g.
+    ``proxy 2282: failed to use encryption: ...``.  We use that index to
+    remove only the bad node and validate again.  This prevents one malformed
+    VLESS URI from killing an otherwise usable subscription.
+    """
+    working = list(nodes)
+    removed = 0
+
+    while working:
+        fd, path = tempfile.mkstemp(suffix=".yaml")
+        os.close(fd)
+
+        try:
+            with open(path, "w", encoding="utf-8") as file:
+                yaml.safe_dump(
+                    make_config(working),
+                    file,
+                    allow_unicode=True,
+                    sort_keys=False,
+                )
+
+            result = subprocess.run(
+                [MIHOMO_PATH, "-t", "-f", path],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+                text=True,
+                timeout=60,
+            )
+            output = result.stdout or ""
+
+            if result.returncode == 0:
+                if removed:
+                    log(f"[FILTER] removed {removed} Mihomo-invalid nodes")
+                return working
+
+            match = _PROXY_ERROR_RE.search(output)
+            if not match:
+                print(output)
+                raise RuntimeError("Mihomo rejected config and did not identify a proxy")
+
+            index = int(match.group(1)) - 1
+            if index < 0 or index >= len(working):
+                print(output)
+                raise RuntimeError(
+                    f"Mihomo reported invalid proxy index {index + 1}, "
+                    f"but only {len(working)} proxies exist"
+                )
+
+            bad = working.pop(index)
+            removed += 1
+            log(f"[FILTER] Mihomo rejected: {bad['name']} | {output.strip().splitlines()[-1]}")
+
+        finally:
+            try:
+                os.unlink(path)
+            except OSError:
+                pass
+
+    raise RuntimeError("All VLESS nodes were rejected by Mihomo")
+
+
 # ----------------------------- Health --------------------------------
 
 def api_get(path):
@@ -761,6 +828,12 @@ def main():
     name_nodes(nodes)
 
     log(f"[TOTAL] {len(nodes)} unique nodes")
+
+    # Remove only malformed nodes that Mihomo itself cannot load.
+    # One bad VLESS (for example invalid ML-KEM parameters) must not abort
+    # the entire build.
+    nodes = filter_mihomo_invalid_nodes(nodes)
+    log(f"[VALID] {len(nodes)} nodes accepted by Mihomo")
 
     alive = health_check(nodes)
 
