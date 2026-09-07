@@ -26,31 +26,20 @@ MIHOMO_BINARY = "./mihomo"
 API_HOST = "127.0.0.1"
 API_PORT = 9090
 
-# Только один endpoint
 TEST_URL = "https://www.gstatic.com/generate_204"
 EXPECTED_STATUS = "204"
 
-# Максимальный допустимый пинг
 MAX_LATENCY_MS = 5000
 
-# Сколько раз проверять каждый узел
 CHECK_ATTEMPTS = 3
-
-# Сколько успешных проверок необходимо
 REQUIRED_SUCCESSES = 2
 
-# Таймаут одного запроса
 REQUEST_TIMEOUT_MS = 5000
 
-# Параллельные проверки
 MAX_WORKERS = 10
 
-# Время ожидания запуска Mihomo
 STARTUP_TIMEOUT = 20
 
-# Минимальная доля живых узлов.
-# Если живых меньше этого количества — считаем проверку подозрительной
-# и НЕ трогаем старый config.yaml.
 MIN_ALIVE_PERCENT = 0.05
 MIN_ALIVE_ABSOLUTE = 10
 
@@ -134,7 +123,7 @@ def download_source(url):
     request = urllib.request.Request(
         url,
         headers={
-            "User-Agent": "KafkaSubBuilder/2.0"
+            "User-Agent": "KafkaSubBuilder/3.0"
         },
     )
 
@@ -147,40 +136,56 @@ def download_source(url):
     return data
 
 
+def decode_base64_candidates(text):
+    candidates = [text]
+
+    compact = re.sub(r"\s+", "", text.strip())
+
+    if len(compact) < 16:
+        return candidates
+
+    variants = [compact]
+
+    if compact.startswith("base64,"):
+        variants.append(compact[7:])
+
+    for value in variants:
+        try:
+            padding = "=" * (-len(value) % 4)
+
+            decoded = base64.b64decode(
+                value + padding,
+                validate=False,
+            )
+
+            decoded_text = decoded.decode(
+                "utf-8",
+                errors="ignore",
+            ).strip()
+
+            if decoded_text:
+                candidates.append(decoded_text)
+
+        except Exception:
+            continue
+
+    return candidates
+
+
 def decode_possible_base64(text):
     text = text.strip()
 
     if not text:
         return text
 
-    # Если это явно VLESS — не трогаем
     if "vless://" in text.lower():
         return text
 
-    try:
-        compact = re.sub(r"\s+", "", text)
+    candidates = decode_base64_candidates(text)
 
-        # Base64 должен иметь адекватную длину
-        if len(compact) < 20:
-            return text
-
-        padding = "=" * (-len(compact) % 4)
-
-        decoded = base64.b64decode(
-            compact + padding,
-            validate=False,
-        )
-
-        decoded_text = decoded.decode(
-            "utf-8",
-            errors="ignore",
-        )
-
-        if "vless://" in decoded_text.lower():
-            return decoded_text
-
-    except Exception:
-        pass
+    for candidate in candidates[1:]:
+        if "vless://" in candidate.lower():
+            return candidate
 
     return text
 
@@ -188,13 +193,12 @@ def decode_possible_base64(text):
 def extract_vless(text):
     found = []
 
-    text = decode_possible_base64(text)
+    for candidate in decode_base64_candidates(text):
+        for match in VLESS_RE.findall(candidate):
+            value = match.rstrip("),]}")
 
-    for match in VLESS_RE.findall(text):
-        value = match.rstrip("),]}")
-
-        if value not in found:
-            found.append(value)
+            if value not in found:
+                found.append(value)
 
     return found
 
@@ -207,11 +211,15 @@ def extract_from_json(value):
 
     elif isinstance(value, dict):
         for item in value.values():
-            result.extend(extract_from_json(item))
+            result.extend(
+                extract_from_json(item)
+            )
 
     elif isinstance(value, list):
         for item in value:
-            result.extend(extract_from_json(item))
+            result.extend(
+                extract_from_json(item)
+            )
 
     return result
 
@@ -224,13 +232,25 @@ def parse_source(data):
 
     result = []
 
-    # Обычный текст
-    result.extend(extract_vless(text))
+    result.extend(
+        extract_vless(text)
+    )
+
+    decoded = decode_possible_base64(text)
+
+    if decoded != text:
+        result.extend(
+            extract_vless(decoded)
+        )
 
     # JSON
     try:
         parsed = json.loads(text)
-        result.extend(extract_from_json(parsed))
+
+        result.extend(
+            extract_from_json(parsed)
+        )
+
     except Exception:
         pass
 
@@ -239,12 +259,289 @@ def parse_source(data):
         parsed = yaml.safe_load(text)
 
         if parsed is not None:
-            result.extend(extract_from_json(parsed))
+            result.extend(
+                extract_from_json(parsed)
+            )
 
     except Exception:
         pass
 
-    return list(dict.fromkeys(result))
+    return list(
+        dict.fromkeys(result)
+    )
+
+
+# ============================================================
+# VALUE HELPERS
+# ============================================================
+
+def first_query_value(query, *keys):
+    for key in keys:
+        values = query.get(key)
+
+        if not values:
+            continue
+
+        value = values[0]
+
+        if value is None:
+            continue
+
+        value = urllib.parse.unquote(
+            str(value)
+        )
+
+        return value
+
+    return None
+
+
+def parse_bool(value):
+    if value is None:
+        return None
+
+    value = str(value).strip().lower()
+
+    if value in (
+        "1",
+        "true",
+        "yes",
+        "on",
+    ):
+        return True
+
+    if value in (
+        "0",
+        "false",
+        "no",
+        "off",
+    ):
+        return False
+
+    return None
+
+
+def parse_int(value):
+    if value is None:
+        return None
+
+    try:
+        return int(str(value).strip())
+
+    except Exception:
+        return None
+
+
+def parse_float(value):
+    if value is None:
+        return None
+
+    try:
+        return float(
+            str(value).strip()
+        )
+
+    except Exception:
+        return None
+
+
+def parse_json_value(value):
+    if value is None:
+        return None
+
+    if isinstance(value, (dict, list)):
+        return value
+
+    value = str(value).strip()
+
+    if not value:
+        return None
+
+    try:
+        return json.loads(value)
+
+    except Exception:
+        return None
+
+
+def split_alpn(value):
+    if not value:
+        return None
+
+    if isinstance(value, list):
+        return [
+            str(x).strip()
+            for x in value
+            if str(x).strip()
+        ]
+
+    result = []
+
+    for item in str(value).split(","):
+        item = item.strip()
+
+        if item:
+            result.append(item)
+
+    return result or None
+
+
+# ============================================================
+# FAKE / INVALID CONFIG FILTER
+# ============================================================
+
+def is_fake_proxy(
+    server,
+    port,
+    uuid,
+    name="",
+):
+    if not server:
+        return True
+
+    server_lower = str(server).strip().lower()
+    name_lower = str(name).strip().lower()
+
+    bad_exact_hosts = {
+        "localhost",
+        "0.0.0.0",
+        "127.0.0.1",
+        "::1",
+        "example.com",
+        "example.org",
+        "example.net",
+    }
+
+    if server_lower in bad_exact_hosts:
+        return True
+
+    bad_words = [
+        "localhost",
+        "example.com",
+        "example.org",
+        "example.net",
+        "invalid.example",
+    ]
+
+    combined = (
+        f"{server_lower} "
+        f"{name_lower}"
+    )
+
+    for word in bad_words:
+        if word in combined:
+            return True
+
+    if port is None:
+        return True
+
+    if port < 1 or port > 65535:
+        return True
+
+    uuid_compact = uuid.replace("-", "").lower()
+
+    if not uuid_compact:
+        return True
+
+    # Очевидные тестовые UUID
+    if len(set(uuid_compact)) <= 2:
+        return True
+
+    if uuid_compact in {
+        "00000000000000000000000000000000",
+        "11111111111111111111111111111111",
+        "22222222222222222222222222222222",
+        "33333333333333333333333333333333",
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    }:
+        return True
+
+    return False
+
+
+# ============================================================
+# XHTTP
+# ============================================================
+
+XHTTP_STRING_MAP = {
+    "path": "path",
+    "host": "host",
+    "mode": "mode",
+    "xPaddingObfsMode": "x-padding-obfs-mode",
+    "xPaddingKey": "x-padding-key",
+    "xPaddingHeader": "x-padding-header",
+    "xPaddingPlacement": "x-padding-placement",
+    "xPaddingMethod": "x-padding-method",
+    "uplinkHttpMethod": "uplink-http-method",
+    "sessionPlacement": "session-placement",
+    "seqPlacement": "seq-placement",
+    "reuseSettings": "reuse-settings",
+}
+
+XHTTP_INT_MAP = {
+    "xPaddingBytes": "x-padding-bytes",
+    "scMaxEachPostBytes": "sc-max-each-post-bytes",
+    "scMinPostsIntervalMs": "sc-min-posts-interval-ms",
+}
+
+
+def build_xhttp_opts(query):
+    opts = {}
+
+    for source_key, target_key in XHTTP_STRING_MAP.items():
+        value = first_query_value(
+            query,
+            source_key,
+            target_key,
+        )
+
+        if value is not None and value != "":
+            opts[target_key] = value
+
+    for source_key, target_key in XHTTP_INT_MAP.items():
+        value = first_query_value(
+            query,
+            source_key,
+            target_key,
+        )
+
+        number = parse_int(value)
+
+        if number is not None:
+            if source_key == "xPaddingBytes":
+                if number >= 0:
+                    opts[target_key] = number
+            else:
+                if number > 0:
+                    opts[target_key] = number
+
+    extra_raw = first_query_value(
+        query,
+        "extra",
+    )
+
+    if extra_raw:
+        extra = parse_json_value(
+            extra_raw
+        )
+
+        if isinstance(extra, dict):
+            # Значения из extra имеют приоритет
+            # только там, где они действительно
+            # являются XHTTP options.
+            for key, value in extra.items():
+                if value is None:
+                    continue
+
+                opts[key] = value
+
+        else:
+            # Если extra не является JSON,
+            # сохраняем исходное значение.
+            opts["extra"] = extra_raw
+
+    return opts
 
 
 # ============================================================
@@ -261,186 +558,427 @@ def parse_vless(url):
         if not parsed.hostname:
             return None, "missing server"
 
-        if not parsed.port:
+        try:
+            port = parsed.port
+
+        except ValueError:
+            return None, "invalid port"
+
+        if port is None:
             return None, "missing port"
 
-        uuid = urllib.parse.unquote(parsed.username or "")
+        uuid = urllib.parse.unquote(
+            parsed.username or ""
+        ).strip()
 
         if not UUID_RE.match(uuid):
             return None, "invalid UUID"
+
+        name = urllib.parse.unquote(
+            parsed.fragment or ""
+        ).strip()
+
+        if is_fake_proxy(
+            parsed.hostname,
+            port,
+            uuid,
+            name,
+        ):
+            return None, "dummy/test"
 
         query = urllib.parse.parse_qs(
             parsed.query,
             keep_blank_values=True,
         )
 
-        def get(name, default=None):
-            values = query.get(name)
-
-            if not values:
-                return default
-
-            return values[0]
-
         proxy = {
             "type": "vless",
             "server": parsed.hostname,
-            "port": parsed.port,
+            "port": port,
             "uuid": uuid,
         }
 
-        encryption = get("encryption")
+        # --------------------------------------------------------
+        # UDP
+        # --------------------------------------------------------
+
+        udp = parse_bool(
+            first_query_value(
+                query,
+                "udp",
+            )
+        )
+
+        if udp is not None:
+            proxy["udp"] = udp
+        else:
+            proxy["udp"] = True
+
+        # --------------------------------------------------------
+        # Encryption
+        # --------------------------------------------------------
+
+        encryption = first_query_value(
+            query,
+            "encryption",
+        )
 
         if encryption:
             proxy["encryption"] = encryption
 
-        flow = get("flow")
+        # --------------------------------------------------------
+        # Flow
+        # --------------------------------------------------------
+
+        flow = first_query_value(
+            query,
+            "flow",
+        )
 
         if flow:
             proxy["flow"] = flow
 
-        security = get("security")
+        # --------------------------------------------------------
+        # Packet encoding
+        # --------------------------------------------------------
 
-        if security == "tls":
+        packet_encoding = first_query_value(
+            query,
+            "packet-encoding",
+            "packetEncoding",
+        )
+
+        if packet_encoding:
+            proxy[
+                "packet-encoding"
+            ] = packet_encoding
+
+        # --------------------------------------------------------
+        # Security
+        # --------------------------------------------------------
+
+        security = (
+            first_query_value(
+                query,
+                "security",
+            )
+            or ""
+        ).lower()
+
+        if security in (
+            "tls",
+            "reality",
+        ):
             proxy["tls"] = True
 
-            servername = get("sni") or get("servername")
+            servername = first_query_value(
+                query,
+                "sni",
+                "servername",
+            )
 
             if servername:
-                proxy["servername"] = servername
+                proxy[
+                    "servername"
+                ] = servername
 
-            fingerprint = get("fp")
+            fingerprint = first_query_value(
+                query,
+                "fp",
+                "fingerprint",
+            )
 
             if fingerprint:
-                proxy["client-fingerprint"] = fingerprint
+                proxy[
+                    "client-fingerprint"
+                ] = fingerprint
 
-            alpn = get("alpn")
+            alpn = split_alpn(
+                first_query_value(
+                    query,
+                    "alpn",
+                )
+            )
 
             if alpn:
-                proxy["alpn"] = [
-                    x.strip()
-                    for x in alpn.split(",")
-                    if x.strip()
-                ]
+                proxy["alpn"] = alpn
 
-        elif security == "reality":
-            proxy["tls"] = True
+            skip_cert = parse_bool(
+                first_query_value(
+                    query,
+                    "allowInsecure",
+                    "allow-insecure",
+                    "skip-cert-verify",
+                    "skipCertVerify",
+                )
+            )
 
-            servername = get("sni") or get("servername")
+            if skip_cert is not None:
+                proxy[
+                    "skip-cert-verify"
+                ] = skip_cert
 
-            if servername:
-                proxy["servername"] = servername
+            ech = first_query_value(
+                query,
+                "ech",
+            )
 
-            fingerprint = get("fp")
+            if ech:
+                proxy["ech"] = ech
 
-            if fingerprint:
-                proxy["client-fingerprint"] = fingerprint
+            name_cert_verify = parse_bool(
+                first_query_value(
+                    query,
+                    "name-cert-verify",
+                    "nameCertVerify",
+                )
+            )
 
-            public_key = get("pbk") or get("public-key")
+            if name_cert_verify is not None:
+                proxy[
+                    "name-cert-verify"
+                ] = name_cert_verify
+
+        # --------------------------------------------------------
+        # Reality
+        # --------------------------------------------------------
+
+        if security == "reality":
+            public_key = first_query_value(
+                query,
+                "pbk",
+                "public-key",
+                "publicKey",
+            )
 
             if not public_key:
-                return None, "missing Reality public key"
+                return None, (
+                    "missing Reality public key"
+                )
 
-            if len(public_key) != 43:
-                return None, "invalid Reality public key"
+            if len(public_key) < 40:
+                return None, (
+                    "invalid Reality public key"
+                )
 
-            short_id = get("sid") or get("short-id")
+            short_id = first_query_value(
+                query,
+                "sid",
+                "short-id",
+                "shortId",
+            )
 
             reality = {
                 "public-key": public_key,
             }
 
             if short_id:
-                reality["short-id"] = short_id
+                reality[
+                    "short-id"
+                ] = short_id
 
-            proxy["reality-opts"] = reality
+            proxy[
+                "reality-opts"
+            ] = reality
 
-        network = get("type", "tcp")
+        # --------------------------------------------------------
+        # Network
+        # --------------------------------------------------------
 
-        proxy["network"] = network
+        network = (
+            first_query_value(
+                query,
+                "type",
+                "network",
+            )
+            or "tcp"
+        ).lower()
+
+        supported_networks = {
+            "tcp",
+            "ws",
+            "grpc",
+            "xhttp",
+            "http",
+            "h2",
+        }
+
+        if network not in supported_networks:
+            return None, (
+                f"unsupported network: "
+                f"{network}"
+            )
+
+        proxy[
+            "network"
+        ] = network
+
+        # --------------------------------------------------------
+        # TCP
+        # --------------------------------------------------------
+
+        if network == "tcp":
+            header_type = first_query_value(
+                query,
+                "headerType",
+                "header-type",
+            )
+
+            if header_type:
+                tcp_opts = {
+                    "header": {
+                        "type": header_type
+                    }
+                }
+
+                proxy[
+                    "tcp-opts"
+                ] = tcp_opts
 
         # --------------------------------------------------------
         # WebSocket
         # --------------------------------------------------------
 
-        if network == "ws":
+        elif network == "ws":
             ws_opts = {}
 
-            path = get("path")
+            path = first_query_value(
+                query,
+                "path",
+            )
 
             if path:
                 ws_opts["path"] = path
 
-            host = get("host")
+            host = first_query_value(
+                query,
+                "host",
+            )
 
             if host:
                 ws_opts["headers"] = {
                     "Host": host
                 }
 
+            max_early_data = parse_int(
+                first_query_value(
+                    query,
+                    "ed",
+                    "max-early-data",
+                )
+            )
+
+            if max_early_data is not None:
+                ws_opts[
+                    "max-early-data"
+                ] = max_early_data
+
+            early_data_header = first_query_value(
+                query,
+                "eh",
+                "early-data-header-name",
+            )
+
+            if early_data_header:
+                ws_opts[
+                    "early-data-header-name"
+                ] = early_data_header
+
             if ws_opts:
-                proxy["ws-opts"] = ws_opts
+                proxy[
+                    "ws-opts"
+                ] = ws_opts
 
         # --------------------------------------------------------
         # gRPC
         # --------------------------------------------------------
 
         elif network == "grpc":
-            grpc_service = (
-                get("serviceName")
-                or get("service-name")
+            grpc_opts = {}
+
+            service = first_query_value(
+                query,
+                "serviceName",
+                "service-name",
             )
 
-            if grpc_service:
-                proxy["grpc-opts"] = {
-                    "grpc-service-name": grpc_service
-                }
+            if service:
+                grpc_opts[
+                    "grpc-service-name"
+                ] = service
+
+            mode = first_query_value(
+                query,
+                "mode",
+            )
+
+            if mode:
+                grpc_opts["grpc-mode"] = mode
+
+            if grpc_opts:
+                proxy[
+                    "grpc-opts"
+                ] = grpc_opts
 
         # --------------------------------------------------------
         # XHTTP
         # --------------------------------------------------------
 
         elif network == "xhttp":
-            xhttp_opts = {}
+            xhttp_opts = build_xhttp_opts(
+                query
+            )
 
-            mappings = {
-                "path": "path",
-                "host": "host",
-                "mode": "mode",
-                "extra": "extra",
-                "xPaddingBytes": "x-padding-bytes",
-                "xPaddingObfsMode": "x-padding-obfs-mode",
-                "xPaddingKey": "x-padding-key",
-                "xPaddingHeader": "x-padding-header",
-                "xPaddingPlacement": "x-padding-placement",
-                "xPaddingMethod": "x-padding-method",
-                "uplinkHttpMethod": "uplink-http-method",
-                "sessionPlacement": "session-placement",
-                "seqPlacement": "seq-placement",
-                "scMaxEachPostBytes": "sc-max-each-post-bytes",
-                "scMinPostsIntervalMs": "sc-min-posts-interval-ms",
-                "reuseSettings": "reuse-settings",
-            }
+            if not xhttp_opts:
+                return None, (
+                    "xhttp without options"
+                )
 
-            for source_key, target_key in mappings.items():
-                value = get(source_key)
-
-                if value is not None:
-                    xhttp_opts[target_key] = value
-
-            if xhttp_opts:
-                proxy["xhttp-opts"] = xhttp_opts
+            proxy[
+                "xhttp-opts"
+            ] = xhttp_opts
 
         # --------------------------------------------------------
-        # Name from URL
+        # HTTP / H2
         # --------------------------------------------------------
 
-        name = urllib.parse.unquote(
-            parsed.fragment or ""
-        ).strip()
+        elif network in (
+            "http",
+            "h2",
+        ):
+            http_opts = {}
+
+            path = first_query_value(
+                query,
+                "path",
+            )
+
+            if path:
+                http_opts["path"] = path
+
+            host = first_query_value(
+                query,
+                "host",
+            )
+
+            if host:
+                http_opts["headers"] = {
+                    "Host": host
+                }
+
+            if http_opts:
+                proxy[
+                    "http-opts"
+                ] = http_opts
+
+        # --------------------------------------------------------
+        # Name
+        # --------------------------------------------------------
 
         if name:
-            proxy["_source_name"] = name
+            proxy[
+                "_source_name"
+            ] = name
 
         return proxy, None
 
@@ -462,6 +1000,7 @@ def proxy_identity(proxy):
         copy,
         sort_keys=True,
         ensure_ascii=False,
+        separators=(",", ":"),
     )
 
 
@@ -471,7 +1010,9 @@ def deduplicate(proxies):
     duplicates = 0
 
     for proxy in proxies:
-        identity = proxy_identity(proxy)
+        identity = proxy_identity(
+            proxy
+        )
 
         if identity in seen:
             duplicates += 1
@@ -484,21 +1025,39 @@ def deduplicate(proxies):
 
 
 # ============================================================
-# COUNTRY NAMES
+# COUNTRY
 # ============================================================
 
 def detect_country(proxy):
-    haystack = " ".join(
-        [
-            str(proxy.get("server", "")),
-            str(proxy.get("servername", "")),
-            str(proxy.get("_source_name", "")),
-        ]
+    server = str(
+        proxy.get("server", "")
     ).lower()
 
+    servername = str(
+        proxy.get("servername", "")
+    ).lower()
+
+    source_name = str(
+        proxy.get("_source_name", "")
+    ).lower()
+
+    # Сначала пытаемся определить страну
+    # по имени узла — оно обычно надёжнее.
     for country, keywords in COUNTRIES:
         for keyword in keywords:
-            if keyword in haystack:
+            if keyword in source_name:
+                return country
+
+    # Затем servername.
+    for country, keywords in COUNTRIES:
+        for keyword in keywords:
+            if keyword in servername:
+                return country
+
+    # В последнюю очередь server.
+    for country, keywords in COUNTRIES:
+        for keyword in keywords:
+            if keyword in server:
                 return country
 
     return "Европа"
@@ -508,21 +1067,24 @@ def assign_names(proxies):
     counters = {}
 
     for proxy in proxies:
-        country = detect_country(proxy)
+        country = detect_country(
+            proxy
+        )
 
         counters[country] = (
             counters.get(country, 0) + 1
         )
 
         proxy["name"] = (
-            f"{country} {counters[country]}"
+            f"{country} "
+            f"{counters[country]}"
         )
 
     return proxies
 
 
 # ============================================================
-# MIHOMO
+# MIHOMO API
 # ============================================================
 
 def api_url(path, params=None):
@@ -543,7 +1105,7 @@ def api_get(path, params=None):
     request = urllib.request.Request(
         api_url(path, params),
         headers={
-            "User-Agent": "KafkaSubBuilder/2.0"
+            "User-Agent": "KafkaSubBuilder/3.0"
         },
     )
 
@@ -556,6 +1118,10 @@ def api_get(path, params=None):
             errors="replace",
         )
 
+
+# ============================================================
+# TEMPORARY MIHOMO CONFIG
+# ============================================================
 
 def create_check_config(proxies):
     config = {
@@ -606,17 +1172,245 @@ def create_check_config(proxies):
             f,
             allow_unicode=True,
             sort_keys=False,
+            default_flow_style=False,
         )
 
     return path
 
+
+# ============================================================
+# MIHOMO VALIDATION
+# ============================================================
+
+def validate_with_mihomo(
+    config,
+    label="config",
+):
+    if not os.path.exists(
+        MIHOMO_BINARY
+    ):
+        print(
+            f"[!] Mihomo binary not found: "
+            f"{MIHOMO_BINARY}"
+        )
+
+        return False, (
+            "mihomo binary not found"
+        )
+
+    fd, path = tempfile.mkstemp(
+        prefix="kafka-validate-",
+        suffix=".yaml",
+    )
+
+    os.close(fd)
+
+    try:
+        with open(
+            path,
+            "w",
+            encoding="utf-8",
+        ) as f:
+            yaml.safe_dump(
+                config,
+                f,
+                allow_unicode=True,
+                sort_keys=False,
+                default_flow_style=False,
+            )
+
+        result = subprocess.run(
+            [
+                MIHOMO_BINARY,
+                "-t",
+                "-f",
+                path,
+            ],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            timeout=30,
+        )
+
+        output = (
+            result.stdout or ""
+        ).strip()
+
+        if result.returncode != 0:
+            print()
+            print(
+                f"[!] Mihomo validation failed "
+                f"for {label}:"
+            )
+            print(output[-5000:])
+
+            return False, output
+
+        return True, None
+
+    except subprocess.TimeoutExpired:
+        return False, (
+            "mihomo validation timeout"
+        )
+
+    except Exception as e:
+        return False, str(e)
+
+    finally:
+        if os.path.exists(path):
+            os.remove(path)
+
+
+def validate_proxies_with_mihomo(
+    proxies,
+):
+    """
+    Проверяет весь набор через Mihomo.
+    Mihomo либо принимает конфиг целиком,
+    либо отклоняет его.
+
+    Если весь набор не проходит,
+    выполняется бинарное деление:
+    проблемный узел постепенно локализуется.
+    """
+
+    if not proxies:
+        return [], []
+
+    print()
+    print(
+        "=== Mihomo syntax validation ==="
+    )
+    print()
+
+    test_config = {
+        "mixed-port": 7890,
+        "mode": "rule",
+        "proxies": proxies,
+        "proxy-groups": [
+            {
+                "name": "CHECK",
+                "type": "select",
+                "proxies": [
+                    proxy["name"]
+                    for proxy in proxies
+                ],
+            }
+        ],
+        "rules": [
+            "MATCH,DIRECT"
+        ],
+    }
+
+    ok, error = validate_with_mihomo(
+        test_config,
+        "all proxies",
+    )
+
+    if ok:
+        print(
+            f"[+] Mihomo accepted all "
+            f"{len(proxies)} proxies."
+        )
+
+        return proxies, []
+
+    print(
+        "[!] Mihomo rejected the complete "
+        "proxy set."
+    )
+
+    print(
+        "[+] Locating invalid proxies..."
+    )
+
+    valid = []
+    rejected = []
+
+    def validate_subset(subset):
+        if not subset:
+            return True
+
+        config = {
+            "mixed-port": 7890,
+            "mode": "rule",
+            "proxies": subset,
+            "proxy-groups": [
+                {
+                    "name": "CHECK",
+                    "type": "select",
+                    "proxies": [
+                        proxy["name"]
+                        for proxy in subset
+                    ],
+                }
+            ],
+            "rules": [
+                "MATCH,DIRECT"
+            ],
+        }
+
+        ok, _ = validate_with_mihomo(
+            config,
+            "subset",
+        )
+
+        return ok
+
+    def locate(subset):
+        if not subset:
+            return
+
+        if validate_subset(subset):
+            valid.extend(subset)
+            return
+
+        if len(subset) == 1:
+            rejected.append(
+                (
+                    subset[0],
+                    "mihomo validation",
+                )
+            )
+            return
+
+        middle = len(subset) // 2
+
+        locate(
+            subset[:middle]
+        )
+
+        locate(
+            subset[middle:]
+        )
+
+    locate(proxies)
+
+    print(
+        f"[+] Mihomo valid: "
+        f"{len(valid)}"
+    )
+
+    print(
+        f"[+] Mihomo rejected: "
+        f"{len(rejected)}"
+    )
+
+    return valid, rejected
+
+
+# ============================================================
+# MIHOMO PROCESS
+# ============================================================
 
 def start_mihomo(proxies):
     check_config = create_check_config(
         proxies
     )
 
-    print("[+] Starting Mihomo...")
+    print(
+        "[+] Starting Mihomo..."
+    )
 
     process = subprocess.Popen(
         [
@@ -634,39 +1428,67 @@ def start_mihomo(proxies):
 
     start = time.time()
 
-    while time.time() - start < STARTUP_TIMEOUT:
+    while (
+        time.time() - start
+        < STARTUP_TIMEOUT
+    ):
         if process.poll() is not None:
             output = ""
 
             try:
-                output = process.stdout.read()
+                output = (
+                    process.stdout.read()
+                )
             except Exception:
                 pass
 
-            os.remove(check_config)
+            if os.path.exists(
+                check_config
+            ):
+                os.remove(
+                    check_config
+                )
 
             print()
-            print("[!] Mihomo exited during startup:")
-            print(output)
+            print(
+                "[!] Mihomo exited during "
+                "startup:"
+            )
+            print(
+                output[-5000:]
+            )
 
             sys.exit(1)
 
         try:
-            api_get("/proxies")
+            api_get(
+                "/proxies"
+            )
 
-            print("[+] Mihomo API is ready.")
+            print(
+                "[+] Mihomo API is ready."
+            )
 
-            return process, check_config
+            return (
+                process,
+                check_config,
+            )
 
         except Exception:
             time.sleep(0.5)
 
-    print("[!] Mihomo API did not start.")
+    print(
+        "[!] Mihomo API did not start."
+    )
 
     process.kill()
 
-    if os.path.exists(check_config):
-        os.remove(check_config)
+    if os.path.exists(
+        check_config
+    ):
+        os.remove(
+            check_config
+        )
 
     sys.exit(1)
 
@@ -686,20 +1508,29 @@ def check_once(name):
             f"/proxies/{encoded_name}/delay",
             {
                 "url": TEST_URL,
-                "timeout": REQUEST_TIMEOUT_MS,
-                "expected": EXPECTED_STATUS,
+                "timeout":
+                    REQUEST_TIMEOUT_MS,
+                "expected":
+                    EXPECTED_STATUS,
             },
         )
 
-        result = json.loads(data)
+        result = json.loads(
+            data
+        )
 
-        delay = result.get("delay")
+        delay = result.get(
+            "delay"
+        )
 
-        if not isinstance(delay, int):
+        if not isinstance(
+            delay,
+            int,
+        ):
             return False, None
 
         if delay <= 0:
-            return False, None
+            return False, delay
 
         if delay > MAX_LATENCY_MS:
             return False, delay
@@ -714,24 +1545,44 @@ def check_proxy(proxy):
     name = proxy["name"]
 
     successes = 0
+    failures = 0
+
     delays = []
+
+    attempts_done = 0
 
     for attempt in range(
         1,
         CHECK_ATTEMPTS + 1,
     ):
-        ok, delay = check_once(name)
+        attempts_done += 1
+
+        ok, delay = check_once(
+            name
+        )
 
         if ok:
             successes += 1
-            delays.append(delay)
 
-        # Если уже невозможно набрать нужное
-        # количество успешных проверок — выходим
+            if delay is not None:
+                delays.append(
+                    delay
+                )
+
+        else:
+            failures += 1
+
         remaining = (
-            CHECK_ATTEMPTS - attempt
+            CHECK_ATTEMPTS
+            - attempt
         )
 
+        # Уже набрали необходимое
+        if successes >= REQUIRED_SUCCESSES:
+            break
+
+        # Даже при идеальном результате
+        # оставшихся попыток недостаточно.
         if (
             successes + remaining
             < REQUIRED_SUCCESSES
@@ -739,50 +1590,59 @@ def check_proxy(proxy):
             break
 
     alive = (
-        successes >= REQUIRED_SUCCESSES
+        successes
+        >= REQUIRED_SUCCESSES
     )
 
-    if alive:
+    average_delay = None
+
+    if delays:
         average_delay = (
-            sum(delays) // len(delays)
-            if delays
-            else None
+            sum(delays)
+            // len(delays)
         )
-    else:
-        average_delay = None
 
     return {
         "proxy": proxy,
         "alive": alive,
         "successes": successes,
-        "attempts": CHECK_ATTEMPTS,
+        "failures": failures,
+        "attempts": attempts_done,
         "delay": average_delay,
     }
 
 
 def health_check(proxies):
     print()
-    print("=== Health Check ===")
+    print(
+        "=== Health Check ==="
+    )
     print()
+
     print(
         f"[+] Endpoint: {TEST_URL}"
     )
+
     print(
-        f"[+] Attempts: {CHECK_ATTEMPTS}"
+        f"[+] Attempts: "
+        f"{CHECK_ATTEMPTS}"
     )
+
     print(
         f"[+] Required: "
         f"{REQUIRED_SUCCESSES}/"
         f"{CHECK_ATTEMPTS}"
     )
+
     print(
         f"[+] Max latency: "
         f"{MAX_LATENCY_MS} ms"
     )
+
     print()
 
-    process, check_config = start_mihomo(
-        proxies
+    process, check_config = (
+        start_mihomo(proxies)
     )
 
     alive = []
@@ -809,24 +1669,42 @@ def health_check(proxies):
                 ),
                 start=1,
             ):
-                result = future.result()
+                result = (
+                    future.result()
+                )
 
-                proxy = result["proxy"]
-                name = proxy["name"]
+                proxy = result[
+                    "proxy"
+                ]
+
+                name = proxy[
+                    "name"
+                ]
 
                 if result["alive"]:
-                    alive.append(proxy)
+                    alive.append(
+                        proxy
+                    )
+
+                    delay_text = (
+                        f"{result['delay']} ms"
+                        if result["delay"]
+                        is not None
+                        else "n/a"
+                    )
 
                     print(
                         f"[{index}/{total}] "
                         f"OK   {name} "
                         f"({result['successes']}/"
                         f"{result['attempts']}) "
-                        f"{result['delay']} ms"
+                        f"{delay_text}"
                     )
 
                 else:
-                    dead.append(proxy)
+                    dead.append(
+                        proxy
+                    )
 
                     print(
                         f"[{index}/{total}] "
@@ -837,7 +1715,9 @@ def health_check(proxies):
 
     finally:
         print()
-        print("[+] Stopping Mihomo...")
+        print(
+            "[+] Stopping Mihomo..."
+        )
 
         process.terminate()
 
@@ -845,21 +1725,26 @@ def health_check(proxies):
             process.wait(
                 timeout=5
             )
+
         except subprocess.TimeoutExpired:
             process.kill()
 
-        if os.path.exists(check_config):
-            os.remove(check_config)
+        if os.path.exists(
+            check_config
+        ):
+            os.remove(
+                check_config
+            )
 
     return alive, dead
 
 
 # ============================================================
-# CONFIG GENERATION
+# FINAL CONFIG
 # ============================================================
 
 def generate_config(proxies):
-    config = {
+    return {
         "mixed-port": 7890,
 
         "mode": "rule",
@@ -884,67 +1769,125 @@ def generate_config(proxies):
         ],
     }
 
-    return config
 
+def validate_config_structure(config):
+    if not isinstance(
+        config,
+        dict,
+    ):
+        return False, (
+            "config is not a mapping"
+        )
 
-def validate_config(config):
-    if not isinstance(config, dict):
-        return False, "config is not a mapping"
+    proxies = config.get(
+        "proxies"
+    )
 
-    proxies = config.get("proxies")
-
-    if not isinstance(proxies, list):
-        return False, "proxies is not a list"
+    if not isinstance(
+        proxies,
+        list,
+    ):
+        return False, (
+            "proxies is not a list"
+        )
 
     if not proxies:
-        return False, "no proxies"
+        return False, (
+            "no proxies"
+        )
 
     names = set()
 
     for proxy in proxies:
-        if not isinstance(proxy, dict):
-            return False, "invalid proxy object"
+        if not isinstance(
+            proxy,
+            dict,
+        ):
+            return False, (
+                "invalid proxy object"
+            )
 
-        name = proxy.get("name")
+        name = proxy.get(
+            "name"
+        )
 
         if not name:
-            return False, "proxy without name"
+            return False, (
+                "proxy without name"
+            )
 
         if name in names:
             return False, (
-                f"duplicate proxy name: {name}"
+                f"duplicate proxy name: "
+                f"{name}"
             )
 
         names.add(name)
 
-        if proxy.get("type") != "vless":
+        if proxy.get(
+            "type"
+        ) != "vless":
             return False, (
-                f"unsupported proxy type: "
+                "unsupported proxy type: "
                 f"{proxy.get('type')}"
+            )
+
+        server = proxy.get(
+            "server"
+        )
+
+        if not server:
+            return False, (
+                f"{name}: missing server"
+            )
+
+        port = proxy.get(
+            "port"
+        )
+
+        if not isinstance(
+            port,
+            int,
+        ):
+            return False, (
+                f"{name}: invalid port"
+            )
+
+        if not (
+            1 <= port <= 65535
+        ):
+            return False, (
+                f"{name}: invalid port"
             )
 
     groups = config.get(
         "proxy-groups"
     )
 
-    if not isinstance(groups, list):
-        return False, "proxy-groups missing"
+    if not isinstance(
+        groups,
+        list,
+    ):
+        return False, (
+            "proxy-groups missing"
+        )
 
     return True, None
 
 
 def atomic_write_config(config):
-    directory = (
-        os.path.dirname(
-            os.path.abspath(CONFIG_FILE)
+    directory = os.path.dirname(
+        os.path.abspath(
+            CONFIG_FILE
         )
-        or "."
-    )
+    ) or "."
 
-    fd, temp_path = tempfile.mkstemp(
-        prefix="config-",
-        suffix=".yaml",
-        dir=directory,
+    fd, temp_path = (
+        tempfile.mkstemp(
+            prefix="config-",
+            suffix=".yaml",
+            dir=directory,
+        )
     )
 
     os.close(fd)
@@ -963,22 +1906,41 @@ def atomic_write_config(config):
                 default_flow_style=False,
             )
 
-        # Проверяем то, что реально записали
         with open(
             temp_path,
             "r",
             encoding="utf-8",
         ) as f:
-            reloaded = yaml.safe_load(f)
+            reloaded = yaml.safe_load(
+                f
+            )
 
-        valid, error = validate_config(
-            reloaded
+        valid, error = (
+            validate_config_structure(
+                reloaded
+            )
         )
 
         if not valid:
             raise RuntimeError(
-                f"Final config validation failed: "
-                f"{error}"
+                "Final config validation "
+                f"failed: {error}"
+            )
+
+        # Последняя проверка именно
+        # того YAML, который собираемся
+        # опубликовать.
+        mihomo_valid, mihomo_error = (
+            validate_with_mihomo(
+                reloaded,
+                "final config",
+            )
+        )
+
+        if not mihomo_valid:
+            raise RuntimeError(
+                "Final Mihomo validation "
+                f"failed: {mihomo_error}"
             )
 
         os.replace(
@@ -987,8 +1949,12 @@ def atomic_write_config(config):
         )
 
     finally:
-        if os.path.exists(temp_path):
-            os.remove(temp_path)
+        if os.path.exists(
+            temp_path
+        ):
+            os.remove(
+                temp_path
+            )
 
 
 # ============================================================
@@ -998,39 +1964,60 @@ def atomic_write_config(config):
 def print_statistics(
     total_found,
     valid_count,
+    mihomo_valid_count,
+    mihomo_rejected_count,
     rejected,
     duplicates,
     alive,
     dead,
 ):
     print()
-    print("=== Statistics ===")
+    print(
+        "=== Statistics ==="
+    )
     print()
 
     print(
-        f"Found VLESS:      {total_found}"
+        f"Found VLESS:          "
+        f"{total_found}"
     )
 
     print(
-        f"Valid before check: {valid_count}"
+        f"Valid after parsing:  "
+        f"{valid_count}"
     )
 
     print(
-        f"Alive:             {len(alive)}"
+        f"Mihomo accepted:      "
+        f"{mihomo_valid_count}"
     )
 
     print(
-        f"Dead:              {len(dead)}"
+        f"Mihomo rejected:      "
+        f"{mihomo_rejected_count}"
     )
 
     print(
-        f"Duplicates removed: {duplicates}"
+        f"Alive:                "
+        f"{len(alive)}"
+    )
+
+    print(
+        f"Dead:                 "
+        f"{len(dead)}"
+    )
+
+    print(
+        f"Duplicates removed:   "
+        f"{duplicates}"
     )
 
     print()
 
     if rejected:
-        print("Rejected:")
+        print(
+            "Parser rejected:"
+        )
 
         for reason, count in sorted(
             rejected.items()
@@ -1044,18 +2031,28 @@ def print_statistics(
     countries = {}
 
     for proxy in alive:
-        country = detect_country(proxy)
+        country = detect_country(
+            proxy
+        )
 
         countries[country] = (
-            countries.get(country, 0) + 1
+            countries.get(
+                country,
+                0
+            ) + 1
         )
 
     if countries:
-        print("Countries:")
+        print(
+            "Countries:"
+        )
 
         for country, count in sorted(
             countries.items(),
-            key=lambda x: (-x[1], x[0])
+            key=lambda x: (
+                -x[1],
+                x[0],
+            ),
         ):
             print(
                 f"  {country}: {count}"
@@ -1067,8 +2064,25 @@ def print_statistics(
 # ============================================================
 
 def main():
-    print("=== Kafka Sub Builder ===")
+    print(
+        "=== Kafka Sub Builder 3.0 ==="
+    )
+
     print()
+
+    # --------------------------------------------------------
+    # Check binary
+    # --------------------------------------------------------
+
+    if not os.path.exists(
+        MIHOMO_BINARY
+    ):
+        print(
+            f"[!] Mihomo binary not found: "
+            f"{MIHOMO_BINARY}"
+        )
+
+        sys.exit(1)
 
     # --------------------------------------------------------
     # Sources
@@ -1079,6 +2093,7 @@ def main():
     print(
         f"[+] Sources: {len(sources)}"
     )
+
     print()
 
     all_vless = []
@@ -1089,15 +2104,22 @@ def main():
         )
 
         try:
-            data = download_source(source)
-
-            found = parse_source(data)
-
-            print(
-                f"[+] Found VLESS: {len(found)}"
+            data = download_source(
+                source
             )
 
-            all_vless.extend(found)
+            found = parse_source(
+                data
+            )
+
+            print(
+                f"[+] Found VLESS: "
+                f"{len(found)}"
+            )
+
+            all_vless.extend(
+                found
+            )
 
         except Exception as e:
             print(
@@ -1105,36 +2127,61 @@ def main():
             )
 
     all_vless = list(
-        dict.fromkeys(all_vless)
+        dict.fromkeys(
+            all_vless
+        )
     )
 
     print()
+
     print(
-        f"[+] Total VLESS: "
+        f"[+] Total unique VLESS: "
         f"{len(all_vless)}"
     )
+
     print()
 
+    if not all_vless:
+        print(
+            "[!] No VLESS configurations "
+            "found."
+        )
+
+        print(
+            "[!] Existing config.yaml "
+            "was NOT modified."
+        )
+
+        sys.exit(1)
+
     # --------------------------------------------------------
-    # Parse / validate
+    # Parse
     # --------------------------------------------------------
 
     valid = []
     rejected = {}
 
     for url in all_vless:
-        proxy, error = parse_vless(url)
+        proxy, error = parse_vless(
+            url
+        )
 
         if proxy is None:
             rejected[error] = (
-                rejected.get(error, 0) + 1
+                rejected.get(
+                    error,
+                    0,
+                ) + 1
             )
+
             continue
 
-        valid.append(proxy)
+        valid.append(
+            proxy
+        )
 
     print(
-        f"[+] Valid proxies: "
+        f"[+] Valid after parsing: "
         f"{len(valid)}"
     )
 
@@ -1142,8 +2189,8 @@ def main():
     # Deduplicate
     # --------------------------------------------------------
 
-    valid, duplicates = deduplicate(
-        valid
+    valid, duplicates = (
+        deduplicate(valid)
     )
 
     print(
@@ -1155,17 +2202,45 @@ def main():
     # Names
     # --------------------------------------------------------
 
-    valid = assign_names(valid)
+    valid = assign_names(
+        valid
+    )
 
     if not valid:
         print()
         print(
             "[!] No valid proxies."
         )
+
         print(
             "[!] Existing config.yaml "
             "was NOT modified."
         )
+
+        sys.exit(1)
+
+    # --------------------------------------------------------
+    # Mihomo validation
+    # --------------------------------------------------------
+
+    mihomo_valid, mihomo_rejected = (
+        validate_proxies_with_mihomo(
+            valid
+        )
+    )
+
+    if not mihomo_valid:
+        print()
+        print(
+            "[!] No proxies survived "
+            "Mihomo validation."
+        )
+
+        print(
+            "[!] Existing config.yaml "
+            "was NOT modified."
+        )
+
         sys.exit(1)
 
     # --------------------------------------------------------
@@ -1173,7 +2248,7 @@ def main():
     # --------------------------------------------------------
 
     alive, dead = health_check(
-        valid
+        mihomo_valid
     )
 
     # --------------------------------------------------------
@@ -1183,15 +2258,17 @@ def main():
     minimum_alive = max(
         MIN_ALIVE_ABSOLUTE,
         math.ceil(
-            len(valid)
+            len(mihomo_valid)
             * MIN_ALIVE_PERCENT
         ),
     )
 
     print()
+
     print(
         f"[+] Alive: "
-        f"{len(alive)}/{len(valid)}"
+        f"{len(alive)}/"
+        f"{len(mihomo_valid)}"
     )
 
     print(
@@ -1204,51 +2281,57 @@ def main():
         print(
             "[!] Too few healthy proxies."
         )
+
         print(
-            "[!] This update looks suspicious."
+            "[!] This update looks "
+            "suspicious."
         )
+
         print(
             "[!] Existing config.yaml "
             "was NOT modified."
         )
+
         sys.exit(1)
 
     # --------------------------------------------------------
-    # Reassign names after filtering
+    # Rebuild names only for final set
     # --------------------------------------------------------
 
-    alive = assign_names(alive)
+    alive = assign_names(
+        alive
+    )
 
     # --------------------------------------------------------
-    # Generate
+    # Final config
     # --------------------------------------------------------
 
     final_config = generate_config(
         alive
     )
 
-    print()
-    print(
-        "[+] Validating generated config..."
-    )
-
-    valid_config, error = validate_config(
-        final_config
-    )
-
-    if not valid_config:
-        print(
-            f"[!] Validation failed: "
-            f"{error}"
+    valid_structure, error = (
+        validate_config_structure(
+            final_config
         )
+    )
+
+    if not valid_structure:
+        print()
+        print(
+            f"[!] Final structure "
+            f"validation failed: {error}"
+        )
+
         print(
             "[!] Existing config.yaml "
             "was NOT modified."
         )
+
         sys.exit(1)
 
     # --------------------------------------------------------
-    # Write atomically
+    # Atomic write + final Mihomo test
     # --------------------------------------------------------
 
     try:
@@ -1259,13 +2342,15 @@ def main():
     except Exception as e:
         print()
         print(
-            f"[!] Failed to write config: "
-            f"{e}"
+            f"[!] Failed to write "
+            f"config.yaml: {e}"
         )
+
         print(
             "[!] Existing config.yaml "
             "was NOT modified."
         )
+
         sys.exit(1)
 
     # --------------------------------------------------------
@@ -1275,6 +2360,12 @@ def main():
     print_statistics(
         total_found=len(all_vless),
         valid_count=len(valid),
+        mihomo_valid_count=len(
+            mihomo_valid
+        ),
+        mihomo_rejected_count=len(
+            mihomo_rejected
+        ),
         rejected=rejected,
         duplicates=duplicates,
         alive=alive,
@@ -1282,6 +2373,7 @@ def main():
     )
 
     print()
+
     print(
         "=== Build complete ==="
     )
