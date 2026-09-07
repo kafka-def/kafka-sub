@@ -618,18 +618,6 @@ proxies:
     public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
 - name: Нидерланды 11
   type: vless
-  server: 192.145.31.5
-  port: 8443
-  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
-  encryption: none
-  tls: true
-  servername: neth9.lunariai.ru
-  client-fingerprint: firefox
-  alpn:
-  - h2
-  - http/1.1
-- name: Нидерланды 12
-  type: vless
   server: 45.82.67.183
   port: 443
   uuid: 1a8d3885-d868-49c5-abc4-68ff79a91e09
@@ -641,7 +629,7 @@ proxies:
   reality-opts:
     public-key: daiJkQwpAcBk7oH1iZzRthMj-jAlqovX7vAiwVqfjTU
     short-id: 8880a9f75eb46d91
-- name: Нидерланды 13
+- name: Нидерланды 12
   type: vless
   server: 45.82.67.183
   port: 443
@@ -654,7 +642,7 @@ proxies:
   reality-opts:
     public-key: daiJkQwpAcBk7oH1iZzRthMj-jAlqovX7vAiwVqfjTU
     short-id: 8880a9f75eb46d91
-- name: Нидерланды 14
+- name: Нидерланды 13
   type: vless
   server: 89.208.105.204
   port: 443
@@ -667,7 +655,7 @@ proxies:
   reality-opts:
     public-key: G8SING6Ibc_igZ5vI5578fXCT_mBMRuq_o8_Ymnj2SQ
     short-id: eba1498e012ef580
-- name: Нидерланды 15
+- name: Нидерланды 14
   type: vless
   server: 172.239.239.53
   port: 22746
@@ -680,20 +668,7 @@ proxies:
   reality-opts:
     public-key: B6bPTxNaLqqoUTuNggzTBP0pPxJEqE_Bd_Ob27MPvgU
     short-id: d9fd4fa80238cd05
-- name: Нидерланды 16
-  type: vless
-  server: 147.45.61.81
-  port: 443
-  uuid: 00d1939a-d03c-4e93-a02b-2040b8429063
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  servername: nl-02.file-rkat.online
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 1KdHB8WjI4E_Qt43QdY0OByHv9CkLjK_cAtVOcnt1Ug
-    short-id: c8eebab189078461
-- name: Нидерланды 17
+- name: Нидерланды 15
   type: vless
   server: 103.75.125.19
   port: 443
@@ -706,7 +681,7 @@ proxies:
   reality-opts:
     public-key: 2AKBmK0PMf2zUMhRo1Ad-WNf_XoRk3AN-SGo6ZdhxA4
     short-id: ecca56e9a9963ed7
-- name: Нидерланды 18
+- name: Нидерланды 16
   type: vless
   server: 5.253.59.156
   port: 443
@@ -719,7 +694,7 @@ proxies:
   reality-opts:
     public-key: sgPREsDFJUchKawgXgFGEM4YBjTDur0rgD2GuQmZXzA
     short-id: 04b9f0b2470fae16
-- name: Нидерланды 19
+- name: Нидерланды 17
   type: vless
   server: 152.70.58.201
   port: 443
@@ -732,7 +707,7 @@ proxies:
   reality-opts:
     public-key: Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28
     short-id: 52c723e0fad49689
-- name: Нидерланды 20
+- name: Нидерланды 18
   type: vless
   server: 144.124.242.136
   port: 443
@@ -745,7 +720,7 @@ proxies:
   reality-opts:
     public-key: Rp0WaupRP9LtJ-dd4vjKwuvSzqo_ZqIZPZWDEbSoIAo
     short-id: 98096455d963bdbb
-- name: Нидерланды 21
+- name: Нидерланды 19
   type: vless
   server: 94.237.4.82
   port: 443
@@ -760,22 +735,6 @@ proxies:
   network: xhttp
   xhttp-opts:
     path: /
-    sc-min-posts-interval-ms: 30
-- name: Нидерланды 22
-  type: vless
-  server: 31.76.252.17
-  port: 443
-  uuid: 00d1939a-d03c-4e93-a02b-2040b8429063
-  encryption: none
-  tls: true
-  servername: cl-78.file-rkat.online
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: tbKg89n1kirBQbHyexrBIH21iHS0JigQnPqits499R4
-    short-id: f7c8ee5aa55993a0
-  network: xhttp
-  xhttp-opts:
-    path: /assets/media/7c2a83
     sc-min-posts-interval-ms: 30
 - name: Германия 1
   type: vless
@@ -978,22 +937,6 @@ proxies:
     short-id: c0dc8d7fda62ee7f
 - name: Германия 16
   type: vless
-  server: 2.26.227.57
-  port: 443
-  uuid: 00d1939a-d03c-4e93-a02b-2040b8429063
-  encryption: none
-  tls: true
-  servername: cl-77.file-rkat.online
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: vefXz-O5G9tnwKRwczX4CCOcxSadtNzA4bBWw7Brzys
-    short-id: 2859c43323bbeba3
-  network: xhttp
-  xhttp-opts:
-    path: /assets/media/4e7b91
-    sc-min-posts-interval-ms: 30
-- name: Германия 17
-  type: vless
   server: 138.124.28.79
   port: 443
   uuid: 14409b0c-2091-4bc7-9845-2485a31ac38a
@@ -1112,31 +1055,6 @@ proxies:
   - http/1.1
 - name: Польша 10
   type: vless
-  server: 144.31.2.33
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  servername: pl3.moritech.net
-  client-fingerprint: firefox
-  alpn:
-  - h2
-- name: Польша 11
-  type: vless
-  server: 144.31.2.33
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  servername: pl3.moritech.net
-  client-fingerprint: firefox
-  alpn:
-  - h2
-  - http/1.1
-- name: Польша 12
-  type: vless
   server: 144.31.5.64
   port: 443
   uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
@@ -1145,7 +1063,7 @@ proxies:
   tls: true
   servername: pl6.moritech.net
   client-fingerprint: firefox
-- name: Польша 13
+- name: Польша 11
   type: vless
   server: 144.31.5.64
   port: 443
@@ -1157,7 +1075,7 @@ proxies:
   client-fingerprint: firefox
   alpn:
   - v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2ra
-- name: Польша 14
+- name: Польша 12
   type: vless
   server: 144.31.5.64
   port: 443
@@ -1169,7 +1087,7 @@ proxies:
   client-fingerprint: firefox
   alpn:
   - h2
-- name: Польша 15
+- name: Польша 13
   type: vless
   server: 144.31.5.64
   port: 443
@@ -1182,7 +1100,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: Польша 16
+- name: Польша 14
   type: vless
   server: 62.132.117.11
   port: 43439
@@ -1307,32 +1225,6 @@ proxies:
     sc-min-posts-interval-ms: 30
 - name: Финляндия 9
   type: vless
-  server: 141.0.184.240
-  port: 7443
-  uuid: 70d482eb-7584-4841-a02a-c668f1ee33e7
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  servername: fi2.routeliora.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: AxzvGjWPl7k1QMOWsRCgtuizgSS5NVWXwRoYsKP-630
-    short-id: e1f2a3b4
-- name: Финляндия 10
-  type: vless
-  server: 141.0.184.240
-  port: 8443
-  uuid: 70d482eb-7584-4841-a02a-c668f1ee33e7
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  servername: dzen.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: AxzvGjWPl7k1QMOWsRCgtuizgSS5NVWXwRoYsKP-630
-    short-id: f2a3b4c5
-- name: Финляндия 11
-  type: vless
   server: 45.128.235.8
   port: 443
   uuid: d9d0f208-d582-41d5-bb7b-742671402810
@@ -1344,20 +1236,7 @@ proxies:
   reality-opts:
     public-key: nnkPnz6R86-6xG92s8k-1DUQPXAJIVMoMWDLPghh4x4
     short-id: 0173b2681806bc97
-- name: Финляндия 12
-  type: vless
-  server: 144.31.129.2
-  port: 443
-  uuid: 91eb52ec-e3f5-4ab9-90da-43104995aef7
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  servername: by1.un1.pro
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: y3EIsxDGDJrBGk3j4YmjI5R_8jiCsEDRDMeL4bv5TTI
-    short-id: 6ba85179e30d4fc2
-- name: Финляндия 13
+- name: Финляндия 10
   type: vless
   server: 62.238.54.59
   port: 443
@@ -1373,20 +1252,7 @@ proxies:
   xhttp-opts:
     path: /farasati1
     sc-min-posts-interval-ms: 30
-- name: Финляндия 14
-  type: vless
-  server: 31.76.31.235
-  port: 443
-  uuid: 00d1939a-d03c-4e93-a02b-2040b8429063
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  servername: pop-01.file-rkat.online
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: NweAmwfe6_o_kpCZTAyY5W7yvQaAvNXfwDh6wSkmF2U
-    short-id: 3f69ecc51edc3231
-- name: Финляндия 15
+- name: Финляндия 11
   type: vless
   server: 2.27.208.9
   port: 443
@@ -1415,47 +1281,6 @@ proxies:
     sc-min-posts-interval-ms: 30
 - name: Россия 2
   type: vless
-  server: 88.218.170.236
-  port: 443
-  uuid: b872771d-e9d1-42d7-ad29-a9acff49ea2d
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  servername: www.sun6-21.userapi.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: qC4VE5jv0q0ALYAfCNtAHU-kN32OdA-cqJmXpL4Y2VY
-    short-id: 3199b70105c62ce0
-- name: Россия 3
-  type: vless
-  server: 72.56.32.106
-  port: 7443
-  uuid: 173330cf-bd41-4c0d-ac3c-a4e95d17de6e
-  encryption: none
-  tls: true
-  servername: ruservice4.oaklandjoseph.top
-  client-fingerprint: firefox
-  alpn:
-  - h2
-  network: xhttp
-  xhttp-opts:
-    path: /assets/build/_app/immutable/chunks/
-    host: ruservice4.oaklandjoseph.top
-    sc-min-posts-interval-ms: 30
-- name: Россия 4
-  type: vless
-  server: 194.87.143.165
-  port: 8443
-  uuid: f9613819-d2fe-4b3a-a2e6-40c184c6854c
-  encryption: none
-  tls: true
-  servername: wsru1.wba-pn.ru
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /
-- name: Россия 5
-  type: vless
   server: 185.147.27.183
   port: 8443
   uuid: 379998c5-2a71-4202-9c74-522e0c3c5404
@@ -1464,7 +1289,7 @@ proxies:
   tls: true
   servername: user-6a917f32.noooo.win
   client-fingerprint: firefox
-- name: Россия 6
+- name: Россия 3
   type: vless
   server: 45.12.75.242
   port: 26424
@@ -1476,20 +1301,7 @@ proxies:
   reality-opts:
     public-key: l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0
     short-id: 23103e1e
-- name: Россия 7
-  type: vless
-  server: 46.173.25.146
-  port: 443
-  uuid: 8d1a1b09-12d6-4b76-82f0-893cc805d9c0
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  servername: ru.crunch-crunch.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: djTtGqd0XWqtt_WHukU7BTPQSn9o7gIpAosAxMy8tUo
-    short-id: ea1058117be12087
-- name: Россия 8
+- name: Россия 4
   type: vless
   server: 46.8.200.91
   port: 443
@@ -1503,23 +1315,6 @@ proxies:
     path: /casc
     headers:
       Host: cf3.rumedia-cdn.com
-- name: Россия 9
-  type: vless
-  server: 95.163.214.43
-  port: 443
-  uuid: 88ce17fc-7c6c-43a7-98a4-33fb59697b17
-  encryption: none
-  tls: true
-  servername: ok.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: VdG4ntV15FfNWV4rvSny2mvOTSXfOUVKHNC0dOyXY2s
-    short-id: 864fbb122f15b43d
-  network: xhttp
-  xhttp-opts:
-    path: /api/v1/e0163615
-    host: vk.com
-    sc-min-posts-interval-ms: 30
 - name: Великобритания 1
   type: vless
   server: 2.24.131.46
@@ -1799,6 +1594,19 @@ proxies:
     short-id: 09994e53af766acd
 - name: Япония 4
   type: vless
+  server: 156.246.88.125
+  port: 26518
+  uuid: e01fcb68-3112-49da-b85d-dffb799cfc9b
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  servername: github.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 1fa6iCY7vhoQyKu91FeaK04FN-mr1qeHnrtdyLZ79mk
+    short-id: 6caead99
+- name: Япония 5
+  type: vless
   server: 46.250.250.149
   port: 2053
   uuid: 59bf58d9-ddaf-42cd-a0ca-db3559ad8714
@@ -1809,7 +1617,7 @@ proxies:
   reality-opts:
     public-key: eUjgCl7-ujbXq11kaSLe-8q1LJJfSueB5Vkh24wKgk8
     short-id: cf081ff86b298c48
-- name: Япония 5
+- name: Япония 6
   type: vless
   server: 154.31.114.248
   port: 50159
@@ -1822,19 +1630,6 @@ proxies:
   reality-opts:
     public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
     short-id: 091e1c5db8451757
-- name: Япония 6
-  type: vless
-  server: 206.251.54.34
-  port: 55596
-  uuid: 9fc6444b-987a-41d5-9bf5-195d147e0a05
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  servername: www.amd.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: QQUHUyF5Wb3XeRRrky-WOaRTxBtHokNaMec02HURWSI
-    short-id: 6ac09686189038
 - name: Латвия 1
   type: vless
   server: 138.124.180.137
@@ -2262,22 +2057,6 @@ proxies:
     public-key: pgdZI2R_VfdbedBJyFKxzSvYUa7oFbiApSTKBooSqCk
 - name: Турция 1
   type: vless
-  server: 201.50.115.5
-  port: 443
-  uuid: 00d1939a-d03c-4e93-a02b-2040b8429063
-  encryption: none
-  tls: true
-  servername: turk-02.file-rkat.online
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 4J-uh84p8Sw4NRO0Ig5UjsOIKQFHYprlba4ECq1nCSg
-    short-id: 9cef599fb1a9ad79
-  network: xhttp
-  xhttp-opts:
-    path: /assets/3d630fb4
-    sc-min-posts-interval-ms: 30
-- name: Турция 2
-  type: vless
   server: 153.52.92.239
   port: 11437
   uuid: fc60d2f9-e3b5-449f-80d8-385c08e93c94
@@ -2301,19 +2080,6 @@ proxies:
   reality-opts:
     public-key: acR3z7kRfCQEnfuCO1U3MFzTUXWQz9YqSe5RwbxafyE
     short-id: a1b2c3d4a1b2c3d4
-- name: Швеция 2
-  type: vless
-  server: 2.56.121.43
-  port: 443
-  uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  servername: www.ikea.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: vnUSQFujh6K08KR6FHYWoBkZCAEZNWSKji0PPw9eMWM
-    short-id: 86229a5e3b1e6ef4
 - name: Европа 7
   type: vless
   server: 149.33.19.143
@@ -2473,16 +2239,17 @@ proxies:
     short-id: 37b4f3ae8bf23763
 - name: Европа 12
   type: vless
-  server: 119.28.161.143
-  port: 443
-  uuid: 1ebb0858-218a-4dee-8746-36a67bc64462
+  server: 129.154.192.50
+  port: 2053
+  uuid: 48e84fcc-ecb1-48a3-a596-88fea84887f5
+  flow: xtls-rprx-vision
   encryption: none
   tls: true
-  servername: apple.com
+  servername: www.ibm.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: pR7MPTAA4cZsW9AO-twMzuogiWGMKPiheTg70fcWWWs
-    short-id: 0a427bc3
+    public-key: oBYxqt4GNTWrmvHRHM_6SAVj_yy95lXtQ0NLd1QWQDU
+    short-id: dea6d68a3f6f96e3
 - name: Европа 13
   type: vless
   server: 46.250.240.80
@@ -2544,7 +2311,7 @@ proxies:
   client-fingerprint: firefox
   reality-opts:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
-- name: Швеция 3
+- name: Швеция 2
   type: vless
   server: 185.178.208.176
   port: 443
@@ -2561,7 +2328,7 @@ proxies:
     path: /stream/615428/socket
     headers:
       Host: founders-blog.online
-- name: Швеция 4
+- name: Швеция 3
   type: vless
   server: 185.178.208.176
   port: 443
@@ -2578,7 +2345,7 @@ proxies:
     path: /stream/615428/socket
     headers:
       Host: founders-blog.online
-- name: Россия 10
+- name: Россия 5
   type: vless
   server: 185.141.227.180
   port: 2053
@@ -2592,7 +2359,7 @@ proxies:
     path: /api/v1/upload
     host: dismissaltree.net
     sc-min-posts-interval-ms: 30
-- name: Россия 11
+- name: Россия 6
   type: vless
   server: 78.159.246.85
   port: 2053
@@ -2606,7 +2373,7 @@ proxies:
     path: /api/v1/upload
     host: fitindoor.net
     sc-min-posts-interval-ms: 30
-- name: Россия 12
+- name: Россия 7
   type: vless
   server: 217.19.122.47
   port: 443
@@ -2632,7 +2399,7 @@ proxies:
     path: /api/v1/upload
     host: summerculture.net
     sc-min-posts-interval-ms: 30
-- name: Финляндия 16
+- name: Финляндия 12
   type: vless
   server: 79.174.92.85
   port: 6443
@@ -2707,9 +2474,6 @@ proxy-groups:
   - Нидерланды 17
   - Нидерланды 18
   - Нидерланды 19
-  - Нидерланды 20
-  - Нидерланды 21
-  - Нидерланды 22
   - Германия 1
   - Германия 2
   - Германия 3
@@ -2726,7 +2490,6 @@ proxy-groups:
   - Германия 14
   - Германия 15
   - Германия 16
-  - Германия 17
   - Польша 1
   - Польша 2
   - Польша 3
@@ -2741,8 +2504,6 @@ proxy-groups:
   - Польша 12
   - Польша 13
   - Польша 14
-  - Польша 15
-  - Польша 16
   - Финляндия 1
   - Финляндия 2
   - Финляндия 3
@@ -2754,19 +2515,10 @@ proxy-groups:
   - Финляндия 9
   - Финляндия 10
   - Финляндия 11
-  - Финляндия 12
-  - Финляндия 13
-  - Финляндия 14
-  - Финляндия 15
   - Россия 1
   - Россия 2
   - Россия 3
   - Россия 4
-  - Россия 5
-  - Россия 6
-  - Россия 7
-  - Россия 8
-  - Россия 9
   - Великобритания 1
   - Великобритания 2
   - Великобритания 3
@@ -2827,9 +2579,7 @@ proxy-groups:
   - Гонконг 4
   - Гонконг 5
   - Турция 1
-  - Турция 2
   - Швеция 1
-  - Швеция 2
   - Европа 7
   - Европа 8
   - Европа 9
@@ -2849,13 +2599,13 @@ proxy-groups:
   - Европа 15
   - Европа 16
   - Европа 17
+  - Швеция 2
   - Швеция 3
-  - Швеция 4
-  - Россия 10
-  - Россия 11
-  - Россия 12
+  - Россия 5
+  - Россия 6
+  - Россия 7
   - Болгария 1
-  - Финляндия 16
+  - Финляндия 12
   - DIRECT
 rules:
 - MATCH,🚀 Freedom Rudy
