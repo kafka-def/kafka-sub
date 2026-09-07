@@ -562,24 +562,34 @@ _PROXY_ERROR_RE = re.compile(r"\bproxy\s+(\d+)\s*:", re.IGNORECASE)
 
 
 def filter_mihomo_invalid_nodes(nodes):
-    """Remove nodes that make Mihomo reject the whole configuration.
+    """Filter nodes that Mihomo cannot load without repeatedly validating the
+    entire subscription.
 
-    Mihomo reports the offending proxy by its 1-based index, e.g.
-    ``proxy 2282: failed to use encryption: ...``.  We use that index to
-    remove only the bad node and validate again.  This prevents one malformed
-    VLESS URI from killing an otherwise usable subscription.
+    The old implementation removed one proxy and then ran ``mihomo -t`` on the
+    whole list again. With thousands of nodes that can turn into thousands of
+    full validations. Instead, validate batches and recursively split only the
+    batches that fail. Valid batches are accepted immediately; a failing
+    single-node batch is discarded.
     """
-    working = list(nodes)
-    removed = 0
+    nodes = list(nodes)
+    if not nodes:
+        return []
 
-    while working:
+    BATCH_SIZE = 200
+    removed = []
+    checked = 0
+
+    def validate_nodes(batch):
+        nonlocal checked
+        if not batch:
+            return True, ""
+
         fd, path = tempfile.mkstemp(suffix=".yaml")
         os.close(fd)
-
         try:
             with open(path, "w", encoding="utf-8") as file:
                 yaml.safe_dump(
-                    make_config(working),
+                    make_config(batch),
                     file,
                     allow_unicode=True,
                     sort_keys=False,
@@ -592,37 +602,50 @@ def filter_mihomo_invalid_nodes(nodes):
                 text=True,
                 timeout=60,
             )
-            output = result.stdout or ""
-
-            if result.returncode == 0:
-                if removed:
-                    log(f"[FILTER] removed {removed} Mihomo-invalid nodes")
-                return working
-
-            match = _PROXY_ERROR_RE.search(output)
-            if not match:
-                print(output)
-                raise RuntimeError("Mihomo rejected config and did not identify a proxy")
-
-            index = int(match.group(1)) - 1
-            if index < 0 or index >= len(working):
-                print(output)
-                raise RuntimeError(
-                    f"Mihomo reported invalid proxy index {index + 1}, "
-                    f"but only {len(working)} proxies exist"
-                )
-
-            bad = working.pop(index)
-            removed += 1
-            log(f"[FILTER] Mihomo rejected: {bad['name']} | {output.strip().splitlines()[-1]}")
-
+            checked += 1
+            return result.returncode == 0, (result.stdout or "")
         finally:
             try:
                 os.unlink(path)
             except OSError:
                 pass
 
-    raise RuntimeError("All VLESS nodes were rejected by Mihomo")
+    def isolate(batch):
+        ok, output = validate_nodes(batch)
+        if ok:
+            return batch
+
+        if len(batch) == 1:
+            node = batch[0]
+            last_line = output.strip().splitlines()[-1] if output.strip() else "unknown Mihomo error"
+            removed.append(node)
+            log(f"[FILTER] Mihomo rejected: {node['name']} | {last_line}")
+            return []
+
+        mid = len(batch) // 2
+        left = isolate(batch[:mid])
+        right = isolate(batch[mid:])
+        return left + right
+
+    valid = []
+    total_batches = math.ceil(len(nodes) / BATCH_SIZE)
+
+    for batch_no, start in enumerate(range(0, len(nodes), BATCH_SIZE), 1):
+        batch = nodes[start:start + BATCH_SIZE]
+        valid.extend(isolate(batch))
+        log(
+            f"[FILTER] batch {batch_no}/{total_batches}: "
+            f"checked {len(batch)} nodes, invalid removed={len(removed)}"
+        )
+
+    if not valid:
+        raise RuntimeError("All VLESS nodes were rejected by Mihomo")
+
+    log(
+        f"[FILTER] removed {len(removed)} Mihomo-invalid nodes; "
+        f"validation runs={checked}"
+    )
+    return valid
 
 
 # ----------------------------- Health --------------------------------
