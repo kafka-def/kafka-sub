@@ -8,4 +8,4 @@ https://raw.githubusercontent.com/kafka-def/v2configs-sub/refs/heads/main/subscr
 https://github.com/Remiuc0ff/Hiddifycode/raw/refs/heads/main/Owner-@remiuc
 https://gist.githubusercontent.com/HappKeysHub2/cdaed609176704424eb617bb4f008f53/raw/
 https://etoneya.su/whitelist
-https://etoneya.su/other
+https://etoneya.best/whitelist
