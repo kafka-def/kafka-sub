@@ -61,7 +61,7 @@ jobs:
           print("PyYAML:", yaml.__version__)
           PY
 
-      - name: Build subscription and health-check nodes
+      - name: Build subscription
         run: |
           set -euo pipefail
           python build.py
