@@ -493,10 +493,10 @@ def identity(node):
 
 
 def name_nodes(nodes):
-    # Use the same naming as proxy_parser.py: every proxy gets the
-    # identical display name, without a numeric suffix or source name.
-    for node in nodes:
-        node["name"] = "🇨🇾 Cyprus | Кипр"
+    # Mihomo requires every proxy name to be unique.
+    # Keep the same display label while adding a sequential number.
+    for index, node in enumerate(nodes, start=1):
+        node["name"] = f"🇨🇾 Cyprus | Кипр #{index}"
 
 
 def make_config(nodes, controller=None):
