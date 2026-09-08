@@ -2,7 +2,7 @@
 #profile-title: kafka sub
 #profile-update-interval: 1
 #support-url: telegram.me/kafka_def
-#announce: автор @kafka_def // переезд на Clash YAML Subscription // получить инструкции и ссылку на подписку у @rudy_bd
+#announce: автор @kafka_def // Эта подписка больше не обновляется // Получить новую подписку можно обратившись к  @rudy_bd тг
 
 trojan://0123406789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#подписка не поддерживается
 trojan://0123456789abcdef0123456789abcdef@example.com:443?security=tls&sni=example.com&type=tcp&headerType=none#новая структура
