@@ -609,10 +609,10 @@ def filter_mihomo_invalid_nodes(nodes):
                     "Mihomo rejected config, but did not report a proxy index"
                 )
 
-            # Mihomo reports proxy numbers as 1-based (proxy 1 is the
-            # first proxy). Convert that number to the Python 0-based index.
+            # Mihomo reports proxy numbers as 0-based (proxy 0 is the
+            # first proxy). Keep the reported number as the Python index.
             reported_index = int(match.group(1))
-            index = reported_index - 1
+            index = reported_index
             if index < 0 or index >= len(nodes):
                 print(output)
                 raise RuntimeError(
