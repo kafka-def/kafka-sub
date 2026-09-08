@@ -493,25 +493,10 @@ def identity(node):
 
 
 def name_nodes(nodes):
-    used = set()
-    nodes.sort(key=lambda item: (item["server"], item["port"], item["uuid"]))
-
+    # Use the same naming as proxy_parser.py: every proxy gets the
+    # identical display name, without a numeric suffix or source name.
     for node in nodes:
-        base = re.sub(
-            r"\s+",
-            " ",
-            str(node.get("name") or node["server"]).strip(),
-        )[:150] or "VLESS"
-
-        name = base
-        index = 2
-
-        while name in used:
-            name = f"{base} {index}"
-            index += 1
-
-        used.add(name)
-        node["name"] = name
+        node["name"] = "🇨🇾 Cyprus | Кипр"
 
 
 def make_config(nodes, controller=None):
