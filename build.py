@@ -566,7 +566,6 @@ def filter_mihomo_invalid_nodes(nodes):
         return []
 
     removed = []
-    max_invalid = max(50, math.ceil(len(nodes) * 0.10))
     validation_runs = 0
 
     while nodes:
@@ -629,11 +628,6 @@ def filter_mihomo_invalid_nodes(nodes):
                 f"remaining={len(nodes)}"
             )
 
-            if len(removed) > max_invalid:
-                raise RuntimeError(
-                    f"Too many Mihomo-invalid nodes ({len(removed)}); "
-                    "aborting to avoid publishing a suspicious subscription"
-                )
         finally:
             try:
                 os.unlink(path)
