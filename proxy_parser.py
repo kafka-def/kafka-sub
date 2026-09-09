@@ -127,9 +127,8 @@ def is_mlkem_encryption_proxy(uri):
         pass
     return False
 
-def rename_uri(uri, number, whitelist=False):
-    # Whitelist configs are marked as LTE and remain at the top of the list.
-    label = f"LTE #{number}" if whitelist else f"🇨🇾 Cyprus | Кипр #{number}"
+def rename_uri(uri, number):
+    label = f"🇨🇾 Cyprus | Кипр #{number}"
     return uri.split("#", 1)[0] + "#" + urllib.parse.quote(label, safe="")
 
 def main():
@@ -176,9 +175,7 @@ def main():
     ordered = whitelist + regular
 
     print(f"[WHITELIST] {len(whitelist)} configs with Russian SNI")
-    output = []
-    for index, uri in enumerate(ordered, start=1):
-        output.append(rename_uri(uri, index, whitelist=(index <= len(whitelist))))
+    output = [rename_uri(uri, index) for index, uri in enumerate(ordered, start=1)]
 
     updated = (datetime.now(timezone.utc) + timedelta(hours=3)).strftime("%d.%m.%Y %H:%M")
 
