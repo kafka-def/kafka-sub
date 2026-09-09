@@ -2,6 +2,15 @@ name: Update proxy URLs
 
 on:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "Update mode"
+        required: true
+        default: fresh
+        type: choice
+        options:
+          - fresh
+          - cleanup
   schedule:
     - cron: "30 * * * *"
 
@@ -29,23 +38,31 @@ jobs:
           python-version: "3.12"
 
       - name: Build proxy URL list
+        env:
+          UPDATE_MODE: ${{ github.event_name == 'schedule' && 'fresh' || inputs.mode }}
         run: |
           set -euo pipefail
-          python proxy_parser.py
+          python proxy_parser.py --mode "$UPDATE_MODE"
 
-      - name: Commit proxy URLs
+      - name: Commit generated files
         run: |
           set -euo pipefail
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add proxies.txt
+          git add proxies.txt parsed_proxies.txt
 
           if git diff --cached --quiet; then
-            echo "No changes to proxies.txt"
+            echo "No generated changes"
+            exit 0
+          fi
+
+          if [ "${{ github.event_name == 'schedule' && 'fresh' || inputs.mode }}" = "cleanup" ]; then
+            git commit -m "Remove failed proxy URLs"
           else
             git commit -m "Update proxy URLs"
-            git pull --rebase origin main
-            git push origin HEAD:main
           fi
+
+          git pull --rebase origin main
+          git push origin HEAD:main
