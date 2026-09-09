@@ -8,9 +8,8 @@ on:
 permissions:
   contents: write
 
-# Do not let two repository-update workflows push to main at the same time.
 concurrency:
-  group: kafka-sub-updates
+  group: kafka-sub-update
   cancel-in-progress: false
 
 jobs:
@@ -44,14 +43,9 @@ jobs:
           git add proxies.txt
 
           if git diff --cached --quiet; then
-            echo "[GIT] No changes to proxies.txt"
-            exit 0
+            echo "No changes to proxies.txt"
+          else
+            git commit -m "Update proxy URLs"
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
-
-          git commit -m "Update proxy URLs"
-
-          # The remote main branch may have changed since checkout.
-          # Rebase our generated commit onto the current remote branch
-          # before pushing, instead of failing with "fetch first".
-          git pull --rebase origin main
-          git push origin HEAD:main
