@@ -1,7 +1,7 @@
 #subscription-userinfo: upload=1073741824000; download=0; total=1073741824000; expire=2524608000
 #profile-title: rudy and kafka
 #profile-update-interval: 1
-#announce: авторы @rudy_bd @kafka_def // обновлено: 10.09.2026 14:38 | конфигов: 453
+#announce: авторы @rudy_bd @kafka_def // обновлено: 10.09.2026 19:35 | конфигов: 453
 vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.235:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&security=reality&sid=c39cc7310a&sni=yahoo.com&type=tcp#%F0%9F%87%A8%F0%9F%87%BE%20Cyprus%20%7C%20%D0%9A%D0%B8%D0%BF%D1%80%20%231
 vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.231:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&security=reality&sid=c39cc7310a&sni=yahoo.com&type=tcp#%F0%9F%87%A8%F0%9F%87%BE%20Cyprus%20%7C%20%D0%9A%D0%B8%D0%BF%D1%80%20%232
 vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.173:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&security=reality&sid=c39cc7310a&sni=yahoo.com&type=tcp#%F0%9F%87%A8%F0%9F%87%BE%20Cyprus%20%7C%20%D0%9A%D0%B8%D0%BF%D1%80%20%233
