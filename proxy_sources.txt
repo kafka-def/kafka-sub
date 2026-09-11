@@ -4,3 +4,4 @@ https://owpn-key.duckdns.org/sub/fe345f78893b449d831c22bda3ef5e2a041398c3e9fe440
 https://tunpass.online/sub/cbe546e69fcdc6b2
 https://raw.githubusercontent.com/kafka-def/enc-kafka-sub/refs/heads/main/enc-kafka-sub.txt
 https://raw.githubusercontent.com/kafka-def/v2configs-sub/refs/heads/main/subscription.txt
+https://sub.alvsub.cc/5BWTeEFyfxdhzt2q
