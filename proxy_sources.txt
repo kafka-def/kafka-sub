@@ -1,7 +1,6 @@
 https://gitverse.ru/api/repos/Akres/VPN/raw/branch/master/bwl
 https://gitverse.ru/api/repos/Akres/VPN/raw/branch/master/all
 https://owpn-key.duckdns.org/sub/fe345f78893b449d831c22bda3ef5e2a041398c3e9fe440c
-https://is.wepogp.gay/bypass-hwid-lock-3z5O6BFAaJQzGlamvtSo?payload=LoWcw85kRd%2BHRAuaIWWTGQtmHz91ER2Gsf9j8ro4aENKelQom7dBGSEIW11PuLnbJGqHulnnMD/AW2RrnHWKlWFJxvUtqF01SLDdwqY%2Bj9MB2RSD%2BDWEqu7KmBMo/8DS
 https://tunpass.online/sub/cbe546e69fcdc6b2
 https://raw.githubusercontent.com/kafka-def/enc-kafka-sub/refs/heads/main/enc-kafka-sub.txt
 https://raw.githubusercontent.com/kafka-def/v2configs-sub/refs/heads/main/subscription.txt
